@@ -24,7 +24,7 @@ class BaseImageViewController: BaseViewController {
     /// To check controller and manage the dark mode
     func checkingControllerForDarkMode(){
         switch self {
-        case is ViewController:
+        case is LoginViewController:
             let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
             backgroundImage.image = UIImage(named: "img_screenDarkBackground")
             backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
@@ -82,7 +82,7 @@ class BaseViewController: UIViewController {
             let backButton = UIButton()
             
             switch self {
-            case is ViewController:
+            case is LoginViewController:
                 backButton.setImage(UIImage(named: "ic_darkback")?.imageFlippedForRightToLeftLayoutDirection(), for: .normal)
                 break
             default:

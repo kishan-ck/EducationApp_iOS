@@ -10,8 +10,6 @@
 		6F8D7A926E6563EA672776EF /* Pods_EducationAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61EA16EB5D775C4D123EF874 /* Pods_EducationAppTests.framework */; };
 		88259DC12B7738C4008B1CA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88259DC02B7738C4008B1CA9 /* AppDelegate.swift */; };
 		88259DC32B7738C4008B1CA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88259DC22B7738C4008B1CA9 /* SceneDelegate.swift */; };
-		88259DC52B7738C4008B1CA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88259DC42B7738C4008B1CA9 /* ViewController.swift */; };
-		88259DC82B7738C4008B1CA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88259DC62B7738C4008B1CA9 /* Main.storyboard */; };
 		88259DCA2B7738C6008B1CA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88259DC92B7738C6008B1CA9 /* Assets.xcassets */; };
 		88259DCD2B7738C6008B1CA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88259DCB2B7738C6008B1CA9 /* LaunchScreen.storyboard */; };
 		88259DD82B7738C6008B1CA9 /* EducationAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88259DD72B7738C6008B1CA9 /* EducationAppTests.swift */; };
@@ -103,6 +101,8 @@
 		88259EB22B774945008B1CA9 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88259EB12B774945008B1CA9 /* Toast.swift */; };
 		88259EBD2B7749B7008B1CA9 /* DismissibleEasyTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88259EBC2B7749B7008B1CA9 /* DismissibleEasyTipView.swift */; };
 		88259EBF2B7749E2008B1CA9 /* AlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88259EBE2B7749E2008B1CA9 /* AlignedCollectionViewFlowLayout.swift */; };
+		88259EC32B774A6C008B1CA9 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88259EC12B774A6C008B1CA9 /* LoginViewController.xib */; };
+		88259EC42B774A6C008B1CA9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88259EC22B774A6C008B1CA9 /* LoginViewController.swift */; };
 		91FB60438E757CE92C16162D /* Pods_EducationApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A4E13DC99F36348412C136 /* Pods_EducationApp.framework */; };
 		BE647C074EC6C6C36949A658 /* Pods_EducationApp_EducationAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18215CD1A93E49825DB5D19F /* Pods_EducationApp_EducationAppUITests.framework */; };
 /* End PBXBuildFile section */
@@ -133,8 +133,6 @@
 		88259DBD2B7738C4008B1CA9 /* EducationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EducationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88259DC02B7738C4008B1CA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88259DC22B7738C4008B1CA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		88259DC42B7738C4008B1CA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		88259DC72B7738C4008B1CA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		88259DC92B7738C6008B1CA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88259DCC2B7738C6008B1CA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88259DCE2B7738C6008B1CA9 /* Education-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Education-Info.plist"; sourceTree = "<group>"; };
@@ -229,6 +227,8 @@
 		88259EB12B774945008B1CA9 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		88259EBC2B7749B7008B1CA9 /* DismissibleEasyTipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissibleEasyTipView.swift; sourceTree = "<group>"; };
 		88259EBE2B7749E2008B1CA9 /* AlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		88259EC12B774A6C008B1CA9 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		88259EC22B774A6C008B1CA9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A0AFCE4BB6CA02F2C3F217DE /* Pods-EducationApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationApp.release.xcconfig"; path = "Target Support Files/Pods-EducationApp/Pods-EducationApp.release.xcconfig"; sourceTree = "<group>"; };
 		C3046BBB64C024B37A2FF712 /* Pods-EducationApp-EducationAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationApp-EducationAppUITests.release.xcconfig"; path = "Target Support Files/Pods-EducationApp-EducationAppUITests/Pods-EducationApp-EducationAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C4A4E13DC99F36348412C136 /* Pods_EducationApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EducationApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -310,7 +310,6 @@
 				88259DF12B773B37008B1CA9 /* Screens */,
 				88259DF02B773B2E008B1CA9 /* Models */,
 				88259DF42B773B5D008B1CA9 /* Configurations+Files */,
-				88259DC62B7738C4008B1CA9 /* Main.storyboard */,
 				88259DCB2B7738C6008B1CA9 /* LaunchScreen.storyboard */,
 			);
 			path = EducationApp;
@@ -343,9 +342,9 @@
 		88259DF12B773B37008B1CA9 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				88259EC02B774A59008B1CA9 /* Authentication Screen */,
 				88259EA82B7741F3008B1CA9 /* Other Common Screen */,
 				88259EA12B77419B008B1CA9 /* No Internet Connection */,
-				88259DC42B7738C4008B1CA9 /* ViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -588,6 +587,15 @@
 			path = Toast;
 			sourceTree = "<group>";
 		};
+		88259EC02B774A59008B1CA9 /* Authentication Screen */ = {
+			isa = PBXGroup;
+			children = (
+				88259EC22B774A6C008B1CA9 /* LoginViewController.swift */,
+				88259EC12B774A6C008B1CA9 /* LoginViewController.xib */,
+			);
+			path = "Authentication Screen";
+			sourceTree = "<group>";
+		};
 		992EAAAD41F3D3F11D543DE9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -710,6 +718,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88259EC32B774A6C008B1CA9 /* LoginViewController.xib in Resources */,
 				88259E2C2B77404F008B1CA9 /* Colors.xcassets in Resources */,
 				88259E302B77408F008B1CA9 /* Localizable.strings in Resources */,
 				88259EAC2B7741F3008B1CA9 /* NoDataFoundView.xib in Resources */,
@@ -717,7 +726,6 @@
 				88259DCA2B7738C6008B1CA9 /* Assets.xcassets in Resources */,
 				88259EA42B77419B008B1CA9 /* NoInternetConnectionViewController.xib in Resources */,
 				88259E262B773C5B008B1CA9 /* Education-Config.plist in Resources */,
-				88259DC82B7738C4008B1CA9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -858,7 +866,7 @@
 				88259E292B773E9C008B1CA9 /* Constants.swift in Sources */,
 				88259E972B77413F008B1CA9 /* NSObject+Additions.swift in Sources */,
 				88259E882B774127008B1CA9 /* UIImage+Extension.swift in Sources */,
-				88259DC52B7738C4008B1CA9 /* ViewController.swift in Sources */,
+				88259EC42B774A6C008B1CA9 /* LoginViewController.swift in Sources */,
 				88259E1C2B773C15008B1CA9 /* APIClient+Chats.swift in Sources */,
 				88259E172B773C15008B1CA9 /* APIClient+Courses.swift in Sources */,
 				88259E802B774127008B1CA9 /* UITextField+Extension.swift in Sources */,
@@ -965,14 +973,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		88259DC62B7738C4008B1CA9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				88259DC72B7738C4008B1CA9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		88259DCB2B7738C6008B1CA9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1113,7 +1113,6 @@
 				INFOPLIST_FILE = "EducationApp/Configurations+Files/Education-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1143,7 +1142,6 @@
 				INFOPLIST_FILE = "EducationApp/Configurations+Files/Education-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

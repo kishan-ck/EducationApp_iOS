@@ -6,12 +6,24 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        IQKeyboardManager.shared.enable = true
+        
+        allFont["bold"] = ["name": "Georgia-Bold"]
+        allFont["medium"] = ["name": "Georgia"]
+        allFont["semiBold"] = ["name": "Georgia"]
+        allFont["regular"] = ["name": "Georgia"]
+        allFont["georgiaRegular"] = ["name": "Georgia"]
+        allFont["georgiaBold"] = ["name": "Georgia-Bold"]
+        
+        ReachabilityManager.sharedInstance.observeReachability()
         return true
     }
 

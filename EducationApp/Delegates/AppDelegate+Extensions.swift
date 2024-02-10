@@ -13,9 +13,9 @@ extension AppDelegate {
     
     /// This function will root to LoginViewController and redirect there.
     func setUpLogin() {
-        /*let loginViewController = LoginViewController.init(nibName: "LoginViewController", bundle: nil)
+        let loginViewController = LoginViewController.init(nibName: "LoginViewController", bundle: nil)
         window?.rootViewController = AppNavigationController(rootViewController: loginViewController)
-        window?.makeKeyAndVisible()*/
+        window?.makeKeyAndVisible()
     }
     
     /*/// This function will root to HomeViewController and redirect there.
