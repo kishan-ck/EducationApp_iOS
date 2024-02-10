@@ -1,0 +1,22 @@
+{
+  "images" : [
+    {
+      "filename" : "material-symbols_arrow-forward-ios-rounded.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "material-symbols_arrow-forward-ios-rounded (1).pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
