@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2023 Luminary Mindset All rights reserved.
+// Copyright (c) 2024 Education App All rights reserved.
 //
 
 import UIKit
@@ -15,7 +15,7 @@ extension UIButton {
     /// Font style for all UIButton
     @IBInspectable var style: String {
         set {
-            self.titleLabel?.font = UIFont(name: (allFont [newValue]?["name"] ?? "Manrope-Regular"), size: self.titleLabel?.font.pointSize ?? 0.0)
+            self.titleLabel?.font = UIFont(name: (allFont [newValue]?["name"] ?? themeFonts.poppinsRegular.rawValue), size: self.titleLabel?.font.pointSize ?? 0.0)
         }
         get {
             return ""

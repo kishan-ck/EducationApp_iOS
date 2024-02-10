@@ -1,0 +1,31 @@
+//
+// Copyright (c) 2024 Education App All rights reserved.
+//
+
+//MARK: - Application Localizable Strings
+
+//MARK: - Common Strings
+"APP_TITLE" = "Education App";
+"CANCEL" = "Cancel";
+"PHOTO_LIBRARY" = "Photo Library";
+"CAMERA" = "Camera";
+"PLEASE_WAIT" = "Please wait...";
+"NO_INTERNET_CONNECTION" = "No Internet Connection!";
+"RETRY" = "Retry";
+"NEXT" = "Next";
+"UPDATE" = "Update";
+"OK" = "Ok";
+"YES" = "Yes";
+"NO" = "No";
+
+//MARK: - Other Validations
+"PLEASE_TRY_AGAIN" = "Please try again.";
+"NO_RECORD_AVAILABLE_TITLE"= "No Records Available";
+"NO_RECORD_AVAILABLE_DESCRIPTION" = "Sorry, there are no records available at this moment.";
+"NO_RECORD_AVAILABLE_DESCRIPTIONS" = "Sorry, there are no %@ available at this moment.";
+"NO_SEARCH_RESULT_FOUND_TITLE" = "No Result Found";
+"NO_SEARCH_RESULT_FOUND_DESCRIPTION" = "Sorry, there are no results for this search. Please try again with another phrase.";
+"URL_NOT_VALID" = "This URL is not valid.";
+"DELETE_ACCOUNT_ALERT" = "Are you sure you want to delete your account?";
+"DELETE_ACCOUNT_DESCRIPTION" = "You are about to delete your account.\n\nDeleting your account will delete your access and all your information on this app.";
+"CALL_NOT_SUPPORTED" = "The call functionality is not supported on your device.";

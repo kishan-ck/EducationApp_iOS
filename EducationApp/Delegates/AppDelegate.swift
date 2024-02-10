@@ -1,8 +1,5 @@
 //
-//  AppDelegate.swift
-//  EducationApp
-//
-//  Created by vp on 10/02/24.
+// Copyright (c) 2024 Education App All rights reserved.
 //
 
 import UIKit

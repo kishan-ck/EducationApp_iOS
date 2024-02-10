@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2023 Luminary Mindset All rights reserved.
+// Copyright (c) 2024 Education App All rights reserved.
 //
 
 import Foundation
@@ -37,14 +37,14 @@ extension UIViewController {
                 }
             } else {
                 print("Calling functinality not support your device..")
-                let alert = UIAlertController(title: "", message: "Calling functinality not support your device..", preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "ok".localized, style: UIAlertAction.Style.default, handler: nil))
+                let alert = UIAlertController(title: "", message: "CALL_NOT_SUPPORTED".localized, preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK".localized, style: UIAlertAction.Style.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             }
         } else {
             print("Calling functinality not support your device..")
-            let alert = UIAlertController(title: "", message: "Calling functinality not support your device..", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "ok".localized, style: UIAlertAction.Style.default, handler: nil))
+            let alert = UIAlertController(title: "", message: "CALL_NOT_SUPPORTED".localized, preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK".localized, style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
     }

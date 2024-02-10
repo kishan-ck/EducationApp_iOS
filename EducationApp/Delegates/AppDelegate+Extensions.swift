@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2023 Luminary Mindset All rights reserved.
+// Copyright (c) 2024 Education App All rights reserved.
 //
 
 import Foundation
