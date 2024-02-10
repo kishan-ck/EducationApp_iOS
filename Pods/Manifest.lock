@@ -1,34 +1,50 @@
 PODS:
   - Alamofire (5.4.1)
+  - EasyTipView (2.1.0)
   - IQKeyboardManagerSwift (6.5.11)
   - JGProgressHUD (2.2)
   - OTPFieldView (1.0.1)
   - SDWebImage (5.16.0):
     - SDWebImage/Core (= 5.16.0)
   - SDWebImage/Core (5.16.0)
+  - SideMenuSwift (2.0.9)
+  - SKCountryPicker (2.0.2)
+  - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
   - Alamofire (= 5.4.1)
+  - EasyTipView (~> 2.1)
   - IQKeyboardManagerSwift
   - JGProgressHUD
   - OTPFieldView
   - SDWebImage
+  - SideMenuSwift
+  - SKCountryPicker
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - EasyTipView
     - IQKeyboardManagerSwift
     - JGProgressHUD
     - OTPFieldView
     - SDWebImage
+    - SideMenuSwift
+    - SKCountryPicker
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  EasyTipView: a92b6edc377b81c5ac18e9fd35d5ee78e9409488
   IQKeyboardManagerSwift: c7955c0bdbf7b2eb29bb7daaa44e3d90f55a9a85
   JGProgressHUD: d83d7a981b85d11205e19ff8ad5bb9c40571c847
   OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
   SDWebImage: 2aea163b50bfcb569a2726b6a754c54a4506fcf6
+  SideMenuSwift: 39f1922e225da4aaa8b16591037a929defe960c9
+  SKCountryPicker: f4882c36fa432d6450099a3e07da60eceda0a8f0
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 2fcf856a817328e2b2a7966231129ac78a78f0b4
+PODFILE CHECKSUM: 067e46b54042c6f691c19e631cbcd5357c218a69
 
 COCOAPODS: 1.13.0

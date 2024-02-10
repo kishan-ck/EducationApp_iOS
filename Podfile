@@ -10,6 +10,10 @@ target 'EducationApp' do
   pod 'SDWebImage'
   pod 'OTPFieldView'
   pod 'JGProgressHUD'
+  pod 'SwiftyJSON'
+  pod 'SideMenuSwift'
+  pod 'SKCountryPicker'
+  pod 'EasyTipView', '~> 2.1'
 
   # Pods for EducationApp
 

@@ -2,12 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>app_specific_shared_secret</key>
-	<string>e6e47998f1594c7d9da2bfa968afe999</string>
-	<key>verify_receipt_url</key>
-	<string>https://buy.itunes.apple.com/</string>
 	<key>host</key>
-	<string>https://peeq.com.au/</string>
+	<string>https://education-app-31lz.onrender.com/</string>
 	<key>path</key>
 	<string>api/v1/</string>
 </dict>
