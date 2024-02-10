@@ -610,7 +610,7 @@ public struct ToastStyle {
     /**
      The message font. Default is `.systemFont(ofSize: 16.0)`.
     */
-    public var messageFont: UIFont = themeFont(size: 17.0, fontname: .georgiaRegular) //.systemFont(ofSize: 16.0)
+    public var messageFont: UIFont = themeFont(size: 17.0, fontname: .poppinsRegular) //.systemFont(ofSize: 16.0)
     
     /**
      The title text alignment. Default is `NSTextAlignment.Left`.

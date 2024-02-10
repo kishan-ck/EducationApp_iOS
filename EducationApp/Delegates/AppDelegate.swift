@@ -16,12 +16,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         IQKeyboardManager.shared.enable = true
         
-        allFont["bold"] = ["name": "Georgia-Bold"]
-        allFont["medium"] = ["name": "Georgia"]
-        allFont["semiBold"] = ["name": "Georgia"]
-        allFont["regular"] = ["name": "Georgia"]
-        allFont["georgiaRegular"] = ["name": "Georgia"]
-        allFont["georgiaBold"] = ["name": "Georgia-Bold"]
+        allFont["regular"] = ["name": "Poppins-Regular"]
+        allFont["italic"] = ["name": "Poppins-Italic"]
+        allFont["thin"] = ["name": "Poppins-Thin"]
+        allFont["thinItalic"] = ["name": "Poppins-ThinItalic"]
+        allFont["extraLight"] = ["name": "Poppins-ExtraLight"]
+        allFont["extraLightItalic"] = ["name": "Poppins-ExtraLightItalic"]
+        allFont["light"] = ["name": "Poppins-Light"]
+        allFont["lightItalic"] = ["name": "Poppins-LightItalic"]
+        allFont["medium"] = ["name": "Poppins-Medium"]
+        allFont["mediumItalic"] = ["name": "Poppins-MediumItalic"]
+        allFont["semiBold"] = ["name": "Poppins-SemiBold"]
+        allFont["semiBoldItalic"] = ["name": "Poppins-SemiBoldItalic"]
+        allFont["bold"] = ["name": "Poppins-Bold"]
+        allFont["boldItalic"] = ["name": "Poppins-BoldItalic"]
+        allFont["extraBold"] = ["name": "Poppins-ExtraBold"]
+        allFont["extraBoldItalic"] = ["name": "Poppins-ExtraBoldItalic"]
+        allFont["black"] = ["name": "Poppins-Black"]
+        allFont["blackItalic"] = ["name": "Poppins-BlackItalic"]
         
         ReachabilityManager.sharedInstance.observeReachability()
         return true

@@ -9,9 +9,9 @@ import SwiftyJSON
 extension Bundle {
     
     /// To get all base url related configuration
-    var luminaryMindsetConfig: [String: AnyObject] {
+    var educationConfig: [String: AnyObject] {
         var nsDictionary: NSDictionary?
-        if let path = Bundle.main.path(forResource: "LuminaryMindset-Config", ofType: "plist") {
+        if let path = Bundle.main.path(forResource: "Education-Config", ofType: "plist") {
             nsDictionary = NSDictionary(contentsOfFile: path)
         }
         return nsDictionary as? [String : AnyObject] ?? [:]
@@ -22,27 +22,17 @@ extension Bundle {
 class Config: NSObject {
     
     /// common baseURL for API URLs.
-    static let hostURL = Bundle.main.luminaryMindsetConfig.valueForKeyString("host")
-    static let baseURL = hostURL + Bundle.main.luminaryMindsetConfig.valueForKeyString("path")
-    static let postEditorBaseURL = hostURL + APIEndPoint.post_editor.value
-    static let articleEditorBaseURL = hostURL + APIEndPoint.article_editor.value
-    static let verifyReceiptURL = Bundle.main.luminaryMindsetConfig.valueForKeyString("verify_receipt_url")
-    static let appSpecificSharedSecret = Bundle.main.luminaryMindsetConfig.valueForKeyString("app_specific_shared_secret")
+    static let hostURL = Bundle.main.educationConfig.valueForKeyString("host")
+    static let baseURL = hostURL + Bundle.main.educationConfig.valueForKeyString("path")
     
     /// Stores access token retrieved from login or registration into userdefaults.
     var accessToken = "Bearer \(USER_DEFAULTS_STANDARD.value(forKey: "token") ?? "")"
-    
-    /// Stores fcm token retrieved from login or registration into userdefaults.
-    var fcmToken: String = "\(USER_DEFAULTS_STANDARD.value(forKey: "fcm_token") ?? "")"
     
     /// To store welcome checklist completed or not flag
     var welcomeChecklistComplete: Int = USER_DEFAULTS_STANDARD.value(forKey: "welcome_checklist_complete") as? Int ?? 0
     
     /// To store is guest login or not flag
     var isGuestLogin: Bool = USER_DEFAULTS_STANDARD.value(forKey: "is_guest_login") as? Bool ?? false
-    
-    /// Stores linkedin access token retrieved from login or registration into userdefaults.
-    var linkedinAccessToken = "\(USER_DEFAULTS_STANDARD.value(forKey: "linkedin_access_token") ?? "")"
     
     /// Stores all user information retrieved from login or registration into userdefaults.
     /// - Parameter object: key value dictionary

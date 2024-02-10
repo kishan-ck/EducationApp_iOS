@@ -60,7 +60,7 @@ extension UILabel {
     private var highlightColor: UIColor { return UIColor(named: "ThemeYellow - #E2A12D")! }
 
     private var attributes: [NSAttributedString.Key: Any] {
-        return [.font: self.font ?? themeFont(size: 14, fontname: .georgiaBold)]
+        return [.font: self.font ?? themeFont(size: 14, fontname: .poppinsRegular)]
     }
     
     public func requiredHeight(for text: String) -> CGFloat {

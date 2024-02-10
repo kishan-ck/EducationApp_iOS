@@ -9,10 +9,10 @@ import UIKit
 extension NSMutableAttributedString {
     
     /// for setup bold fonts
-    var boldFont : UIFont { return themeFont(size: 14, fontname: .georgiaBold) }
+    var boldFont : UIFont { return themeFont(size: 14, fontname: .poppinsBold) }
     
     /// for setup normal fonts
-    var normalFont : UIFont { return themeFont(size: 14, fontname: .georgiaRegular)}
+    var normalFont : UIFont { return themeFont(size: 14, fontname: .poppinsRegular)}
     
     
     /// setup bold fonts to attributed string.
