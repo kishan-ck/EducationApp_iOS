@@ -2,8 +2,8 @@
 // Copyright (c) 2024 Education App All rights reserved.
 //
 
-import Foundation
 import UIKit
+import Foundation
 import ESTabBarController_swift
 
 @available(iOS 13.0, *)
@@ -19,19 +19,19 @@ class MainTabBarController: UITabBarController {
         super.viewDidLoad()
 
         let homeViewController = HomeViewController()
-        homeViewController.tabBarItem = UITabBarItem(title: "HOME".localized, image: UIImage(named: "ic_tab_home"), tag: 1)
+        homeViewController.tabBarItem = UITabBarItem(title: "HOME".localized, image: UIImage(named: "ic_settings"), tag: 1)
         let firstNavigation = AppNavigationController(rootViewController: homeViewController)
         
         let myCoursesViewController = MyCoursesViewController()
-        myCoursesViewController.tabBarItem = UITabBarItem(title: "MY_COURSES".localized, image: UIImage(named: "ic_notification"), tag: 2)
+        myCoursesViewController.tabBarItem = UITabBarItem(title: "MY_COURSES".localized, image: UIImage(named: "ic_my_courses"), tag: 2)
         let secondNavigation = AppNavigationController(rootViewController: myCoursesViewController)
 
         let facultiesViewController = FacultiesViewController()
-        facultiesViewController.tabBarItem = UITabBarItem(title: "FACULTIES".localized, image: UIImage(named: "ic_messages"), tag: 3)
+        facultiesViewController.tabBarItem = UITabBarItem(title: "FACULTIES".localized, image: UIImage(named: "ic_faculities"), tag: 3)
         let thirdNavigation = AppNavigationController(rootViewController: facultiesViewController)
         
         let settingsViewController = SettingsViewController()
-        settingsViewController.tabBarItem = UITabBarItem(title: "SETTINGS".localized, image: UIImage(named: "ic_profile"), tag: 4)
+        settingsViewController.tabBarItem = UITabBarItem(title: "SETTINGS".localized, image: UIImage(named: "ic_settings"), tag: 4)
         let forthNavigation = AppNavigationController(rootViewController: settingsViewController)
         
         viewControllers = [firstNavigation, secondNavigation, thirdNavigation, forthNavigation]
@@ -45,12 +45,12 @@ class MainTabBarController: UITabBarController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.tabBar.tintColor = UIColor(named: "ThemeYellow - #E2A12D")
-        self.tabBar.backgroundColor = UIColor(named: "TabBarColor - #FFFFFF")
-        self.tabBar.unselectedItemTintColor = UIColor(named: "TabBarTextColor - #BEBEBE")
+        self.tabBar.tintColor = UIColor(named: "#0961F5")
+        self.tabBar.backgroundColor = UIColor(named: "#FFFFFF")
+        self.tabBar.unselectedItemTintColor = UIColor(named: "#1E1E1E")
         
         let appearance = UITabBarItem.appearance()
-        let tabBarAttributes = [NSAttributedString.Key.font: themeFont(size: 12, fontname: .poppinsRegular)]
+        let tabBarAttributes = [NSAttributedString.Key.font: themeFont(size: 12, fontname: .poppinsSemiBold)]
         appearance.setTitleTextAttributes(tabBarAttributes, for: .normal)
     }
 }

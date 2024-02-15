@@ -4,7 +4,7 @@
 
 import UIKit
 
-class MyCoursesViewController: UIViewController {
+class MyCoursesViewController: BaseImageViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

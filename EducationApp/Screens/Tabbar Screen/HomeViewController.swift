@@ -4,7 +4,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseImageViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

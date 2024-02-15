@@ -8,6 +8,7 @@ import UIKit
 /// setup fonts with diffrent font families and styles.
 enum themeFonts : String {
     case poppinsRegular = "Poppins-Regular"
+    case poppinsSemiBold = "Poppins-SemiBold"
     case poppinsBold = "Poppins-Bold"
 }
 

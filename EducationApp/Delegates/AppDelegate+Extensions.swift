@@ -18,16 +18,14 @@ extension AppDelegate {
         window?.makeKeyAndVisible()
     }
     
-    /*/// This function will root to HomeViewController and redirect there.
+    /// This function will root to HomeViewController and redirect there.
     func setUpHome() {
         let mainTabBarController = MainTabBarController.init(nibName: "MainTabBarController", bundle: nil)
-        let menuViewController = SideMenuViewController.init(nibName: "SideMenuViewController", bundle: nil)
-        let sideMenuController = SideMenuController(contentViewController: mainTabBarController, menuViewController: menuViewController)
-        window?.rootViewController = sideMenuController
+        window?.rootViewController = mainTabBarController
         window?.makeKeyAndVisible()
     }
     
-    /// This function will root to WelcomeVideoDescriptionViewController and redirect there.
+    /*/// This function will root to WelcomeVideoDescriptionViewController and redirect there.
     func setUpWelcome() {
         let welcomeVideoDescriptionViewController = WelcomeVideoDescriptionViewController.init(nibName: "WelcomeVideoDescriptionViewController", bundle: nil)
         window?.rootViewController = AppNavigationController(rootViewController: welcomeVideoDescriptionViewController)

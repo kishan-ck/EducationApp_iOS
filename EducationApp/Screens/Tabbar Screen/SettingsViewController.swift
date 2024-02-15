@@ -5,7 +5,7 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: BaseImageViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
