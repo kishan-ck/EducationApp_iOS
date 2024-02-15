@@ -177,6 +177,7 @@ code_sign_if_enabled() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/EasyTipView/EasyTipView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework"
@@ -188,6 +189,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/EasyTipView/EasyTipView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework"

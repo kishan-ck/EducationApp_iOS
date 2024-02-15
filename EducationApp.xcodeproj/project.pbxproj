@@ -107,6 +107,17 @@
 		88259EE72B774F68008B1CA9 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88259ED52B774F68008B1CA9 /* Poppins-MediumItalic.ttf */; };
 		88259EE82B774F68008B1CA9 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88259ED62B774F68008B1CA9 /* Poppins-Regular.ttf */; };
 		88259EEA2B7751FA008B1CA9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 88259EEC2B7751FA008B1CA9 /* Localizable.strings */; };
+		88C7A2462B7E02F300F3AFAA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C7A2442B7E02F300F3AFAA /* HomeViewController.swift */; };
+		88C7A2472B7E02F300F3AFAA /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88C7A2452B7E02F300F3AFAA /* HomeViewController.xib */; };
+		88C7A24A2B7E030200F3AFAA /* MyCoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C7A2482B7E030200F3AFAA /* MyCoursesViewController.swift */; };
+		88C7A24B2B7E030200F3AFAA /* MyCoursesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88C7A2492B7E030200F3AFAA /* MyCoursesViewController.xib */; };
+		88C7A24E2B7E032500F3AFAA /* FacultiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C7A24C2B7E032500F3AFAA /* FacultiesViewController.swift */; };
+		88C7A24F2B7E032500F3AFAA /* FacultiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88C7A24D2B7E032500F3AFAA /* FacultiesViewController.xib */; };
+		88C7A2522B7E033000F3AFAA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C7A2502B7E033000F3AFAA /* ProfileViewController.swift */; };
+		88C7A2532B7E033000F3AFAA /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88C7A2512B7E033000F3AFAA /* ProfileViewController.xib */; };
+		88C7A2562B7E03E500F3AFAA /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C7A2552B7E03E500F3AFAA /* MainTabBarController.swift */; };
+		88C7A2592B7E044F00F3AFAA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C7A2572B7E044F00F3AFAA /* SettingsViewController.swift */; };
+		88C7A25A2B7E044F00F3AFAA /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88C7A2582B7E044F00F3AFAA /* SettingsViewController.xib */; };
 		91FB60438E757CE92C16162D /* Pods_EducationApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A4E13DC99F36348412C136 /* Pods_EducationApp.framework */; };
 		BE647C074EC6C6C36949A658 /* Pods_EducationApp_EducationAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18215CD1A93E49825DB5D19F /* Pods_EducationApp_EducationAppUITests.framework */; };
 /* End PBXBuildFile section */
@@ -240,6 +251,17 @@
 		88259EEB2B7751FA008B1CA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		88259EED2B7751FC008B1CA9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		88259EEF2B775208008B1CA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		88C7A2442B7E02F300F3AFAA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		88C7A2452B7E02F300F3AFAA /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		88C7A2482B7E030200F3AFAA /* MyCoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCoursesViewController.swift; sourceTree = "<group>"; };
+		88C7A2492B7E030200F3AFAA /* MyCoursesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCoursesViewController.xib; sourceTree = "<group>"; };
+		88C7A24C2B7E032500F3AFAA /* FacultiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultiesViewController.swift; sourceTree = "<group>"; };
+		88C7A24D2B7E032500F3AFAA /* FacultiesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FacultiesViewController.xib; sourceTree = "<group>"; };
+		88C7A2502B7E033000F3AFAA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		88C7A2512B7E033000F3AFAA /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		88C7A2552B7E03E500F3AFAA /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		88C7A2572B7E044F00F3AFAA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		88C7A2582B7E044F00F3AFAA /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		A0AFCE4BB6CA02F2C3F217DE /* Pods-EducationApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationApp.release.xcconfig"; path = "Target Support Files/Pods-EducationApp/Pods-EducationApp.release.xcconfig"; sourceTree = "<group>"; };
 		C3046BBB64C024B37A2FF712 /* Pods-EducationApp-EducationAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationApp-EducationAppUITests.release.xcconfig"; path = "Target Support Files/Pods-EducationApp-EducationAppUITests/Pods-EducationApp-EducationAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C4A4E13DC99F36348412C136 /* Pods_EducationApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EducationApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -345,9 +367,12 @@
 		88259DF12B773B37008B1CA9 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				88C7A2432B7E02D000F3AFAA /* Tabbar Screen */,
 				88259EC02B774A59008B1CA9 /* Authentication Screen */,
 				88259EA82B7741F3008B1CA9 /* Other Common Screen */,
 				88259EA12B77419B008B1CA9 /* No Internet Connection */,
+				88C7A2502B7E033000F3AFAA /* ProfileViewController.swift */,
+				88C7A2512B7E033000F3AFAA /* ProfileViewController.xib */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -486,6 +511,7 @@
 		88259DFC2B773BA6008B1CA9 /* Library+Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				88C7A2542B7E03E500F3AFAA /* Custom Tabbar */,
 				88259EB02B774945008B1CA9 /* Toast */,
 				88259EAD2B7748F1008B1CA9 /* Rechability */,
 				88259EBE2B7749E2008B1CA9 /* AlignedCollectionViewFlowLayout.swift */,
@@ -601,6 +627,29 @@
 				88259EC12B774A6C008B1CA9 /* LoginViewController.xib */,
 			);
 			path = "Authentication Screen";
+			sourceTree = "<group>";
+		};
+		88C7A2432B7E02D000F3AFAA /* Tabbar Screen */ = {
+			isa = PBXGroup;
+			children = (
+				88C7A2442B7E02F300F3AFAA /* HomeViewController.swift */,
+				88C7A2452B7E02F300F3AFAA /* HomeViewController.xib */,
+				88C7A2482B7E030200F3AFAA /* MyCoursesViewController.swift */,
+				88C7A2492B7E030200F3AFAA /* MyCoursesViewController.xib */,
+				88C7A24C2B7E032500F3AFAA /* FacultiesViewController.swift */,
+				88C7A24D2B7E032500F3AFAA /* FacultiesViewController.xib */,
+				88C7A2572B7E044F00F3AFAA /* SettingsViewController.swift */,
+				88C7A2582B7E044F00F3AFAA /* SettingsViewController.xib */,
+			);
+			path = "Tabbar Screen";
+			sourceTree = "<group>";
+		};
+		88C7A2542B7E03E500F3AFAA /* Custom Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				88C7A2552B7E03E500F3AFAA /* MainTabBarController.swift */,
+			);
+			path = "Custom Tabbar";
 			sourceTree = "<group>";
 		};
 		992EAAAD41F3D3F11D543DE9 /* Pods */ = {
@@ -741,15 +790,20 @@
 				88259EE52B774F68008B1CA9 /* Poppins-ExtraLight.ttf in Resources */,
 				88259EDB2B774F68008B1CA9 /* Poppins-ExtraBoldItalic.ttf in Resources */,
 				88259EEA2B7751FA008B1CA9 /* Localizable.strings in Resources */,
+				88C7A24F2B7E032500F3AFAA /* FacultiesViewController.xib in Resources */,
 				88259EE82B774F68008B1CA9 /* Poppins-Regular.ttf in Resources */,
 				88259EAC2B7741F3008B1CA9 /* NoDataFoundView.xib in Resources */,
+				88C7A2532B7E033000F3AFAA /* ProfileViewController.xib in Resources */,
+				88C7A2472B7E02F300F3AFAA /* HomeViewController.xib in Resources */,
 				88259DCD2B7738C6008B1CA9 /* LaunchScreen.storyboard in Resources */,
 				88259DCA2B7738C6008B1CA9 /* Assets.xcassets in Resources */,
 				88259ED72B774F68008B1CA9 /* Poppins-ThinItalic.ttf in Resources */,
 				88259EE62B774F68008B1CA9 /* Poppins-Italic.ttf in Resources */,
 				88259EDD2B774F68008B1CA9 /* Poppins-ExtraLightItalic.ttf in Resources */,
+				88C7A25A2B7E044F00F3AFAA /* SettingsViewController.xib in Resources */,
 				88259EE42B774F68008B1CA9 /* Poppins-ExtraBold.ttf in Resources */,
 				88259EA42B77419B008B1CA9 /* NoInternetConnectionViewController.xib in Resources */,
+				88C7A24B2B7E030200F3AFAA /* MyCoursesViewController.xib in Resources */,
 				88259E262B773C5B008B1CA9 /* Education-Config.plist in Resources */,
 				88259EDE2B774F68008B1CA9 /* Poppins-BoldItalic.ttf in Resources */,
 			);
@@ -880,6 +934,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				88259E9E2B77413F008B1CA9 /* UITextField+Additions.swift in Sources */,
+				88C7A24A2B7E030200F3AFAA /* MyCoursesViewController.swift in Sources */,
+				88C7A2562B7E03E500F3AFAA /* MainTabBarController.swift in Sources */,
 				88259EA52B77419B008B1CA9 /* NoInternetConnectionViewController.swift in Sources */,
 				88259E832B774127008B1CA9 /* Dictionary+Extension.swift in Sources */,
 				88259E782B774127008B1CA9 /* Float+Extensions.swift in Sources */,
@@ -912,6 +968,7 @@
 				88259E4A2B7740FF008B1CA9 /* ImagePickerService.swift in Sources */,
 				88259E3E2B7740D3008B1CA9 /* ViewControllerEnum.swift in Sources */,
 				88259E242B773C15008B1CA9 /* APIClient.swift in Sources */,
+				88C7A2522B7E033000F3AFAA /* ProfileViewController.swift in Sources */,
 				88259E9F2B77413F008B1CA9 /* UIVisualEffectView+Additions.swift in Sources */,
 				88259E812B774127008B1CA9 /* UIStackView+Extension.swift in Sources */,
 				88259E7E2B774127008B1CA9 /* NSObject+Extension.swift in Sources */,
@@ -919,6 +976,7 @@
 				88259E872B774127008B1CA9 /* Gesture+Extension.swift in Sources */,
 				88259E7F2B774127008B1CA9 /* Array+Extension.swift in Sources */,
 				88259E9A2B77413F008B1CA9 /* UIView+Additions.swift in Sources */,
+				88C7A2592B7E044F00F3AFAA /* SettingsViewController.swift in Sources */,
 				88259E182B773C15008B1CA9 /* APIClient+Authentication.swift in Sources */,
 				88259E732B774127008B1CA9 /* Int+Extension.swift in Sources */,
 				88259E3B2B7740D3008B1CA9 /* CommonFunctions.swift in Sources */,
@@ -933,11 +991,13 @@
 				88259E132B773C15008B1CA9 /* Configuration.swift in Sources */,
 				88259E852B774127008B1CA9 /* UILabel+Extensions.swift in Sources */,
 				88259E752B774127008B1CA9 /* UITextView+Extension.swift in Sources */,
+				88C7A24E2B7E032500F3AFAA /* FacultiesViewController.swift in Sources */,
 				88259E1F2B773C15008B1CA9 /* APIError.swift in Sources */,
 				88259E7B2B774127008B1CA9 /* UICollectionView+Extension.swift in Sources */,
 				88259E742B774127008B1CA9 /* Double+Extension.swift in Sources */,
 				88259E6C2B774127008B1CA9 /* String+Extensions.swift in Sources */,
 				88259EBD2B7749B7008B1CA9 /* DismissibleEasyTipView.swift in Sources */,
+				88C7A2462B7E02F300F3AFAA /* HomeViewController.swift in Sources */,
 				88259E862B774127008B1CA9 /* WKWebView+Extension.swift in Sources */,
 				88259E892B774127008B1CA9 /* UITableView+Extension.swift in Sources */,
 				88259E3C2B7740D3008B1CA9 /* CGImage+FaceCrop.swift in Sources */,
@@ -1136,7 +1196,7 @@
 				DEVELOPMENT_TEAM = 95L29MZABL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "EducationApp/Configurations+Files/Education-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Education App";
+				INFOPLIST_KEY_CFBundleDisplayName = LearnWithCK;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -1167,7 +1227,7 @@
 				DEVELOPMENT_TEAM = 95L29MZABL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "EducationApp/Configurations+Files/Education-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Education App";
+				INFOPLIST_KEY_CFBundleDisplayName = LearnWithCK;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

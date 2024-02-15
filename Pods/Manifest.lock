@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (5.4.1)
   - EasyTipView (2.1.0)
+  - ESTabBarController-swift (2.8.0)
   - IQKeyboardManagerSwift (6.5.11)
   - JGProgressHUD (2.2)
   - OTPFieldView (1.0.1)
@@ -14,6 +15,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (= 5.4.1)
   - EasyTipView (~> 2.1)
+  - ESTabBarController-swift
   - IQKeyboardManagerSwift
   - JGProgressHUD
   - OTPFieldView
@@ -26,6 +28,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - EasyTipView
+    - ESTabBarController-swift
     - IQKeyboardManagerSwift
     - JGProgressHUD
     - OTPFieldView
@@ -37,6 +40,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   EasyTipView: a92b6edc377b81c5ac18e9fd35d5ee78e9409488
+  ESTabBarController-swift: 05593a6ad64700b03c0eb60ff625916370aa4136
   IQKeyboardManagerSwift: c7955c0bdbf7b2eb29bb7daaa44e3d90f55a9a85
   JGProgressHUD: d83d7a981b85d11205e19ff8ad5bb9c40571c847
   OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
@@ -45,6 +49,6 @@ SPEC CHECKSUMS:
   SKCountryPicker: f4882c36fa432d6450099a3e07da60eceda0a8f0
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 067e46b54042c6f691c19e631cbcd5357c218a69
+PODFILE CHECKSUM: ee3d0d53d7405aaca7fce20801b9b1e25db725cf
 
 COCOAPODS: 1.13.0

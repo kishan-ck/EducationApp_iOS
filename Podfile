@@ -14,6 +14,7 @@ target 'EducationApp' do
   pod 'SideMenuSwift'
   pod 'SKCountryPicker'
   pod 'EasyTipView', '~> 2.1'
+  pod 'ESTabBarController-swift'
 
   # Pods for EducationApp
 

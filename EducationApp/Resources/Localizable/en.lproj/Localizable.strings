@@ -29,3 +29,9 @@
 "DELETE_ACCOUNT_ALERT" = "Are you sure you want to delete your account?";
 "DELETE_ACCOUNT_DESCRIPTION" = "You are about to delete your account.\n\nDeleting your account will delete your access and all your information on this app.";
 "CALL_NOT_SUPPORTED" = "The call functionality is not supported on your device.";
+
+//MARK: - Tabbar Strings
+"HOME" = "Home";
+"MY_COURSES" = "My Courses";
+"FACULTIES" = "Faculties";
+"SETTINGS" = "Settings";

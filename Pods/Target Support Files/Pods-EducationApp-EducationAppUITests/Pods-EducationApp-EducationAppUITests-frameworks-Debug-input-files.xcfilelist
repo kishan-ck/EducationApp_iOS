@@ -1,5 +1,6 @@
 ${PODS_ROOT}/Target Support Files/Pods-EducationApp-EducationAppUITests/Pods-EducationApp-EducationAppUITests-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework
 ${BUILT_PRODUCTS_DIR}/EasyTipView/EasyTipView.framework
 ${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework
 ${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework
