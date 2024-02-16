@@ -9,9 +9,10 @@ import SwiftyJSON
 class LoginSuccessPopUpViewController: BaseViewController {
     
     //MARK: - IBOutlet Declaration
+    @IBOutlet weak var backView: UIView?
     
     //MARK: - Variable Declaration
-
+    var completion: stringCompletionHandler?
     
     //MARK: - Class Method
     
@@ -39,7 +40,7 @@ extension LoginSuccessPopUpViewController {
     
     /// setupUI() function will be used for the setup ui when view contoller will load.
     func setUpUI() {
-        
+        backView?.bottomRoundView()
     }
 }
 
@@ -51,5 +52,10 @@ extension LoginSuccessPopUpViewController {
     /// - Parameter sender: passing sender object.
     /// - Description : It is used to redirect to home screen.
     @IBAction func doneButtonAction(_ sender: Any) {
+        guard let completionBlock = self.completion else {
+            return
+        }
+        completionBlock("test")
+        dismiss(animated: false, completion: nil)
     }
 }

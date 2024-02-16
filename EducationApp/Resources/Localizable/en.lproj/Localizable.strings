@@ -17,6 +17,7 @@
 "OK" = "Ok";
 "YES" = "Yes";
 "NO" = "No";
+"DONE" = "Done";
 
 //MARK: - Other Validations
 "PLEASE_TRY_AGAIN" = "Please try again.";
@@ -29,6 +30,8 @@
 "DELETE_ACCOUNT_ALERT" = "Are you sure you want to delete your account?";
 "DELETE_ACCOUNT_DESCRIPTION" = "You are about to delete your account.\n\nDeleting your account will delete your access and all your information on this app.";
 "CALL_NOT_SUPPORTED" = "The call functionality is not supported on your device.";
+"CONGRATULATIONS" = "Congratulations";
+"SUCCESS_MESSAGE" = "Your Account is Ready to Use. You will be\nredirected to the Home Page.";
 
 //MARK: - Welcome Screen Strings
 "ONLINE_LEARNING" = "Online Learning";
@@ -78,7 +81,7 @@
 "HOME" = "Home";
 "COURSES" = "Courses";
 "FACULTIES" = "Faculties";
-"SETTING" = "Setting";
+"SETTINGS" = "Settings";
 
 //MARK: - Settings Screen Strings
 "EMAIL_US" = "Email us";

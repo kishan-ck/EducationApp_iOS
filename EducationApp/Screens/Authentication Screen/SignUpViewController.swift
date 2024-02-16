@@ -137,6 +137,12 @@ extension SignUpViewController {
     /// - Parameter sender: passing sender object.
     /// - Description : It is used to Sign Up to user's account by using dedicated email address and password.
     @IBAction func signUpButtonAction(_ sender: Any) {
+        let viewController = LoginSuccessPopUpViewController(nibName: "LoginSuccessPopUpViewController", bundle: nil)
+        viewController.completion = { dict in
+            KAPPDELEGATE.setUpHome()
+        }
+        viewController.modalPresentationStyle = .custom
+        present(viewController, animated: false, completion: nil)
     }
     
     /// signInButton UIButton click event.

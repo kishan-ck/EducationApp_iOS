@@ -23,7 +23,7 @@ class MainTabBarController: UITabBarController {
         let firstNavigation = AppNavigationController(rootViewController: homeViewController)
         
         let myCoursesViewController = MyCoursesViewController()
-        myCoursesViewController.tabBarItem = UITabBarItem(title: "MY_COURSES".localized, image: UIImage(named: "ic_my_courses"), tag: 2)
+        myCoursesViewController.tabBarItem = UITabBarItem(title: "COURSES".localized, image: UIImage(named: "ic_my_courses"), tag: 2)
         let secondNavigation = AppNavigationController(rootViewController: myCoursesViewController)
 
         let facultiesViewController = FacultiesViewController()
