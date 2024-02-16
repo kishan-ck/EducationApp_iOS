@@ -4,7 +4,6 @@
 
 import UIKit
 import JGProgressHUD
-import SKCountryPicker
 
 //MARK: - Common Constant
 

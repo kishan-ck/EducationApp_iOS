@@ -5,20 +5,6 @@
 import UIKit
 import Alamofire
 
-/// BaseViewController is a common Background image used in every UIViewCotroller.
-class BaseImageViewController: BaseViewController {
-    
-    //MARK: - Class Method
-    
-    /// View did load
-    ///
-    /// - Purpose : Called when view did load
-    /// - Description : To set values after view did load
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-}
-
 /// BaseViewController is a common Tab bar and Modification used in every UIViewCotroller.
 class BaseViewController: UIViewController {
     
@@ -59,42 +45,22 @@ class BaseViewController: UIViewController {
         // set up back button
         if isShowBackButton {
             let backButton = UIButton()
-            
-            switch self {
-            case is LoginViewController:
-                backButton.setImage(UIImage(named: "ic_darkback")?.imageFlippedForRightToLeftLayoutDirection(), for: .normal)
-                break
-            default:
-                backButton.setImage(UIImage(named: "ic_back")?.imageFlippedForRightToLeftLayoutDirection(), for: .normal)
-                break
-            }
-            
-    
-            backButton.addTarget(self, action: #selector(self.backButtonAction(sender:)), for: .touchUpInside)
+            backButton.setImage(UIImage(named: "ic_back")?.imageFlippedForRightToLeftLayoutDirection(), for: .normal)
+            backButton.addTarget(self, action: #selector(backButtonAction), for: .touchUpInside)
+            backButton.tintColor = UIColor(named: "1E1E1E")
             self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
         }
         
+        // set up Title
+        self.title = showTitle
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
-            self.navigationItem.title = showTitle
-            self.view.backgroundColor = UIColor(named: "#F2F2F2 - #000D1C")
-            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: themeFont(size: 20, fontname: .poppinsBold), NSAttributedString.Key.foregroundColor: UIColor(named: "TextColor - #252A36") as Any]
+            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-SemiBold", size: 16)!, NSAttributedString.Key.foregroundColor: UIColor(named: "1E1E1E") as Any]
         }
     }
     
-    /*/// Click event for back button
+    /// Click event for back button
     @objc func backButtonAction() {
-        self.dismiss(animated: false, completion: nil)
-        if let stack = self.navigationController?.viewControllers, stack.count > 1 {
-            self.navigationController?.popViewController(animated: true)
-        }
-    }*/
-    
-    /// To used for back button event.
-    ///
-    /// - Parameter sender: passing sender object.
-    @IBAction func backButtonAction(sender : UIButton){
-        self.dismiss(animated: false, completion: nil)
-        if let stack = self.navigationController?.viewControllers, stack.count > 1 {
+        if let stack = self.navigationController?.viewControllers , stack.count > 1{
             self.navigationController?.popViewController(animated: true)
         }
     }
@@ -147,9 +113,6 @@ class BaseViewController: UIViewController {
     ///
     /// - Parameter collectionViewObject: passing collection view object
     func setFlowLayoutToCollectionView(collectionViewObject : UICollectionView){
-        //let layout = TagFlowLayout()
-        //layout.estimatedItemSize = CGSize(width: 140, height: 40)
-        //collectionViewObject.collectionViewLayout = layout
         let layout = AlignedCollectionViewFlowLayout(horizontalAlignment: .left, verticalAlignment: .center)
         layout.minimumInteritemSpacing = widthPer(per: 2.32)
         layout.minimumLineSpacing = widthPer(per: 2.32)

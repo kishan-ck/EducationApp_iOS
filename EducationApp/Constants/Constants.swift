@@ -4,8 +4,6 @@
 
 import UIKit
 import JGProgressHUD
-import SKCountryPicker
-import EasyTipView
 
 //MARK: - Common Constant
 
@@ -30,17 +28,8 @@ var maxLengths = [UITextField: Int]()
 /// To used for show progress hud view
 var hud = JGProgressHUD(style: .dark)
 
-/// To used for google map api key
-let googleMapAPIKey = "AIzaSyAgZUH7Cjc4CvT0qpn6xp4wcbrXR7SzFIk"
-
 /// To used for user default standard constant
 let USER_DEFAULTS_STANDARD = UserDefaults.standard
-
-/// username key for getUsername()
-let NS_USERNAME  = "NS_USERNAME"
-
-/// password key for getUsername()
-let NS_PASSWORD  = "NS_PASSWORD"
 
 //MARK: - Completion Handler
 
@@ -71,20 +60,7 @@ typealias ScrollViewClosure = (UIScrollView) -> ()
 /// To used for action block key
 var ActionBlockKey: UInt8 = 0
 
-/// To used for common currency sign symbol
-var currencySign = "$"
-
-/// To used for country list DataSource for display list of country
-public var manager : CountryListDataSource = CountryManager.shared
-
-/// Here :-  0 = facebook, 1 = Google, 2 = apple, 3 = linkedin
-var selectSocialLink : Int?
-
 /// Dictionary that stores all fonts to be used in the application.
 var allFont: [String: [String: String]] = [:]
 
-/// EasyTipView Preference
-var preferences = EasyTipView.Preferences()
-
-/// To used for ios app url
-let IOS_APP_URL = "https://apps.apple.com/us/app/peeq/id6458190160"
+var showPassword : Bool = false

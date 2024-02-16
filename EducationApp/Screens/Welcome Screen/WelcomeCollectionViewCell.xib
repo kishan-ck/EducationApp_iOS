@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="WelcomeCollectionViewCell" customModule="EducationApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="290" height="382"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="290" height="382"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hqP-Gl-9oA">
+                        <rect key="frame" x="15" y="0.0" width="260" height="382"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eXK-mo-zi9">
+                                <rect key="frame" x="0.0" y="0.0" width="260" height="309"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YP7-PQ-0dO">
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="215"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="215" id="xKD-fO-xt6">
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                                        <real key="value" value="22.440000000000001"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </constraint>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REQUEST_RIDE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fv7-07-GEC" customClass="UILabelDeviceClass" customModule="EducationApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="240" width="260" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="bDX-gN-bR5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
+                                        <color key="textColor" name="#1E1E1E"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                <real key="value" value="18"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="style" value="semiBold"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="REQUEST_RIDE_DESCRIPTION" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="8P9-ug-Rph" customClass="UILabelDeviceClass" customModule="EducationApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="269" width="260" height="40"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                        <color key="textColor" name="#545454"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                <real key="value" value="14"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="style" value="regular"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Fv7-07-GEC" firstAttribute="leading" secondItem="eXK-mo-zi9" secondAttribute="leading" id="8cB-2O-8C6"/>
+                                    <constraint firstItem="8P9-ug-Rph" firstAttribute="leading" secondItem="eXK-mo-zi9" secondAttribute="leading" id="MME-9N-nJf"/>
+                                    <constraint firstItem="YP7-PQ-0dO" firstAttribute="top" secondItem="eXK-mo-zi9" secondAttribute="top" id="Srw-We-jT2"/>
+                                    <constraint firstItem="8P9-ug-Rph" firstAttribute="top" secondItem="Fv7-07-GEC" secondAttribute="bottom" constant="5" id="T5b-Ve-zhr">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                                <real key="value" value="0.52000000000000002"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="trailing" secondItem="YP7-PQ-0dO" secondAttribute="trailing" id="TFX-Xg-zak"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fv7-07-GEC" secondAttribute="trailing" id="VY3-qb-1ea"/>
+                                    <constraint firstItem="Fv7-07-GEC" firstAttribute="top" secondItem="YP7-PQ-0dO" secondAttribute="bottom" constant="25" id="aKv-Ew-lja">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                                <real key="value" value="2.6000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="trailing" secondItem="8P9-ug-Rph" secondAttribute="trailing" id="h6j-Rq-mOJ"/>
+                                    <constraint firstItem="YP7-PQ-0dO" firstAttribute="leading" secondItem="eXK-mo-zi9" secondAttribute="leading" id="uGM-EW-VSI"/>
+                                    <constraint firstAttribute="bottom" secondItem="8P9-ug-Rph" secondAttribute="bottom" id="z2C-NL-0BV"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m86-bx-xan">
+                                <rect key="frame" x="0.0" y="309" width="260" height="73"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46K-0f-wtW">
+                                        <rect key="frame" x="0.0" y="25" width="260" height="48"/>
+                                        <color key="backgroundColor" name="#0961F5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="62u-tj-FHu">
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                                        <real key="value" value="5.0099999999999998"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </constraint>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="GET_STARTED">
+                                            <color key="titleColor" name="#FFFFFF"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="GET_STARTED"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="style" value="regular"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="46K-0f-wtW" secondAttribute="trailing" id="V9f-1S-t5V"/>
+                                    <constraint firstAttribute="bottom" secondItem="46K-0f-wtW" secondAttribute="bottom" id="Yax-7u-JtA"/>
+                                    <constraint firstItem="46K-0f-wtW" firstAttribute="top" secondItem="m86-bx-xan" secondAttribute="top" constant="25" id="hJh-8e-10N">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                                <real key="value" value="2.6000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstItem="46K-0f-wtW" firstAttribute="leading" secondItem="m86-bx-xan" secondAttribute="leading" id="huU-6z-rZt"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="hqP-Gl-9oA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="NpX-ey-lNR">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="widthPercentage">
+                            <real key="value" value="3.48"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </constraint>
+                <constraint firstItem="hqP-Gl-9oA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="haL-MM-Ha6"/>
+                <constraint firstAttribute="trailing" secondItem="hqP-Gl-9oA" secondAttribute="trailing" constant="15" id="pKH-Lc-tG2">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="widthPercentage">
+                            <real key="value" value="3.48"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </constraint>
+                <constraint firstAttribute="bottom" secondItem="hqP-Gl-9oA" secondAttribute="bottom" id="xj0-oN-BaK"/>
+            </constraints>
+            <connections>
+                <outlet property="buttonBackgroundView" destination="m86-bx-xan" id="MNL-dj-ocx"/>
+                <outlet property="descriptionLabel" destination="8P9-ug-Rph" id="Glo-wk-LNl"/>
+                <outlet property="getStartedButton" destination="46K-0f-wtW" id="d1I-WP-q4D"/>
+                <outlet property="titleLabel" destination="Fv7-07-GEC" id="qvb-lC-XuU"/>
+                <outlet property="topImageView" destination="YP7-PQ-0dO" id="vkU-FE-2cJ"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="76"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="#0961F5">
+            <color red="0.035000000149011612" green="0.37999999523162842" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="#1E1E1E">
+            <color red="0.11800000071525574" green="0.11800000071525574" blue="0.11800000071525574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="#545454">
+            <color red="0.32899999618530273" green="0.32899999618530273" blue="0.32899999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="#FFFFFF">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

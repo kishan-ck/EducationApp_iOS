@@ -6,11 +6,24 @@ import UIKit
 import SwiftyJSON
 
 /// LoginViewController is used to login to user's account by using dedicated email address and password.
-class LoginViewController: BaseImageViewController {
+class LoginViewController: UIViewController {
     
     //MARK: - IBOutlet Declaration
     
+    /// passwordTextField is a UITextField in which user can enter password, which he entered which registering the account.
+    @IBOutlet weak var passwordTextField: UITextField?
+    
+    /// emailTextField is a UITextField in which user can enter his email address.
+    @IBOutlet weak var emailTextField: UITextField?
+    
+    /// showPasswordImageView UIImageView to display or hide passowrd.
+    @IBOutlet weak var showPasswordImageView: UIImageView?
+    
+    /// signUpLabel to display sign up text.
+    @IBOutlet weak var signUpLabel: UILabel?
+    
     //MARK: - Variable Declaration
+
     
     //MARK: - Class Method
     
@@ -20,15 +33,11 @@ class LoginViewController: BaseImageViewController {
     /// - Description : To set values after view did load
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         #if DEBUG
-            //emailTextField?.text = "denialsmith@gmail.com"
-            //passwordTextField?.text = "Denialsmith@123"
+            emailTextField?.text = "dhruv.coderkube@gmail.com"
+            passwordTextField?.text = "Dhruv@123"
         #else
-
         #endif
-        
-        print("Login screen load.")
     }
     
     /// View will Appear
@@ -38,5 +47,56 @@ class LoginViewController: BaseImageViewController {
     /// - Description : To navigation bar after view will appear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setUpUI()
+    }
+}
+
+//MARK: - UI Functions
+extension LoginViewController {
+    
+    /// setupUI() function will be used for the setup ui when view contoller will load.
+    func setUpUI() {
+        self.navigationController?.navigationBar.isHidden = true
+        
+        let attributedString = NSMutableAttributedString(string: "DO_NOT_HAVE_ACCOUNT".localized + "SIGN_UP".localized)
+        attributedString.setColorForText("SIGN_UP".localized, with: UIColor(named: "#0961F5")!)
+        signUpLabel?.attributedText = attributedString
+    }
+}
+
+//MARK: - IBAction Method
+extension LoginViewController {
+    
+    /// loginButton UIButton click event.
+    ///
+    /// - Parameter sender: passing sender object.
+    /// - Description : It is used to login to user's account by using dedicated email address and password.
+    @IBAction func signInButtonAction(_ sender: Any) {
+    }
+    
+    /// forgotPasswordButton UIButton click event.
+    ///
+    /// - Parameter sender: passing sender object.
+    /// - Description : It will redirect user to ForgotPasswordViewController if user forgot his account password.
+    @IBAction func forgotPasswordButtonAction(_ sender: Any) {
+        let viewControllr = ForgotPasswordViewController(nibName: "ForgotPasswordViewController", bundle: nil)
+        navigationController?.pushViewController(viewControllr, animated: true)
+    }
+    
+    /// signUpButton UIButton click event.
+    ///
+    /// - Parameter sender: passing sender object.
+    /// - Description : It will redirect user to SignUpViewController if user does not registered yet.
+    @IBAction func signUpButtonAction(_ sender: Any) {
+        let viewControllr = SignUpViewController(nibName: "SignUpViewController", bundle: nil)
+        navigationController?.pushViewController(viewControllr, animated: true)
+    }
+    
+    /// showPasswordButton UIButton click event.
+    ///
+    /// - Parameter sender: passing sender object.
+    /// - Description : It will be used for show and hide passoword.
+    @IBAction func showPasswordButtonAction(_ sender: Any) {
+        hideShowPassword(image: showPasswordImageView!, textField: passwordTextField!)
     }
 }

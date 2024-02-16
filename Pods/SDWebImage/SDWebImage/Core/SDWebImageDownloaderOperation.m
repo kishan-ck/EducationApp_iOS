@@ -601,8 +601,7 @@ didReceiveResponse:(NSURLResponse *)response
                             CGSize imageSize = image.size;
                             if (imageSize.width == 0 || imageSize.height == 0) {
                                 NSString *description = image == nil ? @"Downloaded image decode failed" : @"Downloaded image has 0 pixels";
-                                NSError *error = [NSError errorWithDomain:SDWebImageErrorDomain code:SDWebImageErrorBadImageData userInfo:@{NSLocalizedDescriptionKey : description}];
-                                [self callCompletionBlockWithToken:token image:nil imageData:nil error:error finished:YES];
+                                [self callCompletionBlocksWithError:[NSError errorWithDomain:SDWebImageErrorDomain code:SDWebImageErrorBadImageData userInfo:@{NSLocalizedDescriptionKey : description}]];
                             } else {
                                 [self callCompletionBlockWithToken:token image:image imageData:imageData error:nil finished:YES];
                             }

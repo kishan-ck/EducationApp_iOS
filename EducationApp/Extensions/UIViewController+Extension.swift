@@ -4,7 +4,6 @@
 
 import Foundation
 import UIKit
-import EasyTipView
 
 //MARK: - UIViewController Setup
 extension UIViewController {
@@ -105,23 +104,6 @@ extension UIViewController {
                 completionHandler()
             }
         })
-    }
-    
-    /// Show Tool Tip Text at Bottom, Top, Left, Right
-    /// - Parameters:
-    ///   - text: Pass Text String
-    ///   - forView: Pass UIView by which tool tip should be displayed.
-    func showToolTip(text : String, forView : UIView) {
-        weak var tipView: DismissibleEasyTipView?
-        if let tipView = tipView {
-            tipView.hide()
-        } else {
-            let text = text
-            
-            let tip = DismissibleEasyTipView(text: text, preferences: preferences)
-            tip.show(on: forView)
-            tipView = tip
-        }
     }
     
     /// To scroll view with pagination for the api

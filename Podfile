@@ -11,9 +11,7 @@ target 'EducationApp' do
   pod 'OTPFieldView'
   pod 'JGProgressHUD'
   pod 'SwiftyJSON'
-  pod 'SideMenuSwift'
-  pod 'SKCountryPicker'
-  pod 'EasyTipView', '~> 2.1'
+  pod 'DropDown'
   pod 'ESTabBarController-swift'
 
   # Pods for EducationApp

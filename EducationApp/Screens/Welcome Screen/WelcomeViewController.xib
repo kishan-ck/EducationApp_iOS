@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeViewController" customModule="EducationApp" customModuleProvider="target">
+            <connections>
+                <outlet property="firstIntroductionView" destination="6yX-2M-kSf" id="ywb-7P-eEP"/>
+                <outlet property="introductionCollectionView" destination="mgA-XZ-5H2" id="t1Z-LR-Lco"/>
+                <outlet property="secondIntroductionView" destination="z1W-cU-BGZ" id="rhn-LI-Pfp"/>
+                <outlet property="thirdIntroductionView" destination="KIt-UW-TU4" id="AmN-Sz-IDj"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P4V-Zj-bUb">
+                    <rect key="frame" x="162" y="830" width="90" height="6"/>
+                    <color key="backgroundColor" name="#EAEAEA"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZIN-1y-ksV">
+                    <rect key="frame" x="162" y="830" width="90" height="6"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6yX-2M-kSf" customClass="DynamicCornerRadiusView" customModule="EducationApp" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="30" height="6"/>
+                            <color key="backgroundColor" name="#0961F5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="DBG-9j-ogz">
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="widthPercentage">
+                                            <real key="value" value="6.9699999999999998"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </constraint>
+                                <constraint firstAttribute="height" constant="6" id="g5i-6y-gDx">
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                            <real key="value" value="0.62"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </constraint>
+                            </constraints>
+                        </view>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z1W-cU-BGZ" customClass="DynamicCornerRadiusView" customModule="EducationApp" customModuleProvider="target">
+                            <rect key="frame" x="30" y="0.0" width="30" height="6"/>
+                            <color key="backgroundColor" name="#0961F5"/>
+                        </view>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KIt-UW-TU4" customClass="DynamicCornerRadiusView" customModule="EducationApp" customModuleProvider="target">
+                            <rect key="frame" x="60" y="0.0" width="30" height="6"/>
+                            <color key="backgroundColor" name="#0961F5"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="6yX-2M-kSf" firstAttribute="leading" secondItem="ZIN-1y-ksV" secondAttribute="leading" id="06u-UC-azH"/>
+                        <constraint firstItem="KIt-UW-TU4" firstAttribute="width" secondItem="6yX-2M-kSf" secondAttribute="width" id="7qq-tu-dms"/>
+                        <constraint firstItem="KIt-UW-TU4" firstAttribute="top" secondItem="ZIN-1y-ksV" secondAttribute="top" id="Enm-mT-hG7"/>
+                        <constraint firstItem="z1W-cU-BGZ" firstAttribute="top" secondItem="ZIN-1y-ksV" secondAttribute="top" id="Jyf-bx-2rG"/>
+                        <constraint firstAttribute="bottom" secondItem="KIt-UW-TU4" secondAttribute="bottom" id="Lq7-Sf-3vc"/>
+                        <constraint firstItem="KIt-UW-TU4" firstAttribute="leading" secondItem="z1W-cU-BGZ" secondAttribute="trailing" id="OOr-os-n2O"/>
+                        <constraint firstAttribute="bottom" secondItem="6yX-2M-kSf" secondAttribute="bottom" id="Rd3-qG-dy8"/>
+                        <constraint firstAttribute="bottom" secondItem="z1W-cU-BGZ" secondAttribute="bottom" id="T8E-MJ-Zne"/>
+                        <constraint firstItem="z1W-cU-BGZ" firstAttribute="leading" secondItem="6yX-2M-kSf" secondAttribute="trailing" id="Xak-mD-eAX"/>
+                        <constraint firstItem="6yX-2M-kSf" firstAttribute="top" secondItem="ZIN-1y-ksV" secondAttribute="top" id="bg7-us-hto"/>
+                        <constraint firstItem="z1W-cU-BGZ" firstAttribute="width" secondItem="6yX-2M-kSf" secondAttribute="width" id="k3D-Zi-ZTl"/>
+                        <constraint firstAttribute="trailing" secondItem="KIt-UW-TU4" secondAttribute="trailing" id="uxq-n3-VcZ"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="mgA-XZ-5H2">
+                    <rect key="frame" x="0.0" y="248" width="414" height="400"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="400" id="Gjq-L8-dZL">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                    <real key="value" value="41.75"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </constraint>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="cEG-iG-sQF">
+                        <size key="itemSize" width="0.0" height="0.0"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ZIN-1y-ksV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="19L-gg-1Fo"/>
+                <constraint firstItem="P4V-Zj-bUb" firstAttribute="bottom" secondItem="ZIN-1y-ksV" secondAttribute="bottom" id="4Fo-Ao-NZb"/>
+                <constraint firstItem="mgA-XZ-5H2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="61t-YV-eP6"/>
+                <constraint firstItem="P4V-Zj-bUb" firstAttribute="top" secondItem="ZIN-1y-ksV" secondAttribute="top" id="6qO-3L-jZV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mgA-XZ-5H2" secondAttribute="trailing" id="VXe-Gz-TJ6"/>
+                <constraint firstItem="mgA-XZ-5H2" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="qDK-zj-gfw"/>
+                <constraint firstItem="P4V-Zj-bUb" firstAttribute="trailing" secondItem="ZIN-1y-ksV" secondAttribute="trailing" id="snS-NS-FEG"/>
+                <constraint firstItem="P4V-Zj-bUb" firstAttribute="leading" secondItem="ZIN-1y-ksV" secondAttribute="leading" id="wrY-SR-fmF"/>
+                <constraint firstAttribute="bottom" secondItem="ZIN-1y-ksV" secondAttribute="bottom" constant="60" id="xWI-ad-B8D">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                            <real key="value" value="6.2599999999999998"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </constraint>
+            </constraints>
+            <point key="canvasLocation" x="139" y="76"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="#0961F5">
+            <color red="0.035000000149011612" green="0.37999999523162842" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="#EAEAEA">
+            <color red="0.9179999828338623" green="0.9179999828338623" blue="0.9179999828338623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

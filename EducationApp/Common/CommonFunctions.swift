@@ -7,7 +7,7 @@ import Foundation
 import Alamofire
 import AVKit
 import AVFoundation
-import EasyTipView
+import DropDown
 
 /// Set width in percentage according to screen width.
 /// - Parameter per: 20
@@ -216,4 +216,53 @@ func convertDateFormatter(fromConvertDateFormatter: String, toConvertDateFormatt
     } else {
         return dateString
     }
+}
+
+/// hideShowPassword() is used to hide or show password.
+/// - Parameters:
+///   - image: UIImageView
+///   - textField: UITextField
+func hideShowPassword(image: UIImageView, textField: UITextField) {
+    if showPassword == false{
+        showPassword = true
+        image.image = UIImage(named: "ic_show_password")
+        textField.isSecureTextEntry = false
+    }
+    else {
+        showPassword = false
+        image.image = UIImage(named: "ic_hide_password")
+        textField.isSecureTextEntry = true
+    }
+}
+
+/// commonDropdown() is used to create a common dropdown for listing data.
+/// - Parameters:
+///   - anchorView: The view to which the drop down will displayed onto.
+///   - dataSource: The data source for the drop down.
+///   - selectionAction: The action to execute when the user selects a cell.
+func commonDropdown(anchorView: UIView, dataSource: [String], selectionAction : SelectionClosure?) -> DropDown {
+    
+    let dropDown = DropDown()
+    dropDown.anchorView = anchorView
+    dropDown.bottomOffset = CGPoint(x: 0, y: anchorView.bounds.height + 10)
+    dropDown.dataSource = dataSource
+    dropDown.dismissMode = .onTap
+    dropDown.direction = .any
+    
+    dropDown.selectionAction = { (index, item) in
+        selectionAction!(index, item)
+    }
+    
+    let appearance = DropDown.appearance()
+    appearance.layer.cornerRadius = 15
+    appearance.shadowColor = UIColor(named: "#545454") ?? .black
+    appearance.shadowOpacity = 0.10
+    appearance.animationduration = 0.05
+    appearance.backgroundColor = UIColor(named: "#FFFFFF") ?? .white
+    appearance.textColor = UIColor(named: "#232323")!
+    appearance.borderWidth = 1.5
+    appearance.borderColor = UIColor(named: "#0961F5")!
+    appearance.textFont = UIFont(name: "Poppins-Medium", size: 16)!
+    
+    return dropDown
 }

@@ -84,7 +84,6 @@
 		88259EAC2B7741F3008B1CA9 /* NoDataFoundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88259EAA2B7741F3008B1CA9 /* NoDataFoundView.xib */; };
 		88259EAF2B7748F1008B1CA9 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88259EAE2B7748F1008B1CA9 /* Reachability.swift */; };
 		88259EB22B774945008B1CA9 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88259EB12B774945008B1CA9 /* Toast.swift */; };
-		88259EBD2B7749B7008B1CA9 /* DismissibleEasyTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88259EBC2B7749B7008B1CA9 /* DismissibleEasyTipView.swift */; };
 		88259EBF2B7749E2008B1CA9 /* AlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88259EBE2B7749E2008B1CA9 /* AlignedCollectionViewFlowLayout.swift */; };
 		88259EC32B774A6C008B1CA9 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88259EC12B774A6C008B1CA9 /* LoginViewController.xib */; };
 		88259EC42B774A6C008B1CA9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88259EC22B774A6C008B1CA9 /* LoginViewController.swift */; };
@@ -119,6 +118,17 @@
 		88C7A2592B7E044F00F3AFAA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C7A2572B7E044F00F3AFAA /* SettingsViewController.swift */; };
 		88C7A25A2B7E044F00F3AFAA /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88C7A2582B7E044F00F3AFAA /* SettingsViewController.xib */; };
 		91FB60438E757CE92C16162D /* Pods_EducationApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A4E13DC99F36348412C136 /* Pods_EducationApp.framework */; };
+		AB83ABEC2B7E34A300272DDF /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB83ABEA2B7E34A300272DDF /* WelcomeViewController.swift */; };
+		AB83ABED2B7E34A300272DDF /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB83ABEB2B7E34A300272DDF /* WelcomeViewController.xib */; };
+		AB83ABF42B7E409F00272DDF /* WelcomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB83ABF22B7E409F00272DDF /* WelcomeCollectionViewCell.swift */; };
+		AB83ABF52B7E409F00272DDF /* WelcomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB83ABF32B7E409F00272DDF /* WelcomeCollectionViewCell.xib */; };
+		AB83ABF72B7E417200272DDF /* WelcomeCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB83ABF62B7E417200272DDF /* WelcomeCollectionDataSource.swift */; };
+		ABB11C252B7F47A400090D9B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB11C232B7F47A400090D9B /* SignUpViewController.swift */; };
+		ABB11C262B7F47A400090D9B /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABB11C242B7F47A400090D9B /* SignUpViewController.xib */; };
+		ABB11C292B7F707800090D9B /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB11C272B7F707800090D9B /* ForgotPasswordViewController.swift */; };
+		ABB11C2A2B7F707800090D9B /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABB11C282B7F707800090D9B /* ForgotPasswordViewController.xib */; };
+		ABB11C2D2B7F7F9700090D9B /* LoginSuccessPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB11C2B2B7F7F9700090D9B /* LoginSuccessPopUpViewController.swift */; };
+		ABB11C2E2B7F7F9700090D9B /* LoginSuccessPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABB11C2C2B7F7F9700090D9B /* LoginSuccessPopUpViewController.xib */; };
 		BE647C074EC6C6C36949A658 /* Pods_EducationApp_EducationAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18215CD1A93E49825DB5D19F /* Pods_EducationApp_EducationAppUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -225,7 +235,6 @@
 		88259EAA2B7741F3008B1CA9 /* NoDataFoundView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoDataFoundView.xib; sourceTree = "<group>"; };
 		88259EAE2B7748F1008B1CA9 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		88259EB12B774945008B1CA9 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
-		88259EBC2B7749B7008B1CA9 /* DismissibleEasyTipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissibleEasyTipView.swift; sourceTree = "<group>"; };
 		88259EBE2B7749E2008B1CA9 /* AlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		88259EC12B774A6C008B1CA9 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		88259EC22B774A6C008B1CA9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -263,6 +272,17 @@
 		88C7A2572B7E044F00F3AFAA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		88C7A2582B7E044F00F3AFAA /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		A0AFCE4BB6CA02F2C3F217DE /* Pods-EducationApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationApp.release.xcconfig"; path = "Target Support Files/Pods-EducationApp/Pods-EducationApp.release.xcconfig"; sourceTree = "<group>"; };
+		AB83ABEA2B7E34A300272DDF /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		AB83ABEB2B7E34A300272DDF /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
+		AB83ABF22B7E409F00272DDF /* WelcomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		AB83ABF32B7E409F00272DDF /* WelcomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		AB83ABF62B7E417200272DDF /* WelcomeCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCollectionDataSource.swift; sourceTree = "<group>"; };
+		ABB11C232B7F47A400090D9B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		ABB11C242B7F47A400090D9B /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		ABB11C272B7F707800090D9B /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		ABB11C282B7F707800090D9B /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
+		ABB11C2B2B7F7F9700090D9B /* LoginSuccessPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSuccessPopUpViewController.swift; sourceTree = "<group>"; };
+		ABB11C2C2B7F7F9700090D9B /* LoginSuccessPopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginSuccessPopUpViewController.xib; sourceTree = "<group>"; };
 		C3046BBB64C024B37A2FF712 /* Pods-EducationApp-EducationAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationApp-EducationAppUITests.release.xcconfig"; path = "Target Support Files/Pods-EducationApp-EducationAppUITests/Pods-EducationApp-EducationAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C4A4E13DC99F36348412C136 /* Pods_EducationApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EducationApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D27C720A84A25F53F524262B /* Pods-EducationAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationAppTests.release.xcconfig"; path = "Target Support Files/Pods-EducationAppTests/Pods-EducationAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -331,6 +351,7 @@
 		88259DBF2B7738C4008B1CA9 /* EducationApp */ = {
 			isa = PBXGroup;
 			children = (
+				88259DF22B773B3D008B1CA9 /* Delegates */,
 				88259DFC2B773BA6008B1CA9 /* Library+Frameworks */,
 				88259DFB2B773B9F008B1CA9 /* AppUtilities */,
 				88259DFA2B773B9A008B1CA9 /* Constants */,
@@ -339,7 +360,6 @@
 				88259DF72B773B86008B1CA9 /* Common */,
 				88259DF62B773B7A008B1CA9 /* ApiServices */,
 				88259DF52B773B74008B1CA9 /* Helper */,
-				88259DF22B773B3D008B1CA9 /* Delegates */,
 				88259DF12B773B37008B1CA9 /* Screens */,
 				88259DF42B773B5D008B1CA9 /* Configurations+Files */,
 				88259DCB2B7738C6008B1CA9 /* LaunchScreen.storyboard */,
@@ -367,10 +387,10 @@
 		88259DF12B773B37008B1CA9 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				88C7A2432B7E02D000F3AFAA /* Tabbar Screen */,
-				88259EC02B774A59008B1CA9 /* Authentication Screen */,
 				88259EA82B7741F3008B1CA9 /* Other Common Screen */,
-				88259EA12B77419B008B1CA9 /* No Internet Connection */,
+				88C7A2432B7E02D000F3AFAA /* Tabbar Screen */,
+				AB83ABE92B7E346200272DDF /* Welcome Screen */,
+				88259EC02B774A59008B1CA9 /* Authentication Screen */,
 				88C7A2502B7E033000F3AFAA /* ProfileViewController.swift */,
 				88C7A2512B7E033000F3AFAA /* ProfileViewController.xib */,
 			);
@@ -515,7 +535,6 @@
 				88259EB02B774945008B1CA9 /* Toast */,
 				88259EAD2B7748F1008B1CA9 /* Rechability */,
 				88259EBE2B7749E2008B1CA9 /* AlignedCollectionViewFlowLayout.swift */,
-				88259EBC2B7749B7008B1CA9 /* DismissibleEasyTipView.swift */,
 			);
 			path = "Library+Frameworks";
 			sourceTree = "<group>";
@@ -600,6 +619,7 @@
 			children = (
 				88259EA92B7741F3008B1CA9 /* NoDataFoundView.swift */,
 				88259EAA2B7741F3008B1CA9 /* NoDataFoundView.xib */,
+				88259EA12B77419B008B1CA9 /* No Internet Connection */,
 			);
 			path = "Other Common Screen";
 			sourceTree = "<group>";
@@ -625,6 +645,12 @@
 			children = (
 				88259EC22B774A6C008B1CA9 /* LoginViewController.swift */,
 				88259EC12B774A6C008B1CA9 /* LoginViewController.xib */,
+				ABB11C232B7F47A400090D9B /* SignUpViewController.swift */,
+				ABB11C242B7F47A400090D9B /* SignUpViewController.xib */,
+				ABB11C272B7F707800090D9B /* ForgotPasswordViewController.swift */,
+				ABB11C282B7F707800090D9B /* ForgotPasswordViewController.xib */,
+				ABB11C2B2B7F7F9700090D9B /* LoginSuccessPopUpViewController.swift */,
+				ABB11C2C2B7F7F9700090D9B /* LoginSuccessPopUpViewController.xib */,
 			);
 			path = "Authentication Screen";
 			sourceTree = "<group>";
@@ -663,6 +689,18 @@
 				D27C720A84A25F53F524262B /* Pods-EducationAppTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		AB83ABE92B7E346200272DDF /* Welcome Screen */ = {
+			isa = PBXGroup;
+			children = (
+				AB83ABEA2B7E34A300272DDF /* WelcomeViewController.swift */,
+				AB83ABEB2B7E34A300272DDF /* WelcomeViewController.xib */,
+				AB83ABF22B7E409F00272DDF /* WelcomeCollectionViewCell.swift */,
+				AB83ABF32B7E409F00272DDF /* WelcomeCollectionViewCell.xib */,
+				AB83ABF62B7E417200272DDF /* WelcomeCollectionDataSource.swift */,
+			);
+			path = "Welcome Screen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -779,10 +817,13 @@
 				88259EE12B774F68008B1CA9 /* Poppins-SemiBoldItalic.ttf in Resources */,
 				88259EE02B774F68008B1CA9 /* Poppins-Bold.ttf in Resources */,
 				88259EE32B774F68008B1CA9 /* Poppins-Black.ttf in Resources */,
+				ABB11C2E2B7F7F9700090D9B /* LoginSuccessPopUpViewController.xib in Resources */,
 				88259EC32B774A6C008B1CA9 /* LoginViewController.xib in Resources */,
 				88259EDC2B774F68008B1CA9 /* Poppins-SemiBold.ttf in Resources */,
+				ABB11C262B7F47A400090D9B /* SignUpViewController.xib in Resources */,
 				88259ED82B774F68008B1CA9 /* Poppins-Light.ttf in Resources */,
 				88259ED92B774F68008B1CA9 /* Poppins-Medium.ttf in Resources */,
+				ABB11C2A2B7F707800090D9B /* ForgotPasswordViewController.xib in Resources */,
 				88259E2C2B77404F008B1CA9 /* Colors.xcassets in Resources */,
 				88259EE72B774F68008B1CA9 /* Poppins-MediumItalic.ttf in Resources */,
 				88259EDA2B774F68008B1CA9 /* Poppins-BlackItalic.ttf in Resources */,
@@ -796,6 +837,8 @@
 				88C7A2532B7E033000F3AFAA /* ProfileViewController.xib in Resources */,
 				88C7A2472B7E02F300F3AFAA /* HomeViewController.xib in Resources */,
 				88259DCD2B7738C6008B1CA9 /* LaunchScreen.storyboard in Resources */,
+				AB83ABED2B7E34A300272DDF /* WelcomeViewController.xib in Resources */,
+				AB83ABF52B7E409F00272DDF /* WelcomeCollectionViewCell.xib in Resources */,
 				88259DCA2B7738C6008B1CA9 /* Assets.xcassets in Resources */,
 				88259ED72B774F68008B1CA9 /* Poppins-ThinItalic.ttf in Resources */,
 				88259EE62B774F68008B1CA9 /* Poppins-Italic.ttf in Resources */,
@@ -935,6 +978,7 @@
 			files = (
 				88259E9E2B77413F008B1CA9 /* UITextField+Additions.swift in Sources */,
 				88C7A24A2B7E030200F3AFAA /* MyCoursesViewController.swift in Sources */,
+				AB83ABF72B7E417200272DDF /* WelcomeCollectionDataSource.swift in Sources */,
 				88C7A2562B7E03E500F3AFAA /* MainTabBarController.swift in Sources */,
 				88259EA52B77419B008B1CA9 /* NoInternetConnectionViewController.swift in Sources */,
 				88259E832B774127008B1CA9 /* Dictionary+Extension.swift in Sources */,
@@ -946,13 +990,16 @@
 				88259E142B773C15008B1CA9 /* ServiceEndPoints.swift in Sources */,
 				88259E3D2B7740D3008B1CA9 /* AppNavigationController.swift in Sources */,
 				88259E292B773E9C008B1CA9 /* Constants.swift in Sources */,
+				AB83ABEC2B7E34A300272DDF /* WelcomeViewController.swift in Sources */,
 				88259E972B77413F008B1CA9 /* NSObject+Additions.swift in Sources */,
 				88259E882B774127008B1CA9 /* UIImage+Extension.swift in Sources */,
 				88259EC42B774A6C008B1CA9 /* LoginViewController.swift in Sources */,
+				AB83ABF42B7E409F00272DDF /* WelcomeCollectionViewCell.swift in Sources */,
 				88259E802B774127008B1CA9 /* UITextField+Extension.swift in Sources */,
 				88259E392B7740D3008B1CA9 /* BaseImageViewController.swift in Sources */,
 				88259DC12B7738C4008B1CA9 /* AppDelegate.swift in Sources */,
 				88259E3A2B7740D3008B1CA9 /* UIFont+Theme.swift in Sources */,
+				ABB11C292B7F707800090D9B /* ForgotPasswordViewController.swift in Sources */,
 				88259E482B7740FF008B1CA9 /* LanguageHelper.swift in Sources */,
 				88259E982B77413F008B1CA9 /* AppUtilities.swift in Sources */,
 				88259E702B774127008B1CA9 /* UIViewController+Extension.swift in Sources */,
@@ -996,7 +1043,6 @@
 				88259E7B2B774127008B1CA9 /* UICollectionView+Extension.swift in Sources */,
 				88259E742B774127008B1CA9 /* Double+Extension.swift in Sources */,
 				88259E6C2B774127008B1CA9 /* String+Extensions.swift in Sources */,
-				88259EBD2B7749B7008B1CA9 /* DismissibleEasyTipView.swift in Sources */,
 				88C7A2462B7E02F300F3AFAA /* HomeViewController.swift in Sources */,
 				88259E862B774127008B1CA9 /* WKWebView+Extension.swift in Sources */,
 				88259E892B774127008B1CA9 /* UITableView+Extension.swift in Sources */,
@@ -1004,11 +1050,13 @@
 				88259E842B774127008B1CA9 /* CALayer+Extension.swift in Sources */,
 				88259E772B774127008B1CA9 /* UIBarButtonItem+Extensions.swift in Sources */,
 				88259E202B773C15008B1CA9 /* Serialization.swift in Sources */,
+				ABB11C252B7F47A400090D9B /* SignUpViewController.swift in Sources */,
 				88259DC32B7738C4008B1CA9 /* SceneDelegate.swift in Sources */,
 				88259EA02B77413F008B1CA9 /* UIImageView+Additions.swift in Sources */,
 				88259EB22B774945008B1CA9 /* Toast.swift in Sources */,
 				88259E762B774127008B1CA9 /* NSLayoutConstrait+Extension.swift in Sources */,
 				88259E6E2B774127008B1CA9 /* UIColor+Extension.swift in Sources */,
+				ABB11C2D2B7F7F9700090D9B /* LoginSuccessPopUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

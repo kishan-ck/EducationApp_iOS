@@ -19,7 +19,7 @@ class MainTabBarController: UITabBarController {
         super.viewDidLoad()
 
         let homeViewController = HomeViewController()
-        homeViewController.tabBarItem = UITabBarItem(title: "HOME".localized, image: UIImage(named: "ic_settings"), tag: 1)
+        homeViewController.tabBarItem = UITabBarItem(title: "HOME".localized, image: UIImage(named: "ic_home"), tag: 1)
         let firstNavigation = AppNavigationController(rootViewController: homeViewController)
         
         let myCoursesViewController = MyCoursesViewController()

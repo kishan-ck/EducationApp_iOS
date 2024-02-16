@@ -5,7 +5,6 @@
 import Foundation
 import UIKit
 import UserNotifications
-import SideMenuSwift
 import SwiftyJSON
 
 //MARK: - AppDelegate setup
@@ -25,33 +24,12 @@ extension AppDelegate {
         window?.makeKeyAndVisible()
     }
     
-    /*/// This function will root to WelcomeVideoDescriptionViewController and redirect there.
+    /// This function will root to WelcomeViewController and redirect there.
     func setUpWelcome() {
-        let welcomeVideoDescriptionViewController = WelcomeVideoDescriptionViewController.init(nibName: "WelcomeVideoDescriptionViewController", bundle: nil)
-        window?.rootViewController = AppNavigationController(rootViewController: welcomeVideoDescriptionViewController)
+        let welcomeViewController = WelcomeViewController.init(nibName: "WelcomeViewController", bundle: nil)
+        window?.rootViewController = AppNavigationController(rootViewController: welcomeViewController)
         window?.makeKeyAndVisible()
     }
-    
-    /// This function will root to ChooseViewController and redirect there.
-    func setUpPlan() {
-        let chooseViewController = ChooseViewController.init(nibName: "ChooseViewController", bundle: nil)
-        window?.rootViewController = AppNavigationController(rootViewController: chooseViewController)
-        window?.makeKeyAndVisible()
-    }
-    
-    /// This function will root to GetReferralCodeViewController and redirect there.
-    func setUpReferral() {
-        let getReferralCodeViewController = GetReferralCodeViewController.init(nibName: "GetReferralCodeViewController", bundle: nil)
-        window?.rootViewController = AppNavigationController(rootViewController: getReferralCodeViewController)
-        window?.makeKeyAndVisible()
-    }
-    
-    /// This function will root to UploadProfilePhotoViewController and redirect there.
-    func setUpUploadProfilePhoto() {
-        let uploadProfilePhotoViewController = UploadProfilePhotoViewController.init(nibName: "UploadProfilePhotoViewController", bundle: nil)
-        window?.rootViewController = AppNavigationController(rootViewController: uploadProfilePhotoViewController)
-        window?.makeKeyAndVisible()
-    }*/
     
     /// Setup unauthenticate message and redirect user to LoginViewController.
     /// - Parameter message: message value in String
@@ -66,10 +44,8 @@ extension AppDelegate {
     
     /// To used this function for remove all user default data from the app.
     func removeAllUserDefault() {
-        USER_DEFAULTS_STANDARD.removeObject(forKey: "is_guest_login")
         USER_DEFAULTS_STANDARD.removeObject(forKey: "user")
         USER_DEFAULTS_STANDARD.removeObject(forKey: "token")
-        USER_DEFAULTS_STANDARD.removeObject(forKey: "welcome_checklist_complete")
     }
     
     /// To used for main root object.
@@ -117,14 +93,6 @@ extension AppDelegate {
                 topController.dismiss(animated: false, completion: nil)
             }
         }
-    }
-    
-    /// To configure the side menu option.
-    public func configureSideMenu() {
-        SideMenuController.preferences.basic.menuWidth = screenWidth
-        SideMenuController.preferences.basic.defaultCacheKey = "0"
-        SideMenuController.preferences.basic.direction = .left
-        SideMenuController.preferences.basic.enablePanGesture = false
     }
     
     /// Subview no data found view inside UIView.
