@@ -410,7 +410,7 @@
                                                             <rect key="frame" x="0.0" y="32.5" width="374" height="46"/>
                                                             <subviews>
                                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="GENDER" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XWa-jO-f1q">
-                                                                    <rect key="frame" x="24" y="0.0" width="299" height="46"/>
+                                                                    <rect key="frame" x="24" y="0.0" width="326" height="46"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <color key="textColor" name="#232323"/>
                                                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
@@ -455,10 +455,10 @@
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </constraint>
-                                                                <constraint firstItem="wSu-oT-oPP" firstAttribute="leading" secondItem="XWa-jO-f1q" secondAttribute="trailing" constant="10" id="sSg-0K-lOq">
+                                                                <constraint firstAttribute="trailing" secondItem="XWa-jO-f1q" secondAttribute="trailing" constant="24" id="nZO-U4-Ftn">
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="widthPercentage">
-                                                                            <real key="value" value="2.3199999999999998"/>
+                                                                            <real key="value" value="5.5800000000000001"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </constraint>
@@ -1092,7 +1092,7 @@
                                                             <rect key="frame" x="0.0" y="32.5" width="374" height="46"/>
                                                             <subviews>
                                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="SELECT_COLLEGE" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uXi-tZ-L7E">
-                                                                    <rect key="frame" x="24" y="0.0" width="299" height="46"/>
+                                                                    <rect key="frame" x="24" y="0.0" width="326" height="46"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <color key="textColor" name="#232323"/>
                                                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
@@ -1143,14 +1143,14 @@
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </constraint>
-                                                                <constraint firstItem="f8e-uE-nww" firstAttribute="leading" secondItem="uXi-tZ-L7E" secondAttribute="trailing" constant="10" id="dLe-C6-v6o">
+                                                                <constraint firstItem="uXi-tZ-L7E" firstAttribute="top" secondItem="mUM-BA-dYd" secondAttribute="top" id="h5C-AD-cNZ"/>
+                                                                <constraint firstAttribute="trailing" secondItem="uXi-tZ-L7E" secondAttribute="trailing" constant="24" id="yVC-n1-gvv">
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="widthPercentage">
-                                                                            <real key="value" value="2.3199999999999998"/>
+                                                                            <real key="value" value="5.5800000000000001"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </constraint>
-                                                                <constraint firstItem="uXi-tZ-L7E" firstAttribute="top" secondItem="mUM-BA-dYd" secondAttribute="top" id="h5C-AD-cNZ"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1220,7 +1220,7 @@
                                                             <rect key="frame" x="0.0" y="32.5" width="374" height="46"/>
                                                             <subviews>
                                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="SELECT_COURSE" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SxP-Z1-jdG">
-                                                                    <rect key="frame" x="24" y="0.0" width="299" height="46"/>
+                                                                    <rect key="frame" x="24" y="0.0" width="326" height="46"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <color key="textColor" name="#232323"/>
                                                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
@@ -1271,10 +1271,10 @@
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </constraint>
-                                                                <constraint firstItem="yep-5M-shf" firstAttribute="leading" secondItem="SxP-Z1-jdG" secondAttribute="trailing" constant="10" id="rI4-sO-Xbn">
+                                                                <constraint firstAttribute="trailing" secondItem="SxP-Z1-jdG" secondAttribute="trailing" constant="24" id="rI4-sO-Xbn">
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="widthPercentage">
-                                                                            <real key="value" value="2.3199999999999998"/>
+                                                                            <real key="value" value="5.5800000000000001"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </constraint>
@@ -1348,7 +1348,7 @@
                                                             <rect key="frame" x="0.0" y="32.5" width="374" height="46"/>
                                                             <subviews>
                                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="SELECT_SEMESTER" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dvd-PW-cCY">
-                                                                    <rect key="frame" x="24" y="0.0" width="299" height="46"/>
+                                                                    <rect key="frame" x="24" y="0.0" width="326" height="46"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <color key="textColor" name="#232323"/>
                                                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
@@ -1399,10 +1399,10 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </constraint>
                                                                 <constraint firstItem="dvd-PW-cCY" firstAttribute="top" secondItem="IIY-tK-ck3" secondAttribute="top" id="Xm9-wC-5HN"/>
-                                                                <constraint firstItem="HCG-GT-baR" firstAttribute="leading" secondItem="dvd-PW-cCY" secondAttribute="trailing" constant="10" id="Xn2-KT-Dxm">
+                                                                <constraint firstAttribute="trailing" secondItem="dvd-PW-cCY" secondAttribute="trailing" constant="24" id="Xn2-KT-Dxm">
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="widthPercentage">
-                                                                            <real key="value" value="2.3199999999999998"/>
+                                                                            <real key="value" value="5.5800000000000001"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </constraint>
