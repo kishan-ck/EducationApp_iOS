@@ -129,6 +129,15 @@
 		ABB11C2A2B7F707800090D9B /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABB11C282B7F707800090D9B /* ForgotPasswordViewController.xib */; };
 		ABB11C2D2B7F7F9700090D9B /* LoginSuccessPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB11C2B2B7F7F9700090D9B /* LoginSuccessPopUpViewController.swift */; };
 		ABB11C2E2B7F7F9700090D9B /* LoginSuccessPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABB11C2C2B7F7F9700090D9B /* LoginSuccessPopUpViewController.xib */; };
+		ABBA87B92B8358F0008F075A /* AdvertisementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBA87B72B8358F0008F075A /* AdvertisementCollectionViewCell.swift */; };
+		ABBA87BA2B8358F0008F075A /* AdvertisementCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABBA87B82B8358F0008F075A /* AdvertisementCollectionViewCell.xib */; };
+		ABBA87BD2B835A60008F075A /* AdvertisementCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBA87BC2B835A60008F075A /* AdvertisementCollectionDataSource.swift */; };
+		ABBA87C12B835CE1008F075A /* CoursesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBA87BF2B835CE1008F075A /* CoursesCollectionViewCell.swift */; };
+		ABBA87C22B835CE1008F075A /* CoursesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABBA87C02B835CE1008F075A /* CoursesCollectionViewCell.xib */; };
+		ABBA87C42B836612008F075A /* CoursesCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBA87C32B836612008F075A /* CoursesCollectionDataSource.swift */; };
+		ABBA87C82B837283008F075A /* FacultiesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBA87C62B837283008F075A /* FacultiesCollectionViewCell.swift */; };
+		ABBA87C92B837283008F075A /* FacultiesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABBA87C72B837283008F075A /* FacultiesCollectionViewCell.xib */; };
+		ABBA87CB2B8375D5008F075A /* FacultiesCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBA87CA2B8375D5008F075A /* FacultiesCollectionDataSource.swift */; };
 		BE647C074EC6C6C36949A658 /* Pods_EducationApp_EducationAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18215CD1A93E49825DB5D19F /* Pods_EducationApp_EducationAppUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -283,6 +292,15 @@
 		ABB11C282B7F707800090D9B /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
 		ABB11C2B2B7F7F9700090D9B /* LoginSuccessPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSuccessPopUpViewController.swift; sourceTree = "<group>"; };
 		ABB11C2C2B7F7F9700090D9B /* LoginSuccessPopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginSuccessPopUpViewController.xib; sourceTree = "<group>"; };
+		ABBA87B72B8358F0008F075A /* AdvertisementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementCollectionViewCell.swift; sourceTree = "<group>"; };
+		ABBA87B82B8358F0008F075A /* AdvertisementCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdvertisementCollectionViewCell.xib; sourceTree = "<group>"; };
+		ABBA87BC2B835A60008F075A /* AdvertisementCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementCollectionDataSource.swift; sourceTree = "<group>"; };
+		ABBA87BF2B835CE1008F075A /* CoursesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesCollectionViewCell.swift; sourceTree = "<group>"; };
+		ABBA87C02B835CE1008F075A /* CoursesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoursesCollectionViewCell.xib; sourceTree = "<group>"; };
+		ABBA87C32B836612008F075A /* CoursesCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesCollectionDataSource.swift; sourceTree = "<group>"; };
+		ABBA87C62B837283008F075A /* FacultiesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultiesCollectionViewCell.swift; sourceTree = "<group>"; };
+		ABBA87C72B837283008F075A /* FacultiesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FacultiesCollectionViewCell.xib; sourceTree = "<group>"; };
+		ABBA87CA2B8375D5008F075A /* FacultiesCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultiesCollectionDataSource.swift; sourceTree = "<group>"; };
 		C3046BBB64C024B37A2FF712 /* Pods-EducationApp-EducationAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationApp-EducationAppUITests.release.xcconfig"; path = "Target Support Files/Pods-EducationApp-EducationAppUITests/Pods-EducationApp-EducationAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C4A4E13DC99F36348412C136 /* Pods_EducationApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EducationApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D27C720A84A25F53F524262B /* Pods-EducationAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationAppTests.release.xcconfig"; path = "Target Support Files/Pods-EducationAppTests/Pods-EducationAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -658,10 +676,8 @@
 		88C7A2432B7E02D000F3AFAA /* Tabbar Screen */ = {
 			isa = PBXGroup;
 			children = (
-				88C7A2442B7E02F300F3AFAA /* HomeViewController.swift */,
-				88C7A2452B7E02F300F3AFAA /* HomeViewController.xib */,
-				88C7A2482B7E030200F3AFAA /* MyCoursesViewController.swift */,
-				88C7A2492B7E030200F3AFAA /* MyCoursesViewController.xib */,
+				ABBA87B62B83418D008F075A /* Home Screen */,
+				ABBA87CC2B83789F008F075A /* Courses Screen */,
 				88C7A24C2B7E032500F3AFAA /* FacultiesViewController.swift */,
 				88C7A24D2B7E032500F3AFAA /* FacultiesViewController.xib */,
 				88C7A2572B7E044F00F3AFAA /* SettingsViewController.swift */,
@@ -701,6 +717,57 @@
 				AB83ABF62B7E417200272DDF /* WelcomeCollectionDataSource.swift */,
 			);
 			path = "Welcome Screen";
+			sourceTree = "<group>";
+		};
+		ABBA87B62B83418D008F075A /* Home Screen */ = {
+			isa = PBXGroup;
+			children = (
+				88C7A2442B7E02F300F3AFAA /* HomeViewController.swift */,
+				88C7A2452B7E02F300F3AFAA /* HomeViewController.xib */,
+				ABBA87BB2B8358F7008F075A /* Advertisement */,
+				ABBA87BE2B835C97008F075A /* PopularCourses */,
+				ABBA87C52B83724E008F075A /* Faculties */,
+			);
+			path = "Home Screen";
+			sourceTree = "<group>";
+		};
+		ABBA87BB2B8358F7008F075A /* Advertisement */ = {
+			isa = PBXGroup;
+			children = (
+				ABBA87B72B8358F0008F075A /* AdvertisementCollectionViewCell.swift */,
+				ABBA87B82B8358F0008F075A /* AdvertisementCollectionViewCell.xib */,
+				ABBA87BC2B835A60008F075A /* AdvertisementCollectionDataSource.swift */,
+			);
+			path = Advertisement;
+			sourceTree = "<group>";
+		};
+		ABBA87BE2B835C97008F075A /* PopularCourses */ = {
+			isa = PBXGroup;
+			children = (
+				ABBA87BF2B835CE1008F075A /* CoursesCollectionViewCell.swift */,
+				ABBA87C02B835CE1008F075A /* CoursesCollectionViewCell.xib */,
+				ABBA87C32B836612008F075A /* CoursesCollectionDataSource.swift */,
+			);
+			name = PopularCourses;
+			sourceTree = "<group>";
+		};
+		ABBA87C52B83724E008F075A /* Faculties */ = {
+			isa = PBXGroup;
+			children = (
+				ABBA87C62B837283008F075A /* FacultiesCollectionViewCell.swift */,
+				ABBA87C72B837283008F075A /* FacultiesCollectionViewCell.xib */,
+				ABBA87CA2B8375D5008F075A /* FacultiesCollectionDataSource.swift */,
+			);
+			path = Faculties;
+			sourceTree = "<group>";
+		};
+		ABBA87CC2B83789F008F075A /* Courses Screen */ = {
+			isa = PBXGroup;
+			children = (
+				88C7A2482B7E030200F3AFAA /* MyCoursesViewController.swift */,
+				88C7A2492B7E030200F3AFAA /* MyCoursesViewController.xib */,
+			);
+			path = "Courses Screen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -816,12 +883,14 @@
 				88259EDF2B774F68008B1CA9 /* Poppins-LightItalic.ttf in Resources */,
 				88259EE12B774F68008B1CA9 /* Poppins-SemiBoldItalic.ttf in Resources */,
 				88259EE02B774F68008B1CA9 /* Poppins-Bold.ttf in Resources */,
+				ABBA87BA2B8358F0008F075A /* AdvertisementCollectionViewCell.xib in Resources */,
 				88259EE32B774F68008B1CA9 /* Poppins-Black.ttf in Resources */,
 				ABB11C2E2B7F7F9700090D9B /* LoginSuccessPopUpViewController.xib in Resources */,
 				88259EC32B774A6C008B1CA9 /* LoginViewController.xib in Resources */,
 				88259EDC2B774F68008B1CA9 /* Poppins-SemiBold.ttf in Resources */,
 				ABB11C262B7F47A400090D9B /* SignUpViewController.xib in Resources */,
 				88259ED82B774F68008B1CA9 /* Poppins-Light.ttf in Resources */,
+				ABBA87C92B837283008F075A /* FacultiesCollectionViewCell.xib in Resources */,
 				88259ED92B774F68008B1CA9 /* Poppins-Medium.ttf in Resources */,
 				ABB11C2A2B7F707800090D9B /* ForgotPasswordViewController.xib in Resources */,
 				88259E2C2B77404F008B1CA9 /* Colors.xcassets in Resources */,
@@ -834,6 +903,7 @@
 				88C7A24F2B7E032500F3AFAA /* FacultiesViewController.xib in Resources */,
 				88259EE82B774F68008B1CA9 /* Poppins-Regular.ttf in Resources */,
 				88259EAC2B7741F3008B1CA9 /* NoDataFoundView.xib in Resources */,
+				ABBA87C22B835CE1008F075A /* CoursesCollectionViewCell.xib in Resources */,
 				88C7A2532B7E033000F3AFAA /* ProfileViewController.xib in Resources */,
 				88C7A2472B7E02F300F3AFAA /* HomeViewController.xib in Resources */,
 				88259DCD2B7738C6008B1CA9 /* LaunchScreen.storyboard in Resources */,
@@ -981,9 +1051,11 @@
 				AB83ABF72B7E417200272DDF /* WelcomeCollectionDataSource.swift in Sources */,
 				88C7A2562B7E03E500F3AFAA /* MainTabBarController.swift in Sources */,
 				88259EA52B77419B008B1CA9 /* NoInternetConnectionViewController.swift in Sources */,
+				ABBA87C82B837283008F075A /* FacultiesCollectionViewCell.swift in Sources */,
 				88259E832B774127008B1CA9 /* Dictionary+Extension.swift in Sources */,
 				88259E782B774127008B1CA9 /* Float+Extensions.swift in Sources */,
 				88259E472B7740FF008B1CA9 /* ReachabilityManager.swift in Sources */,
+				ABBA87B92B8358F0008F075A /* AdvertisementCollectionViewCell.swift in Sources */,
 				88259E9C2B77413F008B1CA9 /* UIButton+Additions.swift in Sources */,
 				88259E382B7740D3008B1CA9 /* ScrollableStackView.swift in Sources */,
 				88259E6D2B774127008B1CA9 /* Date+Extension.swift in Sources */,
@@ -997,6 +1069,7 @@
 				AB83ABF42B7E409F00272DDF /* WelcomeCollectionViewCell.swift in Sources */,
 				88259E802B774127008B1CA9 /* UITextField+Extension.swift in Sources */,
 				88259E392B7740D3008B1CA9 /* BaseImageViewController.swift in Sources */,
+				ABBA87CB2B8375D5008F075A /* FacultiesCollectionDataSource.swift in Sources */,
 				88259DC12B7738C4008B1CA9 /* AppDelegate.swift in Sources */,
 				88259E3A2B7740D3008B1CA9 /* UIFont+Theme.swift in Sources */,
 				ABB11C292B7F707800090D9B /* ForgotPasswordViewController.swift in Sources */,
@@ -1034,6 +1107,7 @@
 				88259E7A2B774127008B1CA9 /* UIApplication+Extension.swift in Sources */,
 				88259E7D2B774127008B1CA9 /* NSMutableAttributedString+Extensions.swift in Sources */,
 				88259E992B77413F008B1CA9 /* BundleEx+Additions.swift in Sources */,
+				ABBA87C42B836612008F075A /* CoursesCollectionDataSource.swift in Sources */,
 				88259E7C2B774127008B1CA9 /* Bundle+Extensions.swift in Sources */,
 				88259E132B773C15008B1CA9 /* Configuration.swift in Sources */,
 				88259E852B774127008B1CA9 /* UILabel+Extensions.swift in Sources */,
@@ -1045,6 +1119,7 @@
 				88259E6C2B774127008B1CA9 /* String+Extensions.swift in Sources */,
 				88C7A2462B7E02F300F3AFAA /* HomeViewController.swift in Sources */,
 				88259E862B774127008B1CA9 /* WKWebView+Extension.swift in Sources */,
+				ABBA87BD2B835A60008F075A /* AdvertisementCollectionDataSource.swift in Sources */,
 				88259E892B774127008B1CA9 /* UITableView+Extension.swift in Sources */,
 				88259E3C2B7740D3008B1CA9 /* CGImage+FaceCrop.swift in Sources */,
 				88259E842B774127008B1CA9 /* CALayer+Extension.swift in Sources */,
@@ -1056,6 +1131,7 @@
 				88259EB22B774945008B1CA9 /* Toast.swift in Sources */,
 				88259E762B774127008B1CA9 /* NSLayoutConstrait+Extension.swift in Sources */,
 				88259E6E2B774127008B1CA9 /* UIColor+Extension.swift in Sources */,
+				ABBA87C12B835CE1008F075A /* CoursesCollectionViewCell.swift in Sources */,
 				ABB11C2D2B7F7F9700090D9B /* LoginSuccessPopUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

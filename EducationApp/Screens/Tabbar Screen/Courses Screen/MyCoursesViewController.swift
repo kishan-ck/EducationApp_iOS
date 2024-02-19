@@ -5,16 +5,12 @@
 import UIKit
 import SwiftyJSON
 
-/// ForgotPasswordViewController is used when user forgot's his password.
-class ForgotPasswordViewController: BaseViewController {
+class MyCoursesViewController: BaseViewController {
     
     //MARK: - IBOutlet Declaration
     
-    /// emailTextField is a UITextField in which user can enter his email address.
-    @IBOutlet weak var emailTextField: UITextField?
     
     //MARK: - Variable Declaration
-
     
     //MARK: - Class Method
     
@@ -24,6 +20,7 @@ class ForgotPasswordViewController: BaseViewController {
     /// - Description : To set values after view did load
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     /// View will Appear
@@ -38,22 +35,15 @@ class ForgotPasswordViewController: BaseViewController {
 }
 
 //MARK: - UI Functions
-extension ForgotPasswordViewController {
+extension MyCoursesViewController {
     
     /// setupUI() function will be used for the setup ui when view contoller will load.
     func setUpUI() {
-        navigationBarWithRightButtonTransparent(isShowBackButton: true, isShowSearchButton: false)
+        navigationBarWithRightButtonTransparent(isShowBackButton: false, showTitle: "COURSES".localized, isShowSearchButton: true)
     }
 }
 
 //MARK: - IBAction Method
-extension ForgotPasswordViewController {
-    
-    /// sendButton UIButton click event.
-    ///
-    /// - Parameter sender: passing sender object.
-    /// - Description : It is used to login to apply forgot password functionality.
-    @IBAction func sendButtonAction(_ sender: Any) {
-        KAPPDELEGATE.setUpLogin()
-    }
+extension MyCoursesViewController {
+
 }
