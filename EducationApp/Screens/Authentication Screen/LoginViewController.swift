@@ -10,11 +10,11 @@ class LoginViewController: UIViewController {
     
     //MARK: - IBOutlet Declaration
     
-    /// passwordTextField is a UITextField in which user can enter password, which he entered which registering the account.
-    @IBOutlet weak var passwordTextField: UITextField?
-    
     /// emailTextField is a UITextField in which user can enter his email address.
     @IBOutlet weak var emailTextField: UITextField?
+    
+    /// passwordTextField is a UITextField in which user can enter password, which he entered which registering the account.
+    @IBOutlet weak var passwordTextField: UITextField?
     
     /// showPasswordImageView UIImageView to display or hide passowrd.
     @IBOutlet weak var showPasswordImageView: UIImageView?
@@ -62,6 +62,62 @@ extension LoginViewController {
         attributedString.setColorForText("SIGN_UP".localized, with: UIColor(named: "#0961F5")!)
         signUpLabel?.attributedText = attributedString
     }
+    
+    /// Login API call with all validations.
+    func loginAPI(){
+        view.endEditing(true)
+        
+        if emailTextField?.text?.trim() == "" {
+            makeToast(type: .error, title: APP_TITLE, message: "PLEASE_ENTER_EMAIL".localized, view: self.view)
+            
+        } else if isValidEmail(email: emailTextField?.text?.trim() ?? "") == false  {
+            makeToast(type: .error, title: APP_TITLE, message: "PLEASE_ENTER_VALID_EMAIL".localized, view: self.view)
+            
+        } else if passwordTextField?.text?.trim() == "" {
+            makeToast(type: .error, title: APP_TITLE, message: "PLEASE_ENTER_PASSWORD".localized, view: self.view)
+            
+        } else {
+            let params: JSONDictionary = [
+                "email": emailTextField?.text?.trim() as AnyObject,
+                "password": passwordTextField?.text?.trim() as AnyObject]
+            
+            APIClient.sharedInstance.loginApi(parameters: params) { [weak self] responseObj in
+                if(responseObj?.integer(key: "status") == 200){
+                    self?.handleLoginResponse(responseObj: responseObj ?? [:])
+                }
+            } failure: { error in
+                makeToast(type: .error, title: APP_TITLE, message: error ?? "", view: self.view)
+            }
+        }
+    }
+    
+    /// To handle login and social login reposne.
+    ///
+    /// - Parameter responseObj: passing response json
+    public func handleLoginResponse(responseObj: JSON){
+        /*let responseData = responseObj.object(key: "data")
+        Config().saveAuthToken(tokenString: responseData.string(key: "authToken"))
+        
+        let userData = responseData.dictionaryObject ?? [:]
+        Config().saveUserData(object: userData)
+        
+        isDocumentUploaded = Config().getUser().integer(key: "document_uploaded")
+        agreementActivated = Config().getUser().integer(key: "agreement_verified")
+        isLoginSucceed = Config().getUser().count
+        
+        if isDocumentUploaded == 0 {
+            KAPPDELEGATE.setUpDocument()
+            
+        } else if agreementActivated == 0 {
+            KAPPDELEGATE.setUpAgreement()
+            
+        } else if (isLoginSucceed ?? 0) > 0 {
+            KAPPDELEGATE.setUpHome()
+            
+        } else {
+            KAPPDELEGATE.setUpIntroduction()
+        }*/
+    }
 }
 
 //MARK: - IBAction Method
@@ -72,6 +128,7 @@ extension LoginViewController {
     /// - Parameter sender: passing sender object.
     /// - Description : It is used to login to user's account by using dedicated email address and password.
     @IBAction func signInButtonAction(_ sender: Any) {
+        loginAPI()
     }
     
     /// forgotPasswordButton UIButton click event.

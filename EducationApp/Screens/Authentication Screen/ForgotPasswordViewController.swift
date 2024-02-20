@@ -13,9 +13,6 @@ class ForgotPasswordViewController: BaseViewController {
     /// emailTextField is a UITextField in which user can enter his email address.
     @IBOutlet weak var emailTextField: UITextField?
     
-    //MARK: - Variable Declaration
-
-    
     //MARK: - Class Method
     
     /// View did load
@@ -44,6 +41,28 @@ extension ForgotPasswordViewController {
     func setUpUI() {
         navigationBarWithRightButtonTransparent(isShowBackButton: true)
     }
+    
+    func forgotPasswordAPI() {
+        view.endEditing(true)
+        
+        if emailTextField?.text?.trim() == "" {
+            makeToast(type: .error, title: APP_TITLE, message: "PLEASE_ENTER_EMAIL".localized, view: self.view)
+            
+        } else if isValidEmail(email: emailTextField?.text?.trim() ?? "") == false  {
+            makeToast(type: .error, title: APP_TITLE, message: "PLEASE_ENTER_VALID_EMAIL".localized, view: self.view)
+            
+        } else {
+            let params : JSONDictionary = [
+                "email": emailTextField?.text?.trim() as AnyObject]
+            APIClient.sharedInstance.forgotPasswordApi(parameters: params) { responseObj in
+                if(responseObj?.integer(key: "status") == 200){
+                    KAPPDELEGATE.setUpLogin()
+                }
+            } failure: { error in
+                makeToast(type: .error, title: APP_TITLE, message: error ?? "", view: self.view)
+            }
+        }
+    }
 }
 
 //MARK: - IBAction Method
@@ -54,6 +73,6 @@ extension ForgotPasswordViewController {
     /// - Parameter sender: passing sender object.
     /// - Description : It is used to login to apply forgot password functionality.
     @IBAction func sendButtonAction(_ sender: Any) {
-        KAPPDELEGATE.setUpLogin()
+        forgotPasswordAPI()
     }
 }

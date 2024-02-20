@@ -5,6 +5,6 @@
 	<key>host</key>
 	<string>https://education-app-31lz.onrender.com/</string>
 	<key>path</key>
-	<string>api/v1/</string>
+	<string>api/</string>
 </dict>
 </plist>

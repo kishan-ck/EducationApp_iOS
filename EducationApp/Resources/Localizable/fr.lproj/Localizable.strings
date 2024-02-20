@@ -6,3 +6,121 @@
 
 //MARK: - Common Strings
 "APP_TITLE" = "Education App";
+"CANCEL" = "Cancel";
+"PHOTO_LIBRARY" = "Photo Library";
+"CAMERA" = "Camera";
+"PLEASE_WAIT" = "Please wait...";
+"NO_INTERNET_CONNECTION" = "No Internet Connection!";
+"RETRY" = "Retry";
+"NEXT" = "Next";
+"UPDATE" = "Update";
+"OK" = "Ok";
+"YES" = "Yes";
+"NO" = "No";
+"DONE" = "Done";
+
+//MARK: - Other Validations
+"PLEASE_TRY_AGAIN" = "Please try again.";
+"NO_RECORD_AVAILABLE_TITLE"= "No Records Available";
+"NO_RECORD_AVAILABLE_DESCRIPTION" = "Sorry, there are no records available at this moment.";
+"NO_RECORD_AVAILABLE_DESCRIPTIONS" = "Sorry, there are no %@ available at this moment.";
+"NO_SEARCH_RESULT_FOUND_TITLE" = "No Result Found";
+"NO_SEARCH_RESULT_FOUND_DESCRIPTION" = "Sorry, there are no results for this search. Please try again with another phrase.";
+"URL_NOT_VALID" = "This URL is not valid.";
+"DELETE_ACCOUNT_ALERT" = "Are you sure you want to delete your account?";
+"DELETE_ACCOUNT_DESCRIPTION" = "You are about to delete your account.\n\nDeleting your account will delete your access and all your information on this app.";
+"CALL_NOT_SUPPORTED" = "The call functionality is not supported on your device.";
+"CONGRATULATIONS" = "Congratulations";
+"SUCCESS_MESSAGE" = "Your Account is Ready to Use. You will be\nredirected to the Home Page.";
+
+//MARK: - Welcome Screen Strings
+"ONLINE_LEARNING" = "Online Learning";
+"ONLINE_LEARNING_DESC" = "Learn any course any time";
+"EASY_LEARNING" = "Easy Learning";
+"EASY_LEARNING_DESC" = "Our books are prepared by experienced faculties";
+"GET_ONLINE_QUESTION_PAPER" = "Get Previous Year Question Paper";
+"GET_QUESTION_PAPER_DESC" = "We provide you a previous year question paper for your better exam practice";
+"GET_STARTED" = "Get Started";
+
+//MARK: - SignUp Screen Strings
+"SIGN_UP" = "Sign Up";
+"FIRST_NAME" = "First name";
+"SIGNUP_TO_YOUR_ACCOUNT" = "Create an account to learn your courses";
+"MALE" = "Male";
+"FEMALE" = "Female";
+"OTHER" = "Other";
+"LAST_NAME" = "Last name";
+"PASSWORD" = "Password";
+"CONFIRM_PASSWORD" = "Confirm Password";
+"PHONE_NUMBER" = "Phone Number";
+"GENDER" = "Gender";
+"SELECT_COLLEGE" = "Select college";
+"SELECT_COURSE" = "Select course";
+"SELECT_SEMESTER" = "Select semester";
+"ALREADY_HAVE_ACCOUNT" = "Already have an account? ";
+"SIGN_IN" = "Sign In";
+
+//MARK: - SignIn Screen Strings
+"EMAIL_ADDRESS" = "Email address";
+"ENTER_PASSWORD" = "Enter Password";
+"FORGOT_PASSWORD" = "Forgot password?";
+"DO_NOT_HAVE_ACCOUNT" = "Don’t have an account? ";
+"LOGIN_TO_YOUR_ACCOUNT" = "Login to your account to continue with your courses";
+"HELLO_STUDENT" = "Hello Student!";
+
+//MARK: - Forgot Password Screen Strings
+"FORGOT_PASSWORD_TITLE" = "Forgot password";
+"FORGOT_PASSWORD_DETAIL" = "We'll send you an email where you can reset your password.";
+"SEND" = "Send";
+
+//MARK: - Home Screen Strings
+"WELCOME_TEXT" = "Wel come";
+"WELCOME_TEXT_DESC" = "What do you want to learn?";
+"SEE_ALL" = "See All";
+"BECOME_A_FACULTY" = "Become a faculty?";
+"HOME" = "Home";
+"COURSES" = "Courses";
+"FACULTIES" = "Faculties";
+"SETTINGS" = "Settings";
+
+//MARK: - Settings Screen Strings
+"EMAIL_US" = "Email us";
+"CHANGE_PASSWORD" = "Change Password";
+"INFORMATION" = "Information";
+"APP_INTRODUCTION" = "App Introduction";
+"SHARE_APP" = "Share App";
+"RATE_US" = "Rate Us";
+"LOG_OUT" = "Log Out";
+
+//MARK: - Change Password Screen Strings
+"OLD_PASSWORD" = "Old password";
+"NEW_PASSWORD" = "New password";
+"CONFIRM_NEW_PASSWORD" = "Confirm new password";
+
+//MARK: - Faculty Screen Strings
+"EXPERIENCE" = "Experience";
+"PERSONAL_INFORMATION" = "Personal Information";
+"DEGREE" = "Degree";
+"ACHIEVEMENT_AWARD" = "Achievement/Awards";
+
+
+//MARK: - Validation Strings
+"PLEASE_ENTER_EMAIL" = "Please enter an email";
+"PLEASE_ENTER_VALID_EMAIL" = "You have entered an invalid Email";
+"PLEASE_ENTER_PASSWORD" = "Please enter a password";
+"PLEASE_ENTER_OLD_PASSWORD" = "Please enter a old password";
+"PLEASE_ENTER_NEW_PASSWORD" = "Please enter a new password";
+"NEW_PASSWORD_NOT_MATCH" = "New password and confirm password are not matching";
+"PLEASE_ENTER_CONFIRM_PASSWORD" = "Please enter a confirm password";
+"PASSWORD_NOT_MATCH" = "Password and confirm password are not matching";
+"ENTER_VALID_PASSWORD" = "Password should be minimum 8 characters";
+"PLEASE_ENTER_FIRST_NAME" = "Please enter a first name";
+"PLEASE_ENTER_LAST_NAME" = "Please enter a last name";
+"PLEASE_ENTER_NUMBER" = "Please enter a mobile number";
+"PLEASE_ENTER_VALID_NUMBER" = "The mobile number must be 10 digits";
+"PLEASE_SELECT_COLLEGE" = "Please select college";
+"PLEASE_SELECT_COURSE" = "Please select course";
+"PLEASE_SELECT_SEMESTER" = "Please select semester";
+"PLEASE_SELECT_GENDER" = "Please select gender";
+"LOGOUT_MESSAGE" = "Are you sure you want to log out?";
+"NO_RECORD_AVAILABLE_DESCRIPTION" = "Sorry, there are no records available at this moment.";
