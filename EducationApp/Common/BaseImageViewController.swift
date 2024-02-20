@@ -33,7 +33,7 @@ class BaseViewController: UIViewController {
     /// - Parameters:
     ///   - isShowBackButton: passing show back button boolean flag.
     ///   - showTitle: passing show title string.
-    func navigationBarWithRightButtonTransparent(isShowBackButton: Bool, showTitle: String? = "") {
+    func navigationBarWithRightButtonTransparent(isShowBackButton: Bool, showTitle: String? = "", isShowSearchButton: Bool) {
         // set up navigation bar
         self.navigationItem.hidesBackButton = true
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -47,14 +47,26 @@ class BaseViewController: UIViewController {
             let backButton = UIButton()
             backButton.setImage(UIImage(named: "ic_back")?.imageFlippedForRightToLeftLayoutDirection(), for: .normal)
             backButton.addTarget(self, action: #selector(backButtonAction), for: .touchUpInside)
-            backButton.tintColor = UIColor(named: "1E1E1E")
+            backButton.tintColor = UIColor(named: "#1E1E1E")
             self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
         }
         
         // set up Title
-        self.title = showTitle
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
-            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-SemiBold", size: 16)!, NSAttributedString.Key.foregroundColor: UIColor(named: "1E1E1E") as Any]
+            self.navigationItem.title = showTitle
+            self.view.backgroundColor = UIColor(named: "#FFFFFF")
+            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-SemiBold", size: 16)!, NSAttributedString.Key.foregroundColor: UIColor(named: "#1E1E1E") as Any]
+        }
+        
+        if isShowSearchButton {
+            let searchButton = UIButton(type: .custom)
+            searchButton.setImage(UIImage(named: "ic_search")?.imageFlippedForRightToLeftLayoutDirection(), for: .normal)
+            searchButton.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
+            searchButton.widthAnchor.constraint(equalToConstant: 24).isActive = true
+            searchButton.heightAnchor.constraint(equalToConstant: 24).isActive = true
+            
+            searchButton.addTarget(self, action: #selector(searchButtonAction), for: .touchUpInside)
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: searchButton)
         }
     }
     
@@ -65,58 +77,9 @@ class BaseViewController: UIViewController {
         }
     }
     
-    /// Set navigation bar right button.
-    ///
-    /// - Parameters:
-    ///   - titleString: passing title string
-    ///   - titleColor: passing title color
-    ///   - backgroundColor: passing background color
-    ///   - titleFont: passing title font
-    ///   - width: passing button width
-    ///   - height: passing button height
-    ///   - cornerRadius: passing corner radius of button
-    /// - Purpose : Called to set right navigation button.
-    /// - Description : Call to set right navigation button.
-    /// - Error : -
-    /// - Dependency : -
-    func setRightMenuButton(titleString: String, titleColor: UIColor? = UIColor(named: "WhiteColor - #FFFFFF"), backgroundColor: UIColor? = UIColor(named: "FloatingYellow - #E3A130"), titleFont: UIFont? = themeFont(size: 15, fontname: .poppinsRegular), width: CGFloat, height: CGFloat, cornerRadius: CGFloat) {
-        let setRightMenuButton = UIButton(type: .custom)
-        setRightMenuButton.setTitle(titleString.localized, for: .normal)
-        setRightMenuButton.titleLabel?.font = titleFont
-        setRightMenuButton.titleLabel?.textAlignment = .center
-        
-        setRightMenuButton.setTitleColor(titleColor, for: .normal)
-        setRightMenuButton.backgroundColor = backgroundColor
-        
-        setRightMenuButton.cornerRadius = cornerRadius
-        setRightMenuButton.clipsToBounds = true
-        setRightMenuButton.frame = CGRect(x: 0, y: 0, width: width, height: height)
-        setRightMenuButton.widthAnchor.constraint(equalToConstant: width).isActive = true
-        setRightMenuButton.heightAnchor.constraint(equalToConstant: height).isActive = true
-        setRightMenuButton.addTarget(self, action: #selector(self.btnSetRightMenuButtonFired(sender:)), for: .touchUpInside)
-        let rightBarBtnItem = UIBarButtonItem(customView: setRightMenuButton)
-        self.navigationItem.rightBarButtonItem = rightBarBtnItem
-    }
-    
-    /// Navigation right click event.
-    ///
-    /// - Parameter sender: passing sender object.
-    /// - Purpose : Called when right navigation button is pressed.
-    /// - Description : Call to perfrom action.
-    /// - Error : -
-    /// - Dependency : -
-    @IBAction func btnSetRightMenuButtonFired(sender: UIButton){
-        self.navigationController?.popViewController(animated: true)
-    }
-    
-    /// Set flow layout to collection view object
-    ///
-    /// - Parameter collectionViewObject: passing collection view object
-    func setFlowLayoutToCollectionView(collectionViewObject : UICollectionView){
-        let layout = AlignedCollectionViewFlowLayout(horizontalAlignment: .left, verticalAlignment: .center)
-        layout.minimumInteritemSpacing = widthPer(per: 2.32)
-        layout.minimumLineSpacing = widthPer(per: 2.32)
-        collectionViewObject.collectionViewLayout = layout
+    /// Click event for search button
+    @objc func searchButtonAction() {
+        print("POM POM")
     }
     
     /// To used for application status bar default style.

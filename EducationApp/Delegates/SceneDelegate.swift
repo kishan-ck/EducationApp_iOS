@@ -14,7 +14,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let window = UIWindow(windowScene: windowScene)
             self.window = window
         
-            KAPPDELEGATE.setUpWelcome()
+            //KAPPDELEGATE.setUpWelcome()
+            KAPPDELEGATE.setUpHome()
         }
     }
 

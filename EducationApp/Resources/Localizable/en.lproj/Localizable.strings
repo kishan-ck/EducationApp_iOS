@@ -18,6 +18,7 @@
 "YES" = "Yes";
 "NO" = "No";
 "DONE" = "Done";
+"SEARCH" = "Search";
 
 //MARK: - Other Validations
 "PLEASE_TRY_AGAIN" = "Please try again.";
@@ -77,11 +78,24 @@
 "WELCOME_TEXT" = "Wel come";
 "WELCOME_TEXT_DESC" = "What do you want to learn?";
 "SEE_ALL" = "See All";
-"BECOME_A_FACULTY" = "Become a faculty?";
+"BECOME_FACULTIES" = "Become faculties";
+"BECOME_FACULTIES_DESCRIPTION" = "Lorem ipsum dolor sit amet consectetur. Neque tristique eget vulputate massa turpis. Sit mus eu sit non.";
+"APPLY_FOR_FACULTIE" = "Apply for facultie";
 "HOME" = "Home";
 "COURSES" = "Courses";
 "FACULTIES" = "Faculties";
+"FACULTY_DETAILS" = "Faculty Details";
 "SETTINGS" = "Settings";
+"POPULAR_COURSES" = "Popular courses";
+"TOTAL_INSTRUCTOR" = "Total Instructor";
+"TOTAL_SUBJECTS" = "Total Instructor";
+"TOTAL_COURSES" = "Total Instructor";
+"HAPPY_STUDENT" = "Total Instructor";
+
+//MARK: - Courses Screen Strings
+"ALL_SEMESTER" = "All Semester";
+"ALL_SUBJECT" = "All Subject";
+"COURSE" = "Course: ";
 
 //MARK: - Settings Screen Strings
 "EMAIL_US" = "Email us";
@@ -102,6 +116,7 @@
 "PERSONAL_INFORMATION" = "Personal Information";
 "DEGREE" = "Degree";
 "ACHIEVEMENT_AWARD" = "Achievement/Awards";
+"ASSISTANT_PROFESSOR" = "Assistant Professor";
 
 
 //MARK: - Validation Strings

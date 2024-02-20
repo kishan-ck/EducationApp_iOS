@@ -39,7 +39,7 @@ extension ForgotPasswordViewController {
     
     /// setupUI() function will be used for the setup ui when view contoller will load.
     func setUpUI() {
-        navigationBarWithRightButtonTransparent(isShowBackButton: true)
+        navigationBarWithRightButtonTransparent(isShowBackButton: true, isShowSearchButton: false)
     }
     
     func forgotPasswordAPI() {
