@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FacultieDetailsViewController" customModule="EducationApp" customModuleProvider="target">
+            <connections>
+                <outlet property="awardsLabel" destination="gZ2-RZ-xbw" id="yGK-St-TZ8"/>
+                <outlet property="awardsView" destination="YcU-vv-7gG" id="Q4M-Tw-2hi"/>
+                <outlet property="degreeLabel" destination="WwV-GT-pJV" id="5KV-3q-Als"/>
+                <outlet property="emailLabel" destination="621-1j-1Qv" id="M0Z-gg-Eil"/>
+                <outlet property="experienceLabel" destination="7qj-8t-lgr" id="v6q-I8-fel"/>
+                <outlet property="facultieNameLabel" destination="wVu-jz-hp6" id="LSh-lC-gpM"/>
+                <outlet property="facultieProfesionLabel" destination="bKN-0C-VbU" id="kBI-NM-vuW"/>
+                <outlet property="facultieProfileImageView" destination="Sai-GN-adz" id="FV1-Dp-D2A"/>
+                <outlet property="personalInformationDegreeView" destination="6p1-GP-apw" id="qsa-JG-nQU"/>
+                <outlet property="personalInformationEmailView" destination="Eyg-cP-RZh" id="yx3-As-AOJ"/>
+                <outlet property="personalInformationExperienceView" destination="sbO-H1-m0h" id="xtQ-Zf-IxB"/>
+                <outlet property="personalInformationProfesionLabel" destination="Hdo-2k-8cB" id="Hhl-p5-Ub5"/>
+                <outlet property="personalInformationProfessionView" destination="W15-cQ-shK" id="sd7-5p-NBs"/>
+                <outlet property="personalInformationView" destination="8uv-Nr-KAp" id="fEC-Rm-Ojt"/>
+                <outlet property="personalInformationWorkPlaceLabel" destination="Afm-ae-o5T" id="0J9-mz-91i"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iiJ-WP-Rdr">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LaV-E8-bgc">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="664.5"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aAI-pp-uJR">
+                                    <rect key="frame" x="20" y="10" width="374" height="654.5"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lDs-NP-ylP">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="175.5"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_courses_background" translatesAutoresizingMaskIntoConstraints="NO" id="Sai-GN-adz">
+                                                    <rect key="frame" x="132" y="0.0" width="110" height="110"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Sai-GN-adz" secondAttribute="height" id="AQ4-6x-O27"/>
+                                                        <constraint firstAttribute="height" constant="110" id="hr5-tk-AIs">
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                                                    <real key="value" value="11.48"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </constraint>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="roundCorner" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="dfdddd" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKN-0C-VbU" customClass="UILabelDeviceClass" customModule="EducationApp" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="120" width="374" height="17"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
+                                                    <color key="textColor" name="#0961F5"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="style" value="regular"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                            <real key="value" value="12"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="dfdddd" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVu-jz-hp6" customClass="UILabelDeviceClass" customModule="EducationApp" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="139" width="374" height="25.5"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
+                                                    <color key="textColor" name="#1E1E1E"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="style" value="semiBold"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                            <real key="value" value="18"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gA3-bh-N08">
+                                                    <rect key="frame" x="0.0" y="174.5" width="374" height="1"/>
+                                                    <color key="backgroundColor" name="#EAEAEA"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="xwa-cs-3PX"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="wVu-jz-hp6" firstAttribute="top" secondItem="bKN-0C-VbU" secondAttribute="bottom" constant="2" id="38H-yu-TZd">
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                                            <real key="value" value="0.20000000000000001"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </constraint>
+                                                <constraint firstItem="bKN-0C-VbU" firstAttribute="leading" secondItem="lDs-NP-ylP" secondAttribute="leading" id="9Hz-NC-V4W"/>
+                                                <constraint firstItem="wVu-jz-hp6" firstAttribute="leading" secondItem="lDs-NP-ylP" secondAttribute="leading" id="C9h-rf-7OP"/>
+                                                <constraint firstAttribute="trailing" secondItem="gA3-bh-N08" secondAttribute="trailing" id="H02-9a-Hft"/>
+                                                <constraint firstAttribute="bottom" secondItem="gA3-bh-N08" secondAttribute="bottom" id="IWX-aC-Wbt"/>
+                                                <constraint firstItem="bKN-0C-VbU" firstAttribute="top" secondItem="Sai-GN-adz" secondAttribute="bottom" constant="10" id="QaE-I8-8Sb">
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                                            <real key="value" value="1.04"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </constraint>
+                                                <constraint firstAttribute="trailing" secondItem="bKN-0C-VbU" secondAttribute="trailing" id="SeU-z6-Pfs"/>
+                                                <constraint firstAttribute="trailing" secondItem="wVu-jz-hp6" secondAttribute="trailing" id="UON-96-Dp0"/>
+                                                <constraint firstItem="Sai-GN-adz" firstAttribute="centerX" secondItem="lDs-NP-ylP" secondAttribute="centerX" id="ayX-KM-Vx4"/>
+                                                <constraint firstItem="gA3-bh-N08" firstAttribute="top" secondItem="wVu-jz-hp6" secondAttribute="bottom" constant="10" id="eEo-Q0-9vz">
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                                            <real key="value" value="1.04"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </constraint>
+                                                <constraint firstItem="Sai-GN-adz" firstAttribute="top" secondItem="lDs-NP-ylP" secondAttribute="top" id="ftf-DI-jrf"/>
+                                                <constraint firstItem="gA3-bh-N08" firstAttribute="leading" secondItem="lDs-NP-ylP" secondAttribute="leading" id="uH7-OT-uRW"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8uv-Nr-KAp">
+                                            <rect key="frame" x="0.0" y="175.5" width="374" height="396.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="PERSONAL_INFORMATION" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPU-15-cAY" customClass="UILabelDeviceClass" customModule="EducationApp" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="20" width="374" height="22.5"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
+                                                    <color key="textColor" name="#0961F5"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="style" value="semiBold"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                            <real key="value" value="16"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="PERSONAL_INFORMATION"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ycY-vT-vas">
+                                                    <rect key="frame" x="0.0" y="42.5" width="374" height="354"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6p1-GP-apw">
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="88.5"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_degree" translatesAutoresizingMaskIntoConstraints="NO" id="6eW-HI-Gqn">
+                                                                    <rect key="frame" x="0.0" y="20" width="34" height="34"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="6eW-HI-Gqn" secondAttribute="height" id="0MJ-CE-LDh"/>
+                                                                        <constraint firstAttribute="height" constant="34" id="yV2-nF-3IZ">
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                                                                    <real key="value" value="3.54"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </constraint>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="DEGREE" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1V-2T-8Bv" customClass="UILabelDeviceClass" customModule="EducationApp" customModuleProvider="target">
+                                                                    <rect key="frame" x="44" y="20" width="330" height="22.5"/>
+                                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                                                                    <color key="textColor" name="#1E1E1E"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="style" value="regular"/>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                                            <real key="value" value="16"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="DEGREE"/>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="DEGREE" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwV-GT-pJV" customClass="UILabelDeviceClass" customModule="EducationApp" customModuleProvider="target">
+                                                                    <rect key="frame" x="44" y="47.5" width="330" height="20"/>
+                                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                                                    <color key="textColor" name="#545454"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="style" value="regular"/>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                                            <real key="value" value="14"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vLY-fg-fXK">
+                                                                    <rect key="frame" x="0.0" y="87.5" width="374" height="1"/>
+                                                                    <color key="backgroundColor" name="#EAEAEA"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="1" id="kmd-fy-l44"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstItem="b1V-2T-8Bv" firstAttribute="leading" secondItem="6eW-HI-Gqn" secondAttribute="trailing" constant="10" id="0My-eg-yJ7">
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="widthPercentage">
+                                                                            <real key="value" value="2.3199999999999998"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </constraint>
+                                                                <constraint firstItem="6eW-HI-Gqn" firstAttribute="top" secondItem="6p1-GP-apw" secondAttribute="top" constant="20" id="5f1-Kz-A9R">
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                                                            <real key="value" value="2.0800000000000001"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </constraint>
+                                                                <constraint firstItem="WwV-GT-pJV" firstAttribute="trailing" secondItem="b1V-2T-8Bv" secondAttribute="trailing" id="91p-Eb-Q2E"/>
+                                                                <constraint firstItem="b1V-2T-8Bv" firstAttribute="top" secondItem="6eW-HI-Gqn" secondAttribute="top" id="Ci3-Oh-8c8"/>
+                                                                <constraint firstItem="WwV-GT-pJV" firstAttribute="leading" secondItem="b1V-2T-8Bv" secondAttribute="leading" id="FUi-6I-IvP"/>
+                                                                <constraint firstItem="6eW-HI-Gqn" firstAttribute="leading" secondItem="6p1-GP-apw" secondAttribute="leading" id="M8p-lE-gY8"/>
+                                                                <constraint firstAttribute="bottom" secondItem="vLY-fg-fXK" secondAttribute="bottom" id="MjJ-iY-zBP"/>
+                                                                <constraint firstAttribute="trailing" secondItem="vLY-fg-fXK" secondAttribute="trailing" id="kn5-gL-Ute"/>
+                                                                <constraint firstAttribute="trailing" secondItem="b1V-2T-8Bv" secondAttribute="trailing" id="mJ8-w7-bY1"/>
+                                                                <constraint firstItem="vLY-fg-fXK" firstAttribute="top" secondItem="WwV-GT-pJV" secondAttribute="bottom" constant="20" id="nxM-IR-O0G">
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                                                            <real key="value" value="2.0800000000000001"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </constraint>
+                                                                <constraint firstItem="vLY-fg-fXK" firstAttribute="leading" secondItem="6p1-GP-apw" secondAttribute="leading" id="p7k-Cg-nJf"/>
+                                                                <constraint firstItem="WwV-GT-pJV" firstAttribute="top" secondItem="b1V-2T-8Bv" secondAttribute="bottom" constant="5" id="qbp-YZ-RnR">
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                                                            <real key="value" value="0.52000000000000002"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </constraint>
+                                                            </constraints>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W15-cQ-shK">
+                                                            <rect key="frame" x="0.0" y="88.5" width="374" height="88.5"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_profession" translatesAutoresizingMaskIntoConstraints="NO" id="amP-aT-Mwu">
+                                                                    <rect key="frame" x="0.0" y="20" width="34" height="34"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="amP-aT-Mwu" secondAttribute="height" id="LrI-yp-rCI"/>
+                                                                        <constraint firstAttribute="height" constant="34" id="sYT-qa-9h3">
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                                                                    <real key="value" value="3.54"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </constraint>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="DEGREE" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hdo-2k-8cB" customClass="UILabelDeviceClass" customModule="EducationApp" customModuleProvider="target">
+                                                                    <rect key="frame" x="44" y="20" width="330" height="22.5"/>
+                                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                                                                    <color key="textColor" name="#1E1E1E"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="style" value="regular"/>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                                            <real key="value" value="16"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="DEGREE" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afm-ae-o5T" customClass="UILabelDeviceClass" customModule="EducationApp" customModuleProvider="target">
+                                                                    <rect key="frame" x="44" y="47.5" width="330" height="20"/>
+                                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                                                    <color key="textColor" name="#545454"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="style" value="regular"/>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                                            <real key="value" value="14"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A0u-fw-yG2">
+                                                                    <rect key="frame" x="0.0" y="87.5" width="374" height="1"/>
+                                                                    <color key="backgroundColor" name="#EAEAEA"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="1" id="gt0-bn-ctH"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="A0u-fw-yG2" secondAttribute="trailing" id="1Gm-6J-skg"/>
+                                                                <constraint firstItem="A0u-fw-yG2" firstAttribute="leading" secondItem="W15-cQ-shK" secondAttribute="leading" id="8an-kI-ydp"/>
+                                                                <constraint firstItem="amP-aT-Mwu" firstAttribute="top" secondItem="W15-cQ-shK" secondAttribute="top" constant="20" id="JnF-V8-mqB">
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                                                            <real key="value" value="2.0800000000000001"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </constraint>
+                                                                <constraint firstAttribute="bottom" secondItem="A0u-fw-yG2" secondAttribute="bottom" id="Q2f-Bo-0QN"/>
+                                                                <constraint firstItem="Afm-ae-o5T" firstAttribute="trailing" secondItem="Hdo-2k-8cB" secondAttribute="trailing" id="UNu-OP-M6u"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Hdo-2k-8cB" secondAttribute="trailing" id="V9Z-sr-4NI"/>
+                                                                <constraint firstItem="Hdo-2k-8cB" firstAttribute="top" secondItem="amP-aT-Mwu" secondAttribute="top" id="W9G-Ps-RrE"/>
+                                                                <constraint firstItem="amP-aT-Mwu" firstAttribute="leading" secondItem="W15-cQ-shK" secondAttribute="leading" id="hwZ-V3-tzF"/>
+                                                                <constraint firstItem="A0u-fw-yG2" firstAttribute="top" secondItem="Afm-ae-o5T" secondAttribute="bottom" constant="20" id="jq0-8h-9SH">
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                                                            <real key="value" value="2.0800000000000001"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </constraint>
+                                                                <constraint firstItem="Afm-ae-o5T" firstAttribute="top" secondItem="Hdo-2k-8cB" secondAttribute="bottom" constant="5" id="m6y-P2-8Ic">
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                                                            <real key="value" value="0.52000000000000002"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </constraint>
+                                                                <constraint firstItem="Afm-ae-o5T" firstAttribute="leading" secondItem="Hdo-2k-8cB" secondAttribute="leading" id="myA-1C-fB2"/>
+                                                                <constraint firstItem="Hdo-2k-8cB" firstAttribute="leading" secondItem="amP-aT-Mwu" secondAttribute="trailing" constant="10" id="u5x-SJ-5VA">
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="widthPercentage">
+                                                                            <real key="value" value="2.3199999999999998"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </constraint>
+                                                            </constraints>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eyg-cP-RZh">
+                                                            <rect key="frame" x="0.0" y="177" width="374" height="88.5"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_email" translatesAutoresizingMaskIntoConstraints="NO" id="AOC-Pb-Kno">
+                                                                    <rect key="frame" x="0.0" y="20" width="34" height="34"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="34" id="EgI-Er-1uN">
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                                                                    <real key="value" value="3.54"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </constraint>
+                                                                        <constraint firstAttribute="width" secondItem="AOC-Pb-Kno" secondAttribute="height" id="gee-Xl-mem"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="EMAIL" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oe5-iQ-GAE" customClass="UILabelDeviceClass" customModule="EducationApp" customModuleProvider="target">
+                                                                    <rect key="frame" x="44" y="20" width="330" height="22.5"/>
+                                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                                                                    <color key="textColor" name="#1E1E1E"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="style" value="regular"/>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                                            <real key="value" value="16"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="EMAIL"/>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="DEGREE" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="621-1j-1Qv" customClass="UILabelDeviceClass" customModule="EducationApp" customModuleProvider="target">
+                                                                    <rect key="frame" x="44" y="47.5" width="330" height="20"/>
+                                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                                                    <color key="textColor" name="#0961F5"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="style" value="regular"/>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                                            <real key="value" value="14"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fx7-Qd-TJt">
+                                                                    <rect key="frame" x="0.0" y="87.5" width="374" height="1"/>
+                                                                    <color key="backgroundColor" name="#EAEAEA"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="1" id="PaW-mR-WLV"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstItem="621-1j-1Qv" firstAttribute="leading" secondItem="Oe5-iQ-GAE" secondAttribute="leading" id="71Z-on-wDE"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Oe5-iQ-GAE" secondAttribute="trailing" id="EeS-Ko-Bfy"/>
+                                                                <constraint firstItem="AOC-Pb-Kno" firstAttribute="leading" secondItem="Eyg-cP-RZh" secondAttribute="leading" id="HYR-Rf-2Na"/>
+                                                                <constraint firstAttribute="trailing" secondItem="fx7-Qd-TJt" secondAttribute="trailing" id="L99-2p-9zL"/>
+                                                                <constraint firstItem="fx7-Qd-TJt" firstAttribute="top" secondItem="621-1j-1Qv" secondAttribute="bottom" constant="20" id="LVp-4i-AKk">
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                                                            <real key="value" value="2.0800000000000001"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </constraint>
+                                                                <constraint firstAttribute="bottom" secondItem="fx7-Qd-TJt" secondAttribute="bottom" id="O81-GQ-cN5"/>
+                                                                <constraint firstItem="621-1j-1Qv" firstAttribute="trailing" secondItem="Oe5-iQ-GAE" secondAttribute="trailing" id="RZg-D6-BSo"/>
+                                                                <constraint firstItem="621-1j-1Qv" firstAttribute="top" secondItem="Oe5-iQ-GAE" secondAttribute="bottom" constant="5" id="jRo-zG-0Hi">
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                                                            <real key="value" value="0.52000000000000002"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </constraint>
+                                                                <constraint firstItem="AOC-Pb-Kno" firstAttribute="top" secondItem="Eyg-cP-RZh" secondAttribute="top" constant="20" id="kqK-SX-vzX">
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                                                            <real key="value" value="2.0800000000000001"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </constraint>
+                                                                <constraint firstItem="Oe5-iQ-GAE" firstAttribute="leading" secondItem="AOC-Pb-Kno" secondAttribute="trailing" constant="10" id="pxs-yi-Ak0">
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="widthPercentage">
+                                                                            <real key="value" value="2.3199999999999998"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </constraint>
+                                                                <constraint firstItem="fx7-Qd-TJt" firstAttribute="leading" secondItem="Eyg-cP-RZh" secondAttribute="leading" id="uBh-eK-Lw7"/>
+                                                                <constraint firstItem="Oe5-iQ-GAE" firstAttribute="top" secondItem="AOC-Pb-Kno" secondAttribute="top" id="wJw-m5-2Iq"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sbO-H1-m0h">
+                                                            <rect key="frame" x="0.0" y="265.5" width="374" height="88.5"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_experience" translatesAutoresizingMaskIntoConstraints="NO" id="2et-GX-Voa">
+                                                                    <rect key="frame" x="0.0" y="20" width="34" height="34"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="2et-GX-Voa" secondAttribute="height" id="Kga-Xs-I0e"/>
+                                                                        <constraint firstAttribute="height" constant="34" id="nhM-tc-nTq">
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                                                                    <real key="value" value="3.54"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </constraint>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="EXPERIENCE" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQD-aG-jhq" customClass="UILabelDeviceClass" customModule="EducationApp" customModuleProvider="target">
+                                                                    <rect key="frame" x="44" y="20" width="330" height="22.5"/>
+                                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                                                                    <color key="textColor" name="#1E1E1E"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="style" value="regular"/>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                                            <real key="value" value="16"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="EXPERIENCE"/>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="DEGREE" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qj-8t-lgr" customClass="UILabelDeviceClass" customModule="EducationApp" customModuleProvider="target">
+                                                                    <rect key="frame" x="44" y="47.5" width="330" height="20"/>
+                                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                                                    <color key="textColor" name="#545454"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="style" value="regular"/>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                                            <real key="value" value="14"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RUB-8G-zlw">
+                                                                    <rect key="frame" x="0.0" y="87.5" width="374" height="1"/>
+                                                                    <color key="backgroundColor" name="#EAEAEA"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="1" id="IuN-8H-e6c"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstItem="7qj-8t-lgr" firstAttribute="top" secondItem="CQD-aG-jhq" secondAttribute="bottom" constant="5" id="3m8-TD-5QA">
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                                                            <real key="value" value="0.52000000000000002"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </constraint>
+                                                                <constraint firstAttribute="bottom" secondItem="RUB-8G-zlw" secondAttribute="bottom" id="6CI-4C-hGD"/>
+                                                                <constraint firstItem="CQD-aG-jhq" firstAttribute="leading" secondItem="2et-GX-Voa" secondAttribute="trailing" constant="10" id="9Ym-Z0-Gkn">
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="widthPercentage">
+                                                                            <real key="value" value="2.3199999999999998"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </constraint>
+                                                                <constraint firstItem="7qj-8t-lgr" firstAttribute="leading" secondItem="CQD-aG-jhq" secondAttribute="leading" id="Edd-9I-IuX"/>
+                                                                <constraint firstAttribute="trailing" secondItem="RUB-8G-zlw" secondAttribute="trailing" id="Ix4-fQ-IZ0"/>
+                                                                <constraint firstItem="RUB-8G-zlw" firstAttribute="leading" secondItem="sbO-H1-m0h" secondAttribute="leading" id="R2P-t9-cOD"/>
+                                                                <constraint firstItem="RUB-8G-zlw" firstAttribute="top" secondItem="7qj-8t-lgr" secondAttribute="bottom" constant="20" id="aIJ-x2-ybP">
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                                                            <real key="value" value="2.0800000000000001"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </constraint>
+                                                                <constraint firstItem="2et-GX-Voa" firstAttribute="leading" secondItem="sbO-H1-m0h" secondAttribute="leading" id="etd-kA-FcZ"/>
+                                                                <constraint firstItem="CQD-aG-jhq" firstAttribute="top" secondItem="2et-GX-Voa" secondAttribute="top" id="gU5-Ya-WKs"/>
+                                                                <constraint firstItem="2et-GX-Voa" firstAttribute="top" secondItem="sbO-H1-m0h" secondAttribute="top" constant="20" id="hkI-Ku-aV0">
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                                                            <real key="value" value="2.0800000000000001"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </constraint>
+                                                                <constraint firstItem="7qj-8t-lgr" firstAttribute="trailing" secondItem="CQD-aG-jhq" secondAttribute="trailing" id="jsG-Ol-HlU"/>
+                                                                <constraint firstAttribute="trailing" secondItem="CQD-aG-jhq" secondAttribute="trailing" id="txw-vd-Q2X"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" name="#FFFFFF"/>
+                                            <constraints>
+                                                <constraint firstItem="nPU-15-cAY" firstAttribute="top" secondItem="8uv-Nr-KAp" secondAttribute="top" constant="20" id="NuY-bG-zoq">
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                                            <real key="value" value="2.0800000000000001"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </constraint>
+                                                <constraint firstAttribute="trailing" secondItem="ycY-vT-vas" secondAttribute="trailing" id="Onu-P2-3mH"/>
+                                                <constraint firstAttribute="bottom" secondItem="ycY-vT-vas" secondAttribute="bottom" id="bl9-aZ-aqJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="nPU-15-cAY" secondAttribute="trailing" id="lmd-6f-fSR"/>
+                                                <constraint firstItem="ycY-vT-vas" firstAttribute="top" secondItem="nPU-15-cAY" secondAttribute="bottom" id="rEg-qe-1mE"/>
+                                                <constraint firstItem="ycY-vT-vas" firstAttribute="leading" secondItem="8uv-Nr-KAp" secondAttribute="leading" id="uf2-k2-5uE"/>
+                                                <constraint firstItem="nPU-15-cAY" firstAttribute="leading" secondItem="8uv-Nr-KAp" secondAttribute="leading" id="zuh-gC-zkD"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YcU-vv-7gG">
+                                            <rect key="frame" x="0.0" y="572" width="374" height="82.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="ACHIEVEMENT_AWARD" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="piX-vc-1kd" customClass="UILabelDeviceClass" customModule="EducationApp" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="20" width="374" height="22.5"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
+                                                    <color key="textColor" name="#0961F5"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="style" value="semiBold"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                            <real key="value" value="16"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="ACHIEVEMENT_AWARD"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="ACHIEVEMENT_AWARD" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZ2-RZ-xbw" customClass="UILabelDeviceClass" customModule="EducationApp" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="62.5" width="374" height="20"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                                    <color key="textColor" name="#1E1E1E"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="style" value="regular"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneFontSize">
+                                                            <real key="value" value="14"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" name="#FFFFFF"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="piX-vc-1kd" secondAttribute="trailing" id="AlE-EU-aeF"/>
+                                                <constraint firstItem="gZ2-RZ-xbw" firstAttribute="leading" secondItem="YcU-vv-7gG" secondAttribute="leading" id="Ntz-ud-hQ6"/>
+                                                <constraint firstAttribute="trailing" secondItem="gZ2-RZ-xbw" secondAttribute="trailing" id="fC5-Mb-TJy"/>
+                                                <constraint firstAttribute="bottom" secondItem="gZ2-RZ-xbw" secondAttribute="bottom" id="g1N-gc-Ekt"/>
+                                                <constraint firstItem="gZ2-RZ-xbw" firstAttribute="top" secondItem="piX-vc-1kd" secondAttribute="bottom" constant="20" id="lnp-Z4-Gw8">
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                                            <real key="value" value="2.0800000000000001"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </constraint>
+                                                <constraint firstItem="piX-vc-1kd" firstAttribute="leading" secondItem="YcU-vv-7gG" secondAttribute="leading" id="tSf-LX-iog"/>
+                                                <constraint firstItem="piX-vc-1kd" firstAttribute="top" secondItem="YcU-vv-7gG" secondAttribute="top" constant="20" id="upL-Eh-kXe">
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                                            <real key="value" value="2.0800000000000001"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </constraint>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="aAI-pp-uJR" firstAttribute="leading" secondItem="LaV-E8-bgc" secondAttribute="leading" constant="20" id="1hg-ck-e1s">
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="widthPercentage">
+                                            <real key="value" value="4.6500000000000004"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </constraint>
+                                <constraint firstAttribute="bottom" secondItem="aAI-pp-uJR" secondAttribute="bottom" id="HlJ-H3-yny"/>
+                                <constraint firstItem="aAI-pp-uJR" firstAttribute="top" secondItem="LaV-E8-bgc" secondAttribute="top" constant="10" id="VV3-jV-FpB">
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                            <real key="value" value="1.04"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </constraint>
+                                <constraint firstAttribute="trailing" secondItem="aAI-pp-uJR" secondAttribute="trailing" constant="20" id="aYY-9a-5Kl">
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="widthPercentage">
+                                            <real key="value" value="4.6500000000000004"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </constraint>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="LaV-E8-bgc" firstAttribute="centerX" secondItem="iiJ-WP-Rdr" secondAttribute="centerX" id="94N-bx-qz0"/>
+                        <constraint firstAttribute="trailing" secondItem="LaV-E8-bgc" secondAttribute="trailing" id="Cbl-xt-O05"/>
+                        <constraint firstItem="LaV-E8-bgc" firstAttribute="top" secondItem="iiJ-WP-Rdr" secondAttribute="top" id="Obx-EN-GQK"/>
+                        <constraint firstAttribute="bottom" secondItem="LaV-E8-bgc" secondAttribute="bottom" id="Z0M-dg-dev"/>
+                        <constraint firstItem="LaV-E8-bgc" firstAttribute="leading" secondItem="iiJ-WP-Rdr" secondAttribute="leading" id="w7b-cK-fsi"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="#FFFFFF"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iiJ-WP-Rdr" secondAttribute="trailing" id="AXA-Sv-ygf"/>
+                <constraint firstItem="iiJ-WP-Rdr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="GAY-TE-edC"/>
+                <constraint firstAttribute="bottom" secondItem="iiJ-WP-Rdr" secondAttribute="bottom" id="GYJ-MU-Rbr"/>
+                <constraint firstItem="iiJ-WP-Rdr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="VvL-Ft-Cvz"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="74"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_courses_background" width="125" height="110"/>
+        <image name="ic_degree" width="34" height="34"/>
+        <image name="ic_email" width="34" height="34"/>
+        <image name="ic_experience" width="34" height="34"/>
+        <image name="ic_profession" width="34" height="34"/>
+        <namedColor name="#0961F5">
+            <color red="0.035000000149011612" green="0.37999999523162842" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="#1E1E1E">
+            <color red="0.11800000071525574" green="0.11800000071525574" blue="0.11800000071525574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="#545454">
+            <color red="0.32899999618530273" green="0.32899999618530273" blue="0.32899999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="#EAEAEA">
+            <color red="0.9179999828338623" green="0.9179999828338623" blue="0.9179999828338623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="#FFFFFF">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
