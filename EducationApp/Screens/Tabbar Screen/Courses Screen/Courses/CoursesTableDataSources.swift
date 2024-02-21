@@ -9,7 +9,7 @@ class CoursesTableDataSources: NSObject, UITableViewDelegate, UITableViewDataSou
     //MARK: - Variable Declaration
     
     /// coursesArray stores array of course list data.
-    var coursesArray : [json]? {
+    var coursesArray: [json]? {
         didSet{
             self.TableView?.reloadData()
             
@@ -48,8 +48,16 @@ class CoursesTableDataSources: NSObject, UITableViewDelegate, UITableViewDataSou
         let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "CoursesTableViewCell", for: indexPath) as! CoursesTableViewCell
     
         let courseObject = self.coursesArray?[indexPath.row]
-        tableViewCell.titleLabel?.text = courseObject?.string(key: "coursename").trim()
-        tableViewCell.descriptionLabel?.text = courseObject?.string(key: "_id").trim()
+        
+        let courseName = courseObject?.string(key: "coursename").trim()
+        tableViewCell.titleImageView?.getImage(url: courseObject?.string(key: "image_url") ?? "")
+        tableViewCell.titleLabel?.text = courseName
+        
+        if (courseName?.lowercased().contains("gujarati") ?? false) {
+            tableViewCell.descriptionLabel?.text = "Internal Gujarati Medium"
+        } else {
+            tableViewCell.descriptionLabel?.text = "Internal English Medium"
+        }
         
         return tableViewCell
     }

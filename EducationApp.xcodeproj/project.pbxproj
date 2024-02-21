@@ -473,10 +473,6 @@
 				88C7A2432B7E02D000F3AFAA /* Tabbar Screen */,
 				AB83ABE92B7E346200272DDF /* Welcome Screen */,
 				88259EC02B774A59008B1CA9 /* Authentication Screen */,
-				88C7A2502B7E033000F3AFAA /* ProfileViewController.swift */,
-				88C7A2512B7E033000F3AFAA /* ProfileViewController.xib */,
-				AB184E212B85E03200AD1C02 /* ChangePasswordViewController.swift */,
-				AB184E222B85E03200AD1C02 /* ChangePasswordViewController.xib */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -795,8 +791,28 @@
 				AB184E1B2B85C77800AD1C02 /* SettingsTableViewCell.swift */,
 				AB184E1C2B85C77800AD1C02 /* SettingsTableViewCell.xib */,
 				AB184E1F2B85CA8B00AD1C02 /* SettingsTableDataSources.swift */,
+				AB184E252B85FAC300AD1C02 /* Edit Profile Screen */,
+				AB184E262B85FAD200AD1C02 /* Change Password Screen */,
 			);
 			path = "Settings Screen";
+			sourceTree = "<group>";
+		};
+		AB184E252B85FAC300AD1C02 /* Edit Profile Screen */ = {
+			isa = PBXGroup;
+			children = (
+				88C7A2502B7E033000F3AFAA /* ProfileViewController.swift */,
+				88C7A2512B7E033000F3AFAA /* ProfileViewController.xib */,
+			);
+			path = "Edit Profile Screen";
+			sourceTree = "<group>";
+		};
+		AB184E262B85FAD200AD1C02 /* Change Password Screen */ = {
+			isa = PBXGroup;
+			children = (
+				AB184E212B85E03200AD1C02 /* ChangePasswordViewController.swift */,
+				AB184E222B85E03200AD1C02 /* ChangePasswordViewController.xib */,
+			);
+			path = "Change Password Screen";
 			sourceTree = "<group>";
 		};
 		AB83ABE92B7E346200272DDF /* Welcome Screen */ = {

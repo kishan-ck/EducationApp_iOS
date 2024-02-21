@@ -17,6 +17,9 @@ class SemesterListViewController: BaseViewController {
     
     var courseObj: json?
     
+    /// semesterListArray stores array of semester list data.
+    var semesterListArray = [json]()
+    
     //MARK: - Class Method
     
     /// View did load
@@ -26,6 +29,11 @@ class SemesterListViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         semesterCollectionView?.setDataSourceDelegate(datasourceAndDelegate: semesterCollectionViewDataSource, collectionCell: "SemesterCollectionViewCell")
+        
+        self.getSemesterList()
+        semesterCollectionView?.addPullToRefresh {
+            self.getSemesterList(isShowloader: false)
+        }
     }
     
     /// View will Appear
@@ -62,6 +70,25 @@ extension SemesterListViewController {
         attributedString.setColorForText((self.courseObj?.string(key: "coursename") ?? ""), with: UIColor(named: "#0961F5")!)
         courseLabel?.attributedText = attributedString
     }
+    
+    /// getSemesterList() used to call semester List API.
+    /// - Parameter isShowloader: passing show loader boolean
+    func getSemesterList(isShowloader: Bool = true){
+        semesterListArray.removeAll()
+        
+        APIClient.sharedInstance.getSemestersListApi(courseId: courseObj?.string(key: "_id") ?? "", parameters: [:]) { responseObj in
+            let listArray = responseObj?.array(key: "data") ?? []
+            self.semesterListArray = listArray
+
+            self.semesterCollectionView?.stopPullToRefresh()
+            self.semesterCollectionViewDataSource.semesterListArray = self.semesterListArray
+            self.semesterCollectionViewDataSource.courseObj = self.courseObj
+            
+        } failure: { error in
+            self.semesterCollectionView?.stopPullToRefresh()
+            makeToast(type: .error, title: APP_TITLE, message: error ?? "")
+        }
+    }
 }
 
 //MARK: - UISearchBarDelegate
@@ -69,9 +96,15 @@ extension SemesterListViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.count == 0 {
-            
+            semesterCollectionViewDataSource.semesterListArray = semesterListArray
         } else {
-            
+            var filteredSemestersArray: [json] = []
+            filteredSemestersArray = semesterListArray.filter({ (semesterObject) -> Bool in
+                let semesterName: NSString = semesterObject.string(key: "semester") as NSString
+                let range = semesterName.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
+                return range.location != NSNotFound
+            })
+            semesterCollectionViewDataSource.semesterListArray = filteredSemestersArray
         }
         semesterCollectionView?.reloadData()
     }
