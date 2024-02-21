@@ -68,3 +68,9 @@ var showPassword : Bool = false
 let supportEmail = "info@coderkube.com"
 
 let appURL = "https://apps.apple.com/us/app/pdf-verse-pdf-converter/id6475039469"
+
+//MARK: - Constants for USER_DEFAULTS_STANDARD keys
+
+var WELCOME_COMPLETE = "WELCOME_COMPLETE"
+
+var PROFILE_COMPLETE = "PROFILE_COMPLETE"

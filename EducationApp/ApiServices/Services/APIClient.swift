@@ -42,7 +42,12 @@ class APIClient {
                 showLoader()
             }
             
-            AF.request(pageUrlStr, method : method, parameters : parameters, encoding : URLEncoding.queryString, headers : headers).responseJSON { response in
+            var paramEncoding: ParameterEncoding = JSONEncoding.default
+            if method == .get {
+                paramEncoding = URLEncoding.queryString
+            }
+            
+            AF.request(pageUrlStr, method: method, parameters: parameters, encoding: paramEncoding, headers: headers).responseJSON { response in
                 switch response.result {
                     
                 case .success(let JSON):

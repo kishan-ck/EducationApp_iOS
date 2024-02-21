@@ -244,6 +244,7 @@ func commonDropdown(anchorView: UIView, dataSource: [String], selectionAction : 
     
     let dropDown = DropDown()
     dropDown.anchorView = anchorView
+    dropDown.width = anchorView.frame.size.width
     dropDown.bottomOffset = CGPoint(x: 0, y: anchorView.bounds.height + 10)
     dropDown.dataSource = dataSource
     dropDown.dismissMode = .onTap

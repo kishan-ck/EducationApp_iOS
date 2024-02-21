@@ -75,6 +75,8 @@ extension HomeViewController {
     func setUpUI() {
         self.navigationController?.navigationBar.isHidden = true
         
+        welcomeLabel?.text = String(format: "HELLO_STUDENT".localized, Config().getUser().string(key: "firstName"), Config().getUser().string(key: "lastName"))
+        
         [totalCoursesView, totalSubjectsView, totalInstructorView, happyStudentView].forEach { (view) in
             view?.layer.applySketchShadow(color: UIColor(named: "#000000")!, alpha: 0.10, x: 1, y: 2, blur: 10.0, spread: 0)
         }
@@ -83,6 +85,7 @@ extension HomeViewController {
 
 //MARK: - IBAction Method
 extension HomeViewController {
+    
     @IBAction func applyForFacultyButtonAction(_ sender: Any) {
     }
     

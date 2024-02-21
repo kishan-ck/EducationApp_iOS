@@ -15,6 +15,9 @@ class MyCoursesViewController: BaseViewController {
     //MARK: - Variable Declaration
     var coursesTableDataSources = CoursesTableDataSources()
     
+    /// coursesListArray stores array of courses list data.
+    var coursesListArray: [json]?
+    
     //MARK: - Class Method
     
     /// View did load
@@ -24,6 +27,11 @@ class MyCoursesViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         coursesTableView?.setDataSourceDelegate(datasourceAndDelegate: coursesTableDataSources, tableCell: "CoursesTableViewCell")
+        
+        self.getCoursesList()
+        coursesTableView?.addPullToRefresh {
+            self.getCoursesList(isShowloader: false)
+        }
     }
     
     /// View will Appear
@@ -38,7 +46,7 @@ class MyCoursesViewController: BaseViewController {
     
     override func searchButtonAction() {
         searchBar?.isHidden.toggle()
-        if !searchBar!.isHidden {
+        if !(searchBar?.isHidden ?? true) {
             searchBar?.becomeFirstResponder()
         } else {
             searchBar?.text = ""
@@ -55,6 +63,25 @@ extension MyCoursesViewController {
         navigationBarWithRightButtonTransparent(isShowBackButton: false, showTitle: "COURSES".localized, isShowSearchButton: true)
         
         searchBar?.placeholder = "SEARCH".localized
+    }
+    
+    /// getCoursesList() used to call courses List API.
+    /// - Parameter isShowloader: passing show loader boolean
+    func getCoursesList(isShowloader: Bool = true){
+        self.coursesListArray = [json]()
+        self.coursesListArray?.removeAll()
+        
+        let collegeId = Config().getUser().object(key: "student_course_details").object(key: "college_details").string(key: "_id")
+        APIClient.sharedInstance.getCoursesListApi(collegeId: collegeId, parameters: [:]) { responseObj in
+            let listArray = responseObj?.array(key: "data") ?? []
+            self.coursesListArray = listArray
+
+            self.coursesTableView?.stopPullToRefresh()
+            self.coursesTableDataSources.coursesArray = self.coursesListArray
+        } failure: { error in
+            self.coursesTableView?.stopPullToRefresh()
+            makeToast(type: .error, title: APP_TITLE, message: error ?? "")
+        }
     }
 }
 

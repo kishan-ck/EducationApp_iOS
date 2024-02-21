@@ -23,7 +23,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var signUpLabel: UILabel?
     
     //MARK: - Variable Declaration
-
     
     //MARK: - Class Method
     
@@ -34,8 +33,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         #if DEBUG
-            emailTextField?.text = "dhruv.coderkube@gmail.com"
-            passwordTextField?.text = "Dhruv@123"
+            emailTextField?.text = "vijay.coderkube@gmail.com"
+            passwordTextField?.text = "12345678"
         #else
         #endif
     }
@@ -95,28 +94,13 @@ extension LoginViewController {
     ///
     /// - Parameter responseObj: passing response json
     public func handleLoginResponse(responseObj: JSON){
-        /*let responseData = responseObj.object(key: "data")
+        let responseData = responseObj.object(key: "data")
         Config().saveAuthToken(tokenString: responseData.string(key: "authToken"))
         
         let userData = responseData.dictionaryObject ?? [:]
         Config().saveUserData(object: userData)
-        
-        isDocumentUploaded = Config().getUser().integer(key: "document_uploaded")
-        agreementActivated = Config().getUser().integer(key: "agreement_verified")
-        isLoginSucceed = Config().getUser().count
-        
-        if isDocumentUploaded == 0 {
-            KAPPDELEGATE.setUpDocument()
-            
-        } else if agreementActivated == 0 {
-            KAPPDELEGATE.setUpAgreement()
-            
-        } else if (isLoginSucceed ?? 0) > 0 {
-            KAPPDELEGATE.setUpHome()
-            
-        } else {
-            KAPPDELEGATE.setUpIntroduction()
-        }*/
+
+        KAPPDELEGATE.setUpHome()
     }
 }
 

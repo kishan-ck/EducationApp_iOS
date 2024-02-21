@@ -37,13 +37,19 @@ class SignUpViewController: UIViewController{
     let genderData = ["MALE".localized, "FEMALE".localized, "OTHER".localized]
     
     var collegeDropDown = DropDown()
-    let collegeData = ["MALE".localized, "FEMALE".localized, "OTHER".localized]
+    var collegeArray: [json]?
+    var collegeData = [String]()
+    var collegeId: String = ""
     
     var courseDropDown = DropDown()
-    let courseData = ["MALE".localized, "FEMALE".localized, "OTHER".localized]
+    var courseArray: [json]?
+    var courseData = [String]()
+    var courseId: String = ""
     
     var semesterDropDown = DropDown()
-    let semesterData = ["MALE".localized, "FEMALE".localized, "OTHER".localized]
+    var semesterArray: [json]?
+    var semesterData = [String]()
+    var semesterId: String = ""
     
     //MARK: - Class Method
     /// View did load
@@ -52,6 +58,16 @@ class SignUpViewController: UIViewController{
     /// - Description : To set values after view did load
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        getCollegesList()
+        
+        self.firstNameTextField?.text = "Vijay"
+        self.lastNameTextField?.text = "Parmar"
+        self.genderTextField?.text = "Male"
+        self.phoneNumberTextField?.text = "9016100516"
+        self.emailTextField?.text = "vijay.coderkube@gmail.com"
+        self.passwordTextField?.text = "12345678"
+        self.confirmPasswordTextField?.text = "12345678"
     }
     
     /// View will Appear
@@ -75,22 +91,155 @@ extension SignUpViewController {
         genderDropDown = commonDropdown(anchorView: genderTextFieldView!, dataSource: genderData) { id, value in
             self.genderTextField?.text = value
         }
-        
-        collegeDropDown = commonDropdown(anchorView: selectCollegeTextFieldView!, dataSource: collegeData) { id, value in
-            self.selectCollegeTextField?.text = value
-        }
-        
-        courseDropDown = commonDropdown(anchorView: selectCourseTextFieldView!, dataSource: courseData) { id, value in
-            self.selectCourseTextField?.text = value
-        }
-        
-        semesterDropDown = commonDropdown(anchorView: selectSemesterTextFieldView!, dataSource: semesterData) { id, value in
-            self.selectSemesterTextField?.text = value
-        }
             
         let attributedString = NSMutableAttributedString(string: "ALREADY_HAVE_ACCOUNT".localized + "SIGN_IN".localized)
         attributedString.setColorForText("SIGN_IN".localized, with: UIColor(named: "#0961F5")!)
         signInLabel?.attributedText = attributedString
+    }
+    
+    /// getCollegesList() used to call colleges List API.
+    func getCollegesList(){
+        selectCollegeTextField?.text = ""
+        collegeArray?.removeAll()
+        collegeData.removeAll()
+        APIClient.sharedInstance.getCollegeListApi(parameters: [:]) { responseObj in
+            let listArray = responseObj?.array(key: "data")
+            self.collegeArray = listArray
+            self.collegeData = self.collegeArray?.map({ $0.string(key: "collegeName").trim() }) ?? []
+            
+            self.collegeDropDown = commonDropdown(anchorView: self.selectCollegeTextFieldView!, dataSource: self.collegeData) { id, value in
+                self.collegeId = self.collegeArray?[id].string(key: "_id") ?? ""
+                self.selectCollegeTextField?.text = value
+                
+                self.getCoursesList()
+            }
+            
+        } failure: { error in
+            makeToast(type: .error, title: APP_TITLE, message: error ?? "")
+        }
+    }
+    
+    /// getCoursesList() used to call courses List API.
+    func getCoursesList(){
+        selectCourseTextField?.text = ""
+        courseArray?.removeAll()
+        courseData.removeAll()
+        APIClient.sharedInstance.getCoursesListApi(collegeId: self.collegeId, parameters: [:]) { responseObj in
+            let listArray = responseObj?.array(key: "data")
+            self.courseArray = listArray
+            self.courseData = self.courseArray?.map({ $0.string(key: "coursename").trim() }) ?? []
+            
+            self.courseDropDown = commonDropdown(anchorView: self.selectCourseTextFieldView!, dataSource: self.courseData) { id, value in
+                self.courseId = self.courseArray?[id].string(key: "_id") ?? ""
+                self.selectCourseTextField?.text = value
+                
+                self.getSemestersList()
+            }
+            
+        } failure: { error in
+            makeToast(type: .error, title: APP_TITLE, message: error ?? "")
+        }
+    }
+    
+    /// getSemestersList() used to call semesters List API.
+    func getSemestersList(){
+        selectSemesterTextField?.text = ""
+        semesterArray?.removeAll()
+        semesterData.removeAll()
+        APIClient.sharedInstance.getSemestersListApi(courseId: self.courseId, parameters: [:]) { responseObj in
+            let listArray = responseObj?.array(key: "data")
+            self.semesterArray = listArray
+            self.semesterData = self.semesterArray?.map({ $0.string(key: "semester").trim() }) ?? []
+            
+            self.semesterDropDown = commonDropdown(anchorView: self.selectSemesterTextFieldView!, dataSource: self.semesterData) { id, value in
+                self.semesterId = self.semesterArray?[id].string(key: "_id") ?? ""
+                self.selectSemesterTextField?.text = value
+            }
+            
+        } failure: { error in
+            makeToast(type: .error, title: APP_TITLE, message: error ?? "")
+        }
+    }
+    
+    /// registerAPI() function used to call registration API.
+    func registerAPI(){
+        view.endEditing(true)
+        
+        if firstNameTextField?.text?.trim() == "" {
+            makeToast(type: .error, title: APP_TITLE, message: "PLEASE_ENTER_FIRST_NAME".localized, view: self.view)
+            
+        } else if lastNameTextField?.text?.trim() == "" {
+            makeToast(type: .error, title: APP_TITLE, message: "PLEASE_ENTER_LAST_NAME".localized, view: self.view)
+            
+        } else if genderTextField?.text?.trim() == "" {
+            makeToast(type: .error, title: APP_TITLE, message: "PLEASE_SELECT_GENDER".localized, view: self.view)
+            
+        } else if emailTextField?.text?.trim() == "" {
+            makeToast(type: .error, title: APP_TITLE, message: "PLEASE_ENTER_EMAIL".localized, view: self.view)
+            
+        } else if isValidEmail(email: emailTextField?.text?.trim() ?? "") == false {
+            makeToast(type: .error, title: APP_TITLE, message: "PLEASE_ENTER_VALID_EMAIL".localized, view: self.view)
+            
+        } else if phoneNumberTextField?.text?.trim() == "" {
+            makeToast(type: .error, title: APP_TITLE, message: "PLEASE_ENTER_NUMBER".localized, view: self.view)
+            
+        } else if phoneNumberTextField?.text?.trim().count ?? 0 < 10 {
+            makeToast(type: .error, title: APP_TITLE, message: "PLEASE_ENTER_VALID_NUMBER".localized, view: self.view)
+            
+        } else if passwordTextField?.text?.trim() == "" {
+            makeToast(type: .error, title: APP_TITLE, message: "PLEASE_ENTER_PASSWORD".localized, view: self.view)
+            
+        } else if (passwordTextField?.text?.trim() ?? "").count < 8 {
+            makeToast(type: .error, title: APP_TITLE, message: "ENTER_VALID_PASSWORD".localized, view: self.view)
+            
+        } else if confirmPasswordTextField?.text?.trim() == "" {
+            makeToast(type: .error, title: APP_TITLE, message: "PLEASE_ENTER_CONFIRM_PASSWORD".localized, view: self.view)
+            
+        } else if passwordTextField?.text?.trim() != confirmPasswordTextField?.text?.trim() {
+            makeToast(type: .error, title: APP_TITLE, message: "PASSWORD_NOT_MATCH".localized, view: self.view)
+            
+        } else if selectCollegeTextField?.text?.trim() == "" {
+            makeToast(type: .error, title: APP_TITLE, message: "PLEASE_SELECT_COLLEGE".localized, view: self.view)
+            
+        } else if selectCourseTextField?.text?.trim() == "" {
+            makeToast(type: .error, title: APP_TITLE, message: "PLEASE_SELECT_COURSE".localized, view: self.view)
+            
+        } else if selectSemesterTextField?.text?.trim() == "" {
+            makeToast(type: .error, title: APP_TITLE, message: "PLEASE_SELECT_SEMESTER".localized, view: self.view)
+            
+        } else {
+        
+            let params : JSONDictionary = [
+                "firstName": self.firstNameTextField?.text?.trim() as AnyObject,
+                "lastName": self.lastNameTextField?.text?.trim() as AnyObject,
+                "mobileNum": self.phoneNumberTextField?.text?.trim() as AnyObject,
+                "email": self.emailTextField?.text?.trim() as AnyObject,
+                "gender": self.genderTextField?.text?.trim() as AnyObject,
+                "password": self.passwordTextField?.text?.trim() as AnyObject,
+                "college_id": self.collegeId as AnyObject,
+                "course_id": self.courseId as AnyObject,
+                "semester_id": self.semesterId as AnyObject]
+
+            APIClient.sharedInstance.registerApi(parameters: params) { [weak self] responseObj in
+                if(responseObj?.integer(key: "status") == 200){
+                    
+                    let responseData = responseObj?.object(key: "data")
+                    Config().saveAuthToken(tokenString: responseData?.string(key: "authToken") ?? "")
+                    
+                    let userData = responseData?.dictionaryObject ?? [:]
+                    Config().saveUserData(object: userData)
+                    
+                    let viewController = LoginSuccessPopUpViewController(nibName: "LoginSuccessPopUpViewController", bundle: nil)
+                    viewController.completion = { dict in
+                        KAPPDELEGATE.setUpHome()
+                    }
+                    viewController.modalPresentationStyle = .custom
+                    self?.present(viewController, animated: false, completion: nil)
+                }
+            } failure: { error in
+                makeToast(type: .error, title: APP_TITLE, message: error ?? "", view: self.view)
+            }
+        }
     }
 }
 
@@ -137,12 +286,7 @@ extension SignUpViewController {
     /// - Parameter sender: passing sender object.
     /// - Description : It is used to Sign Up to user's account by using dedicated email address and password.
     @IBAction func signUpButtonAction(_ sender: Any) {
-        let viewController = LoginSuccessPopUpViewController(nibName: "LoginSuccessPopUpViewController", bundle: nil)
-        viewController.completion = { dict in
-            KAPPDELEGATE.setUpHome()
-        }
-        viewController.modalPresentationStyle = .custom
-        present(viewController, animated: false, completion: nil)
+        registerAPI()
     }
     
     /// signInButton UIButton click event.
@@ -150,7 +294,7 @@ extension SignUpViewController {
     /// - Parameter sender: passing sender object.
     /// - Description : It will redirect user to LoginViewController if user does not registered yet.
     @IBAction func signInButtonAction(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     /// showPasswordButton UIButton click event.

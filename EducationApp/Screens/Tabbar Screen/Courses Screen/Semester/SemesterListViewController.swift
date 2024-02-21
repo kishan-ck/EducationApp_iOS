@@ -13,8 +13,9 @@ class SemesterListViewController: BaseViewController {
     @IBOutlet weak var searchBar: UISearchBar?
     
     //MARK: - Variable Declaration
-    let temp: String = "B.E"
     var semesterCollectionViewDataSource = SemesterCollectionViewDataSource()
+    
+    var courseObj: json?
     
     //MARK: - Class Method
     
@@ -57,8 +58,8 @@ extension SemesterListViewController {
         
         searchBar?.placeholder = "SEARCH".localized
         
-        let attributedString = NSMutableAttributedString(string: "COURSE".localized + temp)
-        attributedString.setColorForText(temp, with: UIColor(named: "#0961F5")!)
+        let attributedString = NSMutableAttributedString(string: "COURSE".localized + (self.courseObj?.string(key: "coursename") ?? ""))
+        attributedString.setColorForText((self.courseObj?.string(key: "coursename") ?? ""), with: UIColor(named: "#0961F5")!)
         courseLabel?.attributedText = attributedString
     }
 }

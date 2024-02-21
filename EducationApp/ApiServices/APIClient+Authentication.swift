@@ -31,17 +31,18 @@ extension APIClient {
             failure(error)
         }
     }
-    
+        
     /// Register API that will add for user
     /// - Parameters:
     ///   - parameters: passing parameters
+    ///   - files: passing files
     ///   - result: provide user data
     ///   - failure: failure will show the error string
     public func registerApi(parameters: Parameters, result: @escaping ((_ responseObj: JSON?) -> Void), failure: @escaping ((_ error: String?) -> Void)){
         callService(serviceName: .register, parameters: parameters, method: .post, passToken: false) { responseObj in
             let object = JSON(responseObj as Any)
             if object["status"].intValue == 200 {
-                makeToast(type: .success, title: APP_TITLE, message: object.string(key: "message"))
+                //makeToast(type: .success, title: APP_TITLE, message: object.string(key: "message"))
                 result(object)
             } else {
                 failure(object.string(key: "message"))
@@ -103,25 +104,6 @@ extension APIClient {
                 failure(object.string(key: "message"))
             }
         } failure : { error in
-            failure(error)
-        }
-    }
-    
-    /// Social login API that will help you to login using your social media account.
-    /// - Parameters:
-    ///   - parameters: passing parameters
-    ///   - result: provide user data
-    ///   - failure: failure will show the error string
-    public func socialLoginApi(parameters: Parameters, files: [JSONDictionary], result: @escaping ((_ responseObj: JSON?) -> Void), failure: @escaping ((_ error: String?) -> Void)){
-        callUploadService(serviceName: .socialLogin, parameters: parameters, files: files, method: .post) { responseObj in
-            let object = JSON(responseObj as Any)
-            if object["status"].intValue == 200 {
-                makeToast(type: .success, title: APP_TITLE, message: object.string(key: "message"))
-                result(object)
-            } else {
-                failure(object.string(key: "message"))
-            }
-        } failure: { error in
             failure(error)
         }
     }

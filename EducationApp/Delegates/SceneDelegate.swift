@@ -6,16 +6,33 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
+    /// To used for main root object
     var window: UIWindow?
+    
+    /// To used to check welcome completed
+    var isWelcomeCompleted: Int?
+    
+    /// To used for check login is succeed
+    var isLoginSucceed: Int?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             self.window = window
-        
-            //KAPPDELEGATE.setUpWelcome()
-            KAPPDELEGATE.setUpHome()
+            
+            isWelcomeCompleted = Config().welcomeComplete
+            isLoginSucceed = Config().getUser().count
+            
+            if (isLoginSucceed ?? 0) > 0 {
+                KAPPDELEGATE.setUpHome()
+                
+            } else if isWelcomeCompleted == 0 {
+                KAPPDELEGATE.setUpWelcome()
+                
+            } else {
+                KAPPDELEGATE.setUpLogin()
+            }
         }
     }
 
