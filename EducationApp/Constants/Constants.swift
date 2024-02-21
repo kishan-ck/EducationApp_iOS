@@ -64,3 +64,7 @@ var ActionBlockKey: UInt8 = 0
 var allFont: [String: [String: String]] = [:]
 
 var showPassword : Bool = false
+
+let supportEmail = "info@coderkube.com"
+
+let appURL = "https://apps.apple.com/us/app/pdf-verse-pdf-converter/id6475039469"

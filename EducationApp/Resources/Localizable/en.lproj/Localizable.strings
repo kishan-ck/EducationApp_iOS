@@ -105,6 +105,8 @@
 "SHARE_APP" = "Share App";
 "RATE_US" = "Rate Us";
 "LOG_OUT" = "Log Out";
+"PROFILE" = "Profile";
+"EDIT_PROFILE" = "Edit Profile";
 
 //MARK: - Change Password Screen Strings
 "OLD_PASSWORD" = "Old password";
@@ -139,3 +141,5 @@
 "PLEASE_SELECT_GENDER" = "Please select gender";
 "LOGOUT_MESSAGE" = "Are you sure you want to log out?";
 "NO_RECORD_AVAILABLE_DESCRIPTION" = "Sorry, there are no records available at this moment.";
+"MAIL_BOX_NOT_SETUP" = "Your mail box didn't setup Please setup your mail box.";
+"APP_URL_NOT_VALID" = "App URL is not valid";

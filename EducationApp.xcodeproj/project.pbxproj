@@ -118,6 +118,11 @@
 		88C7A2592B7E044F00F3AFAA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C7A2572B7E044F00F3AFAA /* SettingsViewController.swift */; };
 		88C7A25A2B7E044F00F3AFAA /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88C7A2582B7E044F00F3AFAA /* SettingsViewController.xib */; };
 		91FB60438E757CE92C16162D /* Pods_EducationApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A4E13DC99F36348412C136 /* Pods_EducationApp.framework */; };
+		AB184E1D2B85C77800AD1C02 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB184E1B2B85C77800AD1C02 /* SettingsTableViewCell.swift */; };
+		AB184E1E2B85C77800AD1C02 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB184E1C2B85C77800AD1C02 /* SettingsTableViewCell.xib */; };
+		AB184E202B85CA8B00AD1C02 /* SettingsTableDataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB184E1F2B85CA8B00AD1C02 /* SettingsTableDataSources.swift */; };
+		AB184E232B85E03200AD1C02 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB184E212B85E03200AD1C02 /* ChangePasswordViewController.swift */; };
+		AB184E242B85E03200AD1C02 /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB184E222B85E03200AD1C02 /* ChangePasswordViewController.xib */; };
 		AB83ABEC2B7E34A300272DDF /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB83ABEA2B7E34A300272DDF /* WelcomeViewController.swift */; };
 		AB83ABED2B7E34A300272DDF /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB83ABEB2B7E34A300272DDF /* WelcomeViewController.xib */; };
 		AB83ABF42B7E409F00272DDF /* WelcomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB83ABF22B7E409F00272DDF /* WelcomeCollectionViewCell.swift */; };
@@ -300,6 +305,11 @@
 		88C7A2572B7E044F00F3AFAA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		88C7A2582B7E044F00F3AFAA /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		A0AFCE4BB6CA02F2C3F217DE /* Pods-EducationApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationApp.release.xcconfig"; path = "Target Support Files/Pods-EducationApp/Pods-EducationApp.release.xcconfig"; sourceTree = "<group>"; };
+		AB184E1B2B85C77800AD1C02 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		AB184E1C2B85C77800AD1C02 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
+		AB184E1F2B85CA8B00AD1C02 /* SettingsTableDataSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableDataSources.swift; sourceTree = "<group>"; };
+		AB184E212B85E03200AD1C02 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		AB184E222B85E03200AD1C02 /* ChangePasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangePasswordViewController.xib; sourceTree = "<group>"; };
 		AB83ABEA2B7E34A300272DDF /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		AB83ABEB2B7E34A300272DDF /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		AB83ABF22B7E409F00272DDF /* WelcomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -449,6 +459,8 @@
 				88259EC02B774A59008B1CA9 /* Authentication Screen */,
 				88C7A2502B7E033000F3AFAA /* ProfileViewController.swift */,
 				88C7A2512B7E033000F3AFAA /* ProfileViewController.xib */,
+				AB184E212B85E03200AD1C02 /* ChangePasswordViewController.swift */,
+				AB184E222B85E03200AD1C02 /* ChangePasswordViewController.xib */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -717,8 +729,7 @@
 				ABBA87B62B83418D008F075A /* Home Screen */,
 				ABBA87CC2B83789F008F075A /* Courses Screen */,
 				ABC39D4D2B84B80A002398C2 /* Faculties Screen */,
-				88C7A2572B7E044F00F3AFAA /* SettingsViewController.swift */,
-				88C7A2582B7E044F00F3AFAA /* SettingsViewController.xib */,
+				AB184E1A2B85C74D00AD1C02 /* Settings Screen */,
 			);
 			path = "Tabbar Screen";
 			sourceTree = "<group>";
@@ -742,6 +753,18 @@
 				D27C720A84A25F53F524262B /* Pods-EducationAppTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		AB184E1A2B85C74D00AD1C02 /* Settings Screen */ = {
+			isa = PBXGroup;
+			children = (
+				88C7A2572B7E044F00F3AFAA /* SettingsViewController.swift */,
+				88C7A2582B7E044F00F3AFAA /* SettingsViewController.xib */,
+				AB184E1B2B85C77800AD1C02 /* SettingsTableViewCell.swift */,
+				AB184E1C2B85C77800AD1C02 /* SettingsTableViewCell.xib */,
+				AB184E1F2B85CA8B00AD1C02 /* SettingsTableDataSources.swift */,
+			);
+			path = "Settings Screen";
 			sourceTree = "<group>";
 		};
 		AB83ABE92B7E346200272DDF /* Welcome Screen */ = {
@@ -1001,6 +1024,7 @@
 				ABC39D512B84B8F3002398C2 /* FacultiesTableViewCell.xib in Resources */,
 				ABB11C2E2B7F7F9700090D9B /* LoginSuccessPopUpViewController.xib in Resources */,
 				88259EC32B774A6C008B1CA9 /* LoginViewController.xib in Resources */,
+				AB184E1E2B85C77800AD1C02 /* SettingsTableViewCell.xib in Resources */,
 				88259EDC2B774F68008B1CA9 /* Poppins-SemiBold.ttf in Resources */,
 				ABC39D3A2B848CB9002398C2 /* SemesterCollectionViewCell.xib in Resources */,
 				ABB11C262B7F47A400090D9B /* SignUpViewController.xib in Resources */,
@@ -1026,6 +1050,7 @@
 				88259DCD2B7738C6008B1CA9 /* LaunchScreen.storyboard in Resources */,
 				AB83ABED2B7E34A300272DDF /* WelcomeViewController.xib in Resources */,
 				AB83ABF52B7E409F00272DDF /* WelcomeCollectionViewCell.xib in Resources */,
+				AB184E242B85E03200AD1C02 /* ChangePasswordViewController.xib in Resources */,
 				ABC39D4A2B84A872002398C2 /* ChapterListViewController.xib in Resources */,
 				88259DCA2B7738C6008B1CA9 /* Assets.xcassets in Resources */,
 				88259ED72B774F68008B1CA9 /* Poppins-ThinItalic.ttf in Resources */,
@@ -1204,6 +1229,7 @@
 				88259E702B774127008B1CA9 /* UIViewController+Extension.swift in Sources */,
 				88259E6F2B774127008B1CA9 /* UIControl+Extensions.swift in Sources */,
 				88259E962B77413F008B1CA9 /* Protocols.swift in Sources */,
+				AB184E1D2B85C77800AD1C02 /* SettingsTableViewCell.swift in Sources */,
 				88259E9B2B77413F008B1CA9 /* BundleUIKitEx+Additions.swift in Sources */,
 				88259EAB2B7741F3008B1CA9 /* NoDataFoundView.swift in Sources */,
 				88259EA72B7741C1008B1CA9 /* AppDelegate+Extensions.swift in Sources */,
@@ -1218,6 +1244,7 @@
 				88C7A2522B7E033000F3AFAA /* ProfileViewController.swift in Sources */,
 				88259E9F2B77413F008B1CA9 /* UIVisualEffectView+Additions.swift in Sources */,
 				88259E812B774127008B1CA9 /* UIStackView+Extension.swift in Sources */,
+				AB184E202B85CA8B00AD1C02 /* SettingsTableDataSources.swift in Sources */,
 				88259E7E2B774127008B1CA9 /* NSObject+Extension.swift in Sources */,
 				ABC39D492B84A872002398C2 /* ChapterListViewController.swift in Sources */,
 				88259E792B774127008B1CA9 /* UIButton+Extensions.swift in Sources */,
@@ -1227,6 +1254,7 @@
 				88259E9A2B77413F008B1CA9 /* UIView+Additions.swift in Sources */,
 				88C7A2592B7E044F00F3AFAA /* SettingsViewController.swift in Sources */,
 				88259E182B773C15008B1CA9 /* APIClient+Authentication.swift in Sources */,
+				AB184E232B85E03200AD1C02 /* ChangePasswordViewController.swift in Sources */,
 				88259E732B774127008B1CA9 /* Int+Extension.swift in Sources */,
 				88259E3B2B7740D3008B1CA9 /* CommonFunctions.swift in Sources */,
 				88259E2A2B773E9D008B1CA9 /* DateConstants.swift in Sources */,

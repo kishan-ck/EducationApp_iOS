@@ -55,15 +55,16 @@ extension UIViewController {
     ///   - alertOkTitle: "OK"
     ///   - cancelTitle: "Cancel"
     ///   - showCancelButton: true
-    func showAlert(title: String? = nil, msg: String? = nil, alertOkTitle: String? = nil, okHandler: @escaping() -> Void, cancelTitle: String? = nil, showCancelButton: Bool = false) {
-        let alert = UIAlertController(title: title, message: AppUtilities.appendDotAfterString(str: msg ?? "", capitalize: false), preferredStyle: .alert)
+    func showAlert(title: String? = nil, msg: String? = nil, alertOkTitle: String? = nil, okHandlor: @escaping()->Void = {}, cancelTitle: String? = "", showCancelButton: Bool = false, cancelHandlor: @escaping()->Void = {}, style: UIAlertController.Style) {
+        let alert = UIAlertController(title: title, message: msg, preferredStyle: style)
         alert.addAction(UIAlertAction(title: alertOkTitle, style: .default, handler: { alt in
-            okHandler()
+            okHandlor()
         }))
         if showCancelButton {
-            alert.addAction(UIAlertAction(title: cancelTitle, style: .cancel, handler: { alt in }))
+            alert.addAction(UIAlertAction(title: cancelTitle, style: .default, handler: { alt in }))
+            cancelHandlor()
         }
-        self.present(alert, animated: true, completion: nil)
+        UIApplication.topViewController()?.present(alert, animated: false, completion: nil)
     }
     
     /// Completion handler for call back

@@ -35,10 +35,10 @@ extension AppDelegate {
     /// - Parameter message: message value in String
     func setUpUnauthenticated(message : String?) {
         DispatchQueue.main.async {
-            self.window?.rootViewController?.showAlert(title: APP_TITLE, msg: message, alertOkTitle: "OK".localized, okHandler: {
+            self.window?.rootViewController?.showAlert(title: APP_TITLE, msg: message, alertOkTitle: "OK".localized, okHandlor: {
                 KAPPDELEGATE.removeAllUserDefault()
                 KAPPDELEGATE.setUpLogin()
-            }, cancelTitle: "", showCancelButton: false)
+            }, cancelTitle: "", showCancelButton: false, style: .alert)
         }
     }
     
