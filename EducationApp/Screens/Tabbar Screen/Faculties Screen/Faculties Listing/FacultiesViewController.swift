@@ -15,6 +15,9 @@ class FacultiesViewController: BaseViewController {
     //MARK: - Variable Declaration
     var facultiesTableDataSources = FacultiesTableDataSources()
     
+    /// facultiesListArray stores array of faculties list data.
+    var facultiesListArray: [json]?
+    
     //MARK: - Class Method
     
     /// View did load
@@ -24,6 +27,11 @@ class FacultiesViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         facultiesTableView?.setDataSourceDelegate(datasourceAndDelegate: facultiesTableDataSources, tableCell: "FacultiesTableViewCell")
+        
+        self.getFacultiesList()
+        facultiesTableView?.addPullToRefresh {
+            self.getFacultiesList(isShowloader: false)
+        }
     }
     
     /// View will Appear
@@ -55,6 +63,25 @@ extension FacultiesViewController {
         navigationBarWithRightButtonTransparent(isShowBackButton: false, showTitle: "FACULTIES".localized, isShowSearchButton: true)
         
         searchBar?.placeholder = "SEARCH".localized
+    }
+    
+    /// getFacultiesList() used to call faculties List API.
+    /// - Parameter isShowloader: passing show loader boolean
+    func getFacultiesList(isShowloader: Bool = true){
+        self.facultiesListArray = [json]()
+        self.facultiesListArray?.removeAll()
+        
+        //let collegeId = Config().getUser().object(key: "student_course_details").object(key: "college_details").string(key: "_id")
+        APIClient.sharedInstance.getAllFacultiesListApi(parameters: [:], isShowloader: isShowloader) { responseObj in
+            let listArray = responseObj?.array(key: "data") ?? []
+            self.facultiesListArray = listArray
+
+            self.facultiesTableView?.stopPullToRefresh()
+            self.facultiesTableDataSources.facultiesArray = self.facultiesListArray
+        } failure: { error in
+            self.facultiesTableView?.stopPullToRefresh()
+            makeToast(type: .error, title: APP_TITLE, message: error ?? "")
+        }
     }
 }
 

@@ -8,6 +8,13 @@ class AdvertisementCollectionDataSource: NSObject, UICollectionViewDelegateFlowL
     
     //MARK: - Variable Declaration
     
+    /// advertisementArray stores array of advertisement list data.
+    var advertisementArray : [json]? {
+        didSet{
+            self.CollectionView?.reloadData()
+        }
+    }
+    
     /// Asks the DataSource to return the number of sections in the collection view.
     /// - Parameter tableView: UICollectionView
     /// - Returns: returns numer of sections in Int
@@ -15,14 +22,13 @@ class AdvertisementCollectionDataSource: NSObject, UICollectionViewDelegateFlowL
         return 1
     }
     
-    
     /// Tells the DataSource to return the number of items in a given section of a collection view.
     /// - Parameters:
     ///   - tableView: UICollectionView
     ///   - section: An index number identifying a number of items in a section in collectionView.
     /// - Returns: returns total numer of items in Int
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        return 8
+        return self.advertisementArray?.count ?? 0
     }
     
     /// Asks the DataSource for a cell to insert in a particular location of the collection view.
@@ -31,8 +37,10 @@ class AdvertisementCollectionDataSource: NSObject, UICollectionViewDelegateFlowL
     ///   - indexPath: An index path locating a row in collectionView.
     /// - Returns: returns UICollectionViewCell
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
-        
         guard let collectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "AdvertisementCollectionViewCell", for: indexPath) as? AdvertisementCollectionViewCell  else { fatalError("Bad cell type.") }
+        
+        let advertisementObject = self.advertisementArray?[indexPath.row]
+        collectionViewCell.advertisementImageView?.getImage(url: advertisementObject?.string(key: "image_url") ?? "", placeHolderImage: enumForPlaceHolderImage.commonCoursesBackgroundImage.rawValue)
         
         return collectionViewCell
     }
@@ -54,5 +62,8 @@ class AdvertisementCollectionDataSource: NSObject, UICollectionViewDelegateFlowL
     ///   - collectionView: UICollectionView
     ///   - indexPath: An index path locating a row in collectionView.
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if (advertisementArray?.count ?? 0) > 0 {
+            let advertisementObject = self.advertisementArray?[indexPath.row]
+        }
     }
 }

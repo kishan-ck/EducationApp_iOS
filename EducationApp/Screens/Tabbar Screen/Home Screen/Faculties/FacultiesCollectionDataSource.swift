@@ -8,6 +8,13 @@ class FacultiesCollectionDataSource: NSObject, UICollectionViewDelegateFlowLayou
     
     //MARK: - Variable Declaration
     
+    /// facultiesArray stores array of faculties list data.
+    var facultiesArray : [json]? {
+        didSet{
+            self.CollectionView?.reloadData()
+        }
+    }
+    
     /// Asks the DataSource to return the number of sections in the collection view.
     /// - Parameter tableView: UICollectionView
     /// - Returns: returns numer of sections in Int
@@ -15,14 +22,13 @@ class FacultiesCollectionDataSource: NSObject, UICollectionViewDelegateFlowLayou
         return 1
     }
     
-    
     /// Tells the DataSource to return the number of items in a given section of a collection view.
     /// - Parameters:
     ///   - tableView: UICollectionView
     ///   - section: An index number identifying a number of items in a section in collectionView.
     /// - Returns: returns total numer of items in Int
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        return 8
+        return self.facultiesArray?.count ?? 0
     }
     
     /// Asks the DataSource for a cell to insert in a particular location of the collection view.
@@ -31,12 +37,12 @@ class FacultiesCollectionDataSource: NSObject, UICollectionViewDelegateFlowLayou
     ///   - indexPath: An index path locating a row in collectionView.
     /// - Returns: returns UICollectionViewCell
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
-        
         guard let collectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "FacultiesCollectionViewCell", for: indexPath) as? FacultiesCollectionViewCell  else { fatalError("Bad cell type.") }
-        
-        collectionViewCell.facultieNameLabel?.text = "Sagar Paneliya"
-        collectionViewCell.facultieFieldLabel?.text = "Kotlin"
-        collectionViewCell.facultieImageView?.image = UIImage(named: "ic_forgot_password")
+
+        let facultiesObject = self.facultiesArray?[indexPath.row]
+        collectionViewCell.facultieImageView?.getImage(url: facultiesObject?.string(key: "profile_Image") ?? "", placeHolderImage: enumForPlaceHolderImage.commonCoursesBackgroundImage.rawValue)
+        collectionViewCell.facultieNameLabel?.text = (facultiesObject?.string(key: "name") ?? "")
+        collectionViewCell.facultieFieldLabel?.text = (facultiesObject?.string(key: "lecture") ?? "")
         
         return collectionViewCell
     }
@@ -62,5 +68,8 @@ class FacultiesCollectionDataSource: NSObject, UICollectionViewDelegateFlowLayou
     ///   - collectionView: UICollectionView
     ///   - indexPath: An index path locating a row in collectionView.
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if (facultiesArray?.count ?? 0) > 0 {
+            let facultiesObject = self.facultiesArray?[indexPath.row]
+        }
     }
 }

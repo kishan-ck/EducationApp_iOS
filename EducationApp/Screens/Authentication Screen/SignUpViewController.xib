@@ -47,7 +47,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zkO-Pl-qHv">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkO-Pl-qHv">
                     <rect key="frame" x="0.0" y="69" width="414" height="797"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bcw-Gj-i3l">
@@ -1642,7 +1642,7 @@
     <resources>
         <image name="ic_call" width="24" height="24"/>
         <image name="ic_drop_down_filled" width="10" height="6"/>
-        <image name="ic_email" width="34" height="34"/>
+        <image name="ic_email" width="24" height="24"/>
         <image name="ic_hide_password" width="24" height="24"/>
         <image name="ic_login_banner" width="324" height="324"/>
         <image name="ic_user" width="24" height="24"/>

@@ -8,6 +8,21 @@ class FacultiesTableDataSources: NSObject, UITableViewDelegate, UITableViewDataS
     
     //MARK: - Variable Declaration
     
+    /// facultiesArray stores array of faculties list data.
+    var facultiesArray : [json]? {
+        didSet{
+            self.TableView?.reloadData()
+            
+            if facultiesArray?.count == 0 {
+                TableView?.isScrollEnabled = false
+                KAPPDELEGATE.noDataFoundView(subView: self.TableView!)
+            } else {
+                TableView?.isScrollEnabled = true
+                KAPPDELEGATE.removeNoDataFoundView(subView: self.TableView!)
+            }
+        }
+    }
+    
     /// Asks the data source to return the number of sections in the table view.
     /// - Parameter tableView: UITableView
     /// - Returns: returns numer of sections in Int
@@ -21,7 +36,7 @@ class FacultiesTableDataSources: NSObject, UITableViewDelegate, UITableViewDataS
     ///   - section: An index number identifying a section in tableView.
     /// - Returns: returns total numer of rows in Int
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return 5
+        return self.facultiesArray?.count ?? 0
     }
     
     /// Asks the data source for a cell to insert in a particular location of the table view.
@@ -32,11 +47,13 @@ class FacultiesTableDataSources: NSObject, UITableViewDelegate, UITableViewDataS
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "FacultiesTableViewCell", for: indexPath) as! FacultiesTableViewCell
         
-        tableViewCell.facultieImageView?.image = UIImage(named: "ic_courses_background")
-        tableViewCell.facultieNameLabel?.text = "Dhruv Jariwala"
-        tableViewCell.facultieDegreeLabel?.text = "B.E(CSE)"
-        tableViewCell.facultieEmailLabel?.text = "dhruv.coderkube@gmail.com"
-        tableViewCell.facultieExperienceLabel?.text = "EXPERIENCE".localized.uppercased() + ": " + "3"
+        let facultiesObject = self.facultiesArray?[indexPath.row]
+        
+        tableViewCell.facultieImageView?.getImage(url: facultiesObject?.string(key: "profileImage") ?? "", placeHolderImage: enumForPlaceHolderImage.commonCoursesBackgroundImage.rawValue)
+        tableViewCell.facultieNameLabel?.text = (facultiesObject?.string(key: "name") ?? "")
+        tableViewCell.facultieDegreeLabel?.text = (facultiesObject?.string(key: "currentPosition") ?? "")
+        tableViewCell.facultieEmailLabel?.text = (facultiesObject?.string(key: "email") ?? "")
+        tableViewCell.facultieExperienceLabel?.text = "EXPERIENCE".localized.uppercased() + ": " + (facultiesObject?.string(key: "experience") ?? "")
     
         return tableViewCell
     }
@@ -46,8 +63,12 @@ class FacultiesTableDataSources: NSObject, UITableViewDelegate, UITableViewDataS
     ///   - tableView: UITableView
     ///   - indexPath: An index path locating a row in tableView.
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let viewController = FacultieDetailsViewController(nibName: "FacultieDetailsViewController", bundle: nil)
-        viewController.hidesBottomBarWhenPushed = true
-        tableView.parentViewController?.navigationController?.pushViewController(viewController, animated: true)
+        if (facultiesArray?.count ?? 0) > 0 {
+            let facultiesObject = self.facultiesArray?[indexPath.row]
+            let viewController = FacultieDetailsViewController(nibName: "FacultieDetailsViewController", bundle: nil)
+            viewController.facultiesObj = facultiesObject
+            viewController.hidesBottomBarWhenPushed = true
+            tableView.parentViewController?.navigationController?.pushViewController(viewController, animated: true)
+        }
     }
 }

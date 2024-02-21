@@ -45,7 +45,7 @@ extension AppDelegate {
     /// To used this function for remove all user default data from the app.
     func removeAllUserDefault() {
         USER_DEFAULTS_STANDARD.removeObject(forKey: "user")
-        USER_DEFAULTS_STANDARD.removeObject(forKey: "token")
+        USER_DEFAULTS_STANDARD.removeObject(forKey: "authToken")
     }
     
     /// To used for main root object.

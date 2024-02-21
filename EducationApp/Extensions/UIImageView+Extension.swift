@@ -8,9 +8,7 @@ import SDWebImage
 /// Enum for place holder images
 enum enumForPlaceHolderImage: String {
     
-    case profileImage = "ic_user_profile_image"
-    case profileBannerImage = "ic_profile_banner"
-    case commonBannerImage = "ic_common_banner"
+    case commonCoursesBackgroundImage = "ic_courses_background"
     case defaultImage = "app_logo"
 }
 
@@ -45,7 +43,7 @@ extension UIImageView{
     
     /// Gets UIImage from URL.
     /// - Parameter url: web url of image.
-    func getImage(url: String, placeHolderImage: String = enumForPlaceHolderImage.profileImage.rawValue, backgroundColor: UIColor = UIColor(named: "WhiteColor - #FFFFFF")!) {
+    func getImage(url: String, placeHolderImage: String = enumForPlaceHolderImage.commonCoursesBackgroundImage.rawValue, backgroundColor: UIColor = UIColor(named: "#FFFFFF")!) {
         //if url != "" {
             self.sd_imageIndicator = SDWebImageActivityIndicator.gray
             self.sd_setImage(with: URL(string: url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""), placeholderImage: UIImage(named: placeHolderImage), options: SDWebImageOptions(rawValue: 0), completed: { image, error, cacheType, imageURL in

@@ -36,6 +36,7 @@ class FacultieDetailsViewController: BaseViewController {
     
     //MARK: - Variable Declaration
     
+    var facultiesObj: json?
     
     //MARK: - Class Method
     
@@ -65,15 +66,18 @@ extension FacultieDetailsViewController {
     func setUpUI() {
         navigationBarWithRightButtonTransparent(isShowBackButton: true, showTitle: "FACULTY_DETAILS".localized, isShowSearchButton: false)
         
-        facultieProfesionLabel?.text = "Swift Developer"
-        facultieNameLabel?.text = "Dhruv Jariwala"
+        facultieProfileImageView?.getImage(url: facultiesObj?.string(key: "profileImage") ?? "", placeHolderImage: enumForPlaceHolderImage.commonCoursesBackgroundImage.rawValue)
+        facultieProfesionLabel?.text = (facultiesObj?.string(key: "lecture") ?? "")
         
-        degreeLabel?.text = "B.E(CSE)"
-        personalInformationProfesionLabel?.text = "Swift Developer"
+        degreeLabel?.text = (facultiesObj?.string(key: "degree") ?? "BCA")
         
-        emailLabel?.text = "dhruv.coderkube@gmail.com"
-        experienceLabel?.text = "3"
+        personalInformationProfesionLabel?.text = (facultiesObj?.string(key: "lecture") ?? "")
+        personalInformationWorkPlaceLabel?.text = (facultiesObj?.object(key: "college_Details").string(key: "collegeName"))
         
-        awardsLabel?.text = "સિંહને કોઈ એવોર્ડની જરૂર નથી"
+        facultieNameLabel?.text = (facultiesObj?.string(key: "name") ?? "")
+        emailLabel?.text = (facultiesObj?.string(key: "email") ?? "")
+        experienceLabel?.text = (facultiesObj?.string(key: "experience") ?? "")
+        
+        awardsLabel?.text = (facultiesObj?.string(key: "facultyDetail") ?? "")
     }
 }

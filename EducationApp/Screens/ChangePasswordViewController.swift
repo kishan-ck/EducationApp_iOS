@@ -45,6 +45,41 @@ extension ChangePasswordViewController {
     func setUpUI() {
         navigationBarWithRightButtonTransparent(isShowBackButton: true, showTitle: "CHANGE_PASSWORD".localized, isShowSearchButton: false)
     }
+    
+    /// changePasswordAPI() function used to call change password API.
+    func changePasswordAPI(){
+        view.endEditing(true)
+        
+        if showOldPasswordTextField?.text?.trim() == "" {
+            makeToast(type: .error, title: APP_TITLE, message: "PLEASE_ENTER_OLD_PASSWORD".localized, view: self.view)
+            
+        } else if showNewPasswordTextField?.text?.trim() == "" {
+            makeToast(type: .error, title: APP_TITLE, message: "PLEASE_ENTER_NEW_PASSWORD".localized, view: self.view)
+            
+        } else if (showNewPasswordTextField?.text?.trim() ?? "").count < 8 {
+            makeToast(type: .error, title: APP_TITLE, message: "ENTER_VALID_NEW_PASSWORD".localized, view: self.view)
+            
+        } else if showConfirmNewPasswordTextField?.text?.trim() == "" {
+            makeToast(type: .error, title: APP_TITLE, message: "PLEASE_ENTER_CONFIRM_PASSWORD".localized, view: self.view)
+            
+        } else if showNewPasswordTextField?.text?.trim() != showConfirmNewPasswordTextField?.text?.trim() {
+            makeToast(type: .error, title: APP_TITLE, message: "NEW_PASSWORD_NOT_MATCH".localized, view: self.view)
+            
+        } else {
+            
+            let params : JSONDictionary = [
+                "oldPassword": self.showOldPasswordTextField?.text as AnyObject,
+                "newPassword": self.showNewPasswordTextField?.text as AnyObject]
+            
+            APIClient.sharedInstance.updatePasswordApi(parameters: params) { [weak self] responseObj in
+                if(responseObj?.integer(key: "status") == 200){
+                    self?.navigationController?.popViewController(animated: true)
+                }
+            } failure: { error in
+                makeToast(type: .error, title: APP_TITLE, message: error ?? "")
+            }
+        }
+    }
 }
 
 //MARK: - IBAction Method
@@ -55,7 +90,7 @@ extension ChangePasswordViewController {
     /// - Parameter sender: passing sender object.
     /// - Description : It is used to edit user's password by using dedicated email address and password.
     @IBAction func changePasswordButtonAction(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        changePasswordAPI()
     }
     
     /// showOldPasswordButton UIButton click event.

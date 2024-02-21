@@ -11,7 +11,7 @@ import SwiftyJSON
 /// All API calls are goes from here so don't write any where else api calling code
 extension APIClient {
     
-    //MARK: - Login API
+    //MARK: - College API
     
     /// Get college list API that will give the college details
     /// - Parameters:

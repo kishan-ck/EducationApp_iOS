@@ -44,6 +44,15 @@ class ProfileViewController: BaseViewController {
     /// - Description : To set values after view did load
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.firstNameTextField?.text = Config().getUser().string(key: "firstName")
+        self.lastNameTextField?.text = Config().getUser().string(key: "lastName")
+        self.genderTextField?.text = Config().getUser().string(key: "gender")
+        self.phoneNumberTextField?.text = Config().getUser().string(key: "mobileNum")
+        self.emailTextField?.text = Config().getUser().string(key: "email")
+        self.selectCollegeTextField?.text = Config().getUser().object(key: "student_course_details").object(key: "college_details").string(key: "collegeName")
+        self.selectCourseTextField?.text = Config().getUser().object(key: "student_course_details").object(key: "course_details").string(key: "coursename")
+        self.selectSemesterTextField?.text = Config().getUser().object(key: "student_course_details").object(key: "semester_details").string(key: "semester")
     }
     
     /// View will Appear

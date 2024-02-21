@@ -213,9 +213,9 @@ extension UIView {
         toastLabel.bottomInset = 8
         toastLabel.leftInset = 8
         toastLabel.rightInset = 8
-        toastLabel.textColor = UIColor(named: "WhiteColor - #FFFFFF")
+        toastLabel.textColor = UIColor(named: "#FFFFFF")
         toastLabel.numberOfLines = 1
-        toastLabel.backgroundColor = UIColor(named: "BlackColor")
+        toastLabel.backgroundColor = UIColor(named: "#000000")
         toastLabel.textAlignment = .center
         toastLabel.font = font
         toastLabel.text = message

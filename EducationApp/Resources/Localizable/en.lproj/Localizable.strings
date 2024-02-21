@@ -88,9 +88,9 @@
 "SETTINGS" = "Settings";
 "POPULAR_COURSES" = "Popular courses";
 "TOTAL_INSTRUCTOR" = "Total Instructor";
-"TOTAL_SUBJECTS" = "Total Instructor";
-"TOTAL_COURSES" = "Total Instructor";
-"HAPPY_STUDENT" = "Total Instructor";
+"TOTAL_SUBJECTS" = "Total Subjects";
+"TOTAL_COURSES" = "Total Courses";
+"HAPPY_STUDENT" = "Total Student";
 
 //MARK: - Courses Screen Strings
 "ALL_SEMESTER" = "All Semester";
@@ -127,6 +127,7 @@
 "PLEASE_ENTER_PASSWORD" = "Please enter a password";
 "PLEASE_ENTER_OLD_PASSWORD" = "Please enter a old password";
 "PLEASE_ENTER_NEW_PASSWORD" = "Please enter a new password";
+"ENTER_VALID_NEW_PASSWORD" = "NPassword should be minimum 8 characters";
 "NEW_PASSWORD_NOT_MATCH" = "New password and confirm password are not matching";
 "PLEASE_ENTER_CONFIRM_PASSWORD" = "Please enter a confirm password";
 "PASSWORD_NOT_MATCH" = "Password and confirm password are not matching";

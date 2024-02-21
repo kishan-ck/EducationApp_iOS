@@ -112,6 +112,8 @@
 		8837B9EC2B85F18E00719EF8 /* LoadMore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8837B9E72B85F18E00719EF8 /* LoadMore.swift */; };
 		8837B9ED2B85F18E00719EF8 /* PullToRefreshAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8837B9E82B85F18E00719EF8 /* PullToRefreshAnimator.swift */; };
 		8837B9EE2B85F18E00719EF8 /* UIScrollView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8837B9E92B85F18E00719EF8 /* UIScrollView+Extensions.swift */; };
+		8837B9F02B85FE8C00719EF8 /* APIClient+Faculties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8837B9EF2B85FE8C00719EF8 /* APIClient+Faculties.swift */; };
+		8837B9F22B860ABA00719EF8 /* APIClient+Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8837B9F12B860ABA00719EF8 /* APIClient+Home.swift */; };
 		88C7A2462B7E02F300F3AFAA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C7A2442B7E02F300F3AFAA /* HomeViewController.swift */; };
 		88C7A2472B7E02F300F3AFAA /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88C7A2452B7E02F300F3AFAA /* HomeViewController.xib */; };
 		88C7A24A2B7E030200F3AFAA /* MyCoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C7A2482B7E030200F3AFAA /* MyCoursesViewController.swift */; };
@@ -305,6 +307,8 @@
 		8837B9E72B85F18E00719EF8 /* LoadMore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadMore.swift; sourceTree = "<group>"; };
 		8837B9E82B85F18E00719EF8 /* PullToRefreshAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefreshAnimator.swift; sourceTree = "<group>"; };
 		8837B9E92B85F18E00719EF8 /* UIScrollView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extensions.swift"; sourceTree = "<group>"; };
+		8837B9EF2B85FE8C00719EF8 /* APIClient+Faculties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIClient+Faculties.swift"; sourceTree = "<group>"; };
+		8837B9F12B860ABA00719EF8 /* APIClient+Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIClient+Home.swift"; sourceTree = "<group>"; };
 		88C7A2442B7E02F300F3AFAA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		88C7A2452B7E02F300F3AFAA /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		88C7A2482B7E030200F3AFAA /* MyCoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCoursesViewController.swift; sourceTree = "<group>"; };
@@ -515,6 +519,8 @@
 				88259E112B773C15008B1CA9 /* Services */,
 				88259E042B773C15008B1CA9 /* APIClient+Authentication.swift */,
 				8837B9E02B85D63A00719EF8 /* APIClient+Colleges.swift */,
+				8837B9EF2B85FE8C00719EF8 /* APIClient+Faculties.swift */,
+				8837B9F12B860ABA00719EF8 /* APIClient+Home.swift */,
 			);
 			path = ApiServices;
 			sourceTree = "<group>";
@@ -1275,6 +1281,7 @@
 				88259E812B774127008B1CA9 /* UIStackView+Extension.swift in Sources */,
 				AB184E202B85CA8B00AD1C02 /* SettingsTableDataSources.swift in Sources */,
 				88259E7E2B774127008B1CA9 /* NSObject+Extension.swift in Sources */,
+				8837B9F02B85FE8C00719EF8 /* APIClient+Faculties.swift in Sources */,
 				ABC39D492B84A872002398C2 /* ChapterListViewController.swift in Sources */,
 				88259E792B774127008B1CA9 /* UIButton+Extensions.swift in Sources */,
 				88259E872B774127008B1CA9 /* Gesture+Extension.swift in Sources */,
@@ -1314,6 +1321,7 @@
 				88259E842B774127008B1CA9 /* CALayer+Extension.swift in Sources */,
 				88259E772B774127008B1CA9 /* UIBarButtonItem+Extensions.swift in Sources */,
 				88259E202B773C15008B1CA9 /* Serialization.swift in Sources */,
+				8837B9F22B860ABA00719EF8 /* APIClient+Home.swift in Sources */,
 				ABC39D3C2B84A333002398C2 /* SemesterCollectionViewDataSource.swift in Sources */,
 				ABB11C252B7F47A400090D9B /* SignUpViewController.swift in Sources */,
 				88259DC32B7738C4008B1CA9 /* SceneDelegate.swift in Sources */,
