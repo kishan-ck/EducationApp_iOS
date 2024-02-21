@@ -25,14 +25,11 @@ class Config: NSObject {
     static let hostURL = Bundle.main.educationConfig.valueForKeyString("host")
     static let baseURL = hostURL + Bundle.main.educationConfig.valueForKeyString("path")
     
+    /// Store welcome complete screen variable
+    var welcomeComplete: Int = USER_DEFAULTS_STANDARD.value(forKey: WELCOME_COMPLETE) as? Int ?? 0
+    
     /// Stores access token retrieved from login or registration into userdefaults.
-    var accessToken = "Bearer \(USER_DEFAULTS_STANDARD.value(forKey: "token") ?? "")"
-    
-    /// To store welcome checklist completed or not flag
-    var welcomeChecklistComplete: Int = USER_DEFAULTS_STANDARD.value(forKey: "welcome_checklist_complete") as? Int ?? 0
-    
-    /// To store is guest login or not flag
-    var isGuestLogin: Bool = USER_DEFAULTS_STANDARD.value(forKey: "is_guest_login") as? Bool ?? false
+    var accessToken = "Bearer \(USER_DEFAULTS_STANDARD.value(forKey: "authToken") ?? "")"
     
     /// Stores all user information retrieved from login or registration into userdefaults.
     /// - Parameter object: key value dictionary
@@ -40,6 +37,11 @@ class Config: NSObject {
         var userData = object
         userData = userData.nullKeyRemoval()
         USER_DEFAULTS_STANDARD.set(userData, forKey: "user")
+        USER_DEFAULTS_STANDARD.synchronize()
+    }
+    
+    func saveAuthToken(tokenString: String) {
+        USER_DEFAULTS_STANDARD.set(tokenString, forKey: "authToken")
         USER_DEFAULTS_STANDARD.synchronize()
     }
     

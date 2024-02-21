@@ -64,3 +64,9 @@ var ActionBlockKey: UInt8 = 0
 var allFont: [String: [String: String]] = [:]
 
 var showPassword : Bool = false
+
+//MARK: - Constants for USER_DEFAULTS_STANDARD keys
+
+var WELCOME_COMPLETE = "WELCOME_COMPLETE"
+
+var PROFILE_COMPLETE = "PROFILE_COMPLETE"

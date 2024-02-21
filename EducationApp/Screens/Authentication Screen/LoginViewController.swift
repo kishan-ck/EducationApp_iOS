@@ -24,6 +24,11 @@ class LoginViewController: UIViewController {
     
     //MARK: - Variable Declaration
 
+    /// To used to check welcome completed
+    var isWelcomeCompleted: Int?
+    
+    /// To used for check login is succeed
+    var isLoginSucceed: Int?
     
     //MARK: - Class Method
     
@@ -95,28 +100,24 @@ extension LoginViewController {
     ///
     /// - Parameter responseObj: passing response json
     public func handleLoginResponse(responseObj: JSON){
-        /*let responseData = responseObj.object(key: "data")
+        let responseData = responseObj.object(key: "data")
         Config().saveAuthToken(tokenString: responseData.string(key: "authToken"))
         
         let userData = responseData.dictionaryObject ?? [:]
         Config().saveUserData(object: userData)
-        
-        isDocumentUploaded = Config().getUser().integer(key: "document_uploaded")
-        agreementActivated = Config().getUser().integer(key: "agreement_verified")
+
+        isWelcomeCompleted = Config().welcomeComplete
         isLoginSucceed = Config().getUser().count
         
-        if isDocumentUploaded == 0 {
-            KAPPDELEGATE.setUpDocument()
-            
-        } else if agreementActivated == 0 {
-            KAPPDELEGATE.setUpAgreement()
-            
-        } else if (isLoginSucceed ?? 0) > 0 {
+        if (isLoginSucceed ?? 0) > 0 {
             KAPPDELEGATE.setUpHome()
             
+        } else if isWelcomeCompleted == 0 {
+            KAPPDELEGATE.setUpWelcome()
+            
         } else {
-            KAPPDELEGATE.setUpIntroduction()
-        }*/
+            KAPPDELEGATE.setUpLogin()
+        }
     }
 }
 

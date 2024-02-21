@@ -55,8 +55,9 @@ class WelcomeCollectionDataSource: NSObject, UICollectionViewDelegateFlowLayout,
         }
         
         collectionViewCell.getStartedButton?.block_setAction(block: { sender in
-            USER_DEFAULTS_STANDARD.set(true, forKey: "isIntroDone")
+            USER_DEFAULTS_STANDARD.set(1, forKey: WELCOME_COMPLETE)
             USER_DEFAULTS_STANDARD.synchronize()
+            
             let viewController = LoginViewController.init(nibName: "LoginViewController", bundle: nil)
             self.CollectionView?.parentViewController?.navigationController?.pushViewController(viewController, animated: true)
         })
@@ -76,7 +77,6 @@ class WelcomeCollectionDataSource: NSObject, UICollectionViewDelegateFlowLayout,
         return CGSize(width: convenientWidth, height: convenientHeight)
     }
 }
-
 
 //MARK: - WelcomeCollectionDataSource Scroll View Setup
 extension WelcomeCollectionDataSource {
