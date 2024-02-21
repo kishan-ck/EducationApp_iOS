@@ -8,6 +8,21 @@ class CoursesTableDataSources: NSObject, UITableViewDelegate, UITableViewDataSou
     
     //MARK: - Variable Declaration
     
+    /// coursesArray stores array of course list data.
+    var coursesArray : [json]? {
+        didSet{
+            self.TableView?.reloadData()
+            
+            if coursesArray?.count == 0 {
+                TableView?.isScrollEnabled = false
+                KAPPDELEGATE.noDataFoundView(subView: self.TableView!)
+            } else {
+                TableView?.isScrollEnabled = true
+                KAPPDELEGATE.removeNoDataFoundView(subView: self.TableView!)
+            }
+        }
+    }
+    
     /// Asks the data source to return the number of sections in the table view.
     /// - Parameter tableView: UITableView
     /// - Returns: returns numer of sections in Int
@@ -21,7 +36,7 @@ class CoursesTableDataSources: NSObject, UITableViewDelegate, UITableViewDataSou
     ///   - section: An index number identifying a section in tableView.
     /// - Returns: returns total numer of rows in Int
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return 5
+        return self.coursesArray?.count ?? 0
     }
     
     /// Asks the data source for a cell to insert in a particular location of the table view.
@@ -32,6 +47,10 @@ class CoursesTableDataSources: NSObject, UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "CoursesTableViewCell", for: indexPath) as! CoursesTableViewCell
     
+        let courseObject = self.coursesArray?[indexPath.row]
+        tableViewCell.titleLabel?.text = courseObject?.string(key: "coursename").trim()
+        tableViewCell.descriptionLabel?.text = courseObject?.string(key: "_id").trim()
+        
         return tableViewCell
     }
     
@@ -40,8 +59,12 @@ class CoursesTableDataSources: NSObject, UITableViewDelegate, UITableViewDataSou
     ///   - tableView: UITableView
     ///   - indexPath: An index path locating a row in tableView.
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let viewController = SemesterListViewController(nibName: "SemesterListViewController", bundle: nil)
-        viewController.hidesBottomBarWhenPushed = true
-        tableView.parentViewController?.navigationController?.pushViewController(viewController, animated: true)
+        if (coursesArray?.count ?? 0) > 0 {
+            let courseObject = self.coursesArray?[indexPath.row]
+            let viewController = SemesterListViewController(nibName: "SemesterListViewController", bundle: nil)
+            viewController.courseObj = courseObject
+            viewController.hidesBottomBarWhenPushed = true
+            tableView.parentViewController?.navigationController?.pushViewController(viewController, animated: true)
+        }
     }
 }

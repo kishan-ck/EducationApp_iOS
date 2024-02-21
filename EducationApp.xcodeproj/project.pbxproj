@@ -106,6 +106,12 @@
 		88259EE72B774F68008B1CA9 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88259ED52B774F68008B1CA9 /* Poppins-MediumItalic.ttf */; };
 		88259EE82B774F68008B1CA9 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88259ED62B774F68008B1CA9 /* Poppins-Regular.ttf */; };
 		88259EEA2B7751FA008B1CA9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 88259EEC2B7751FA008B1CA9 /* Localizable.strings */; };
+		8837B9E12B85D63A00719EF8 /* APIClient+Colleges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8837B9E02B85D63A00719EF8 /* APIClient+Colleges.swift */; };
+		8837B9EA2B85F18E00719EF8 /* PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8837B9E52B85F18E00719EF8 /* PullToRefresh.swift */; };
+		8837B9EB2B85F18E00719EF8 /* LoadMoreViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8837B9E62B85F18E00719EF8 /* LoadMoreViewAnimator.swift */; };
+		8837B9EC2B85F18E00719EF8 /* LoadMore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8837B9E72B85F18E00719EF8 /* LoadMore.swift */; };
+		8837B9ED2B85F18E00719EF8 /* PullToRefreshAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8837B9E82B85F18E00719EF8 /* PullToRefreshAnimator.swift */; };
+		8837B9EE2B85F18E00719EF8 /* UIScrollView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8837B9E92B85F18E00719EF8 /* UIScrollView+Extensions.swift */; };
 		88C7A2462B7E02F300F3AFAA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C7A2442B7E02F300F3AFAA /* HomeViewController.swift */; };
 		88C7A2472B7E02F300F3AFAA /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88C7A2452B7E02F300F3AFAA /* HomeViewController.xib */; };
 		88C7A24A2B7E030200F3AFAA /* MyCoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C7A2482B7E030200F3AFAA /* MyCoursesViewController.swift */; };
@@ -288,6 +294,12 @@
 		88259EEB2B7751FA008B1CA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		88259EED2B7751FC008B1CA9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		88259EEF2B775208008B1CA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		8837B9E02B85D63A00719EF8 /* APIClient+Colleges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIClient+Colleges.swift"; sourceTree = "<group>"; };
+		8837B9E52B85F18E00719EF8 /* PullToRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefresh.swift; sourceTree = "<group>"; };
+		8837B9E62B85F18E00719EF8 /* LoadMoreViewAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadMoreViewAnimator.swift; sourceTree = "<group>"; };
+		8837B9E72B85F18E00719EF8 /* LoadMore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadMore.swift; sourceTree = "<group>"; };
+		8837B9E82B85F18E00719EF8 /* PullToRefreshAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefreshAnimator.swift; sourceTree = "<group>"; };
+		8837B9E92B85F18E00719EF8 /* UIScrollView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extensions.swift"; sourceTree = "<group>"; };
 		88C7A2442B7E02F300F3AFAA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		88C7A2452B7E02F300F3AFAA /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		88C7A2482B7E030200F3AFAA /* MyCoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCoursesViewController.swift; sourceTree = "<group>"; };
@@ -490,6 +502,7 @@
 				88259E0B2B773C15008B1CA9 /* Serialization+Errors */,
 				88259E112B773C15008B1CA9 /* Services */,
 				88259E042B773C15008B1CA9 /* APIClient+Authentication.swift */,
+				8837B9E02B85D63A00719EF8 /* APIClient+Colleges.swift */,
 			);
 			path = ApiServices;
 			sourceTree = "<group>";
@@ -587,6 +600,7 @@
 		88259DFC2B773BA6008B1CA9 /* Library+Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8837B9E42B85F18E00719EF8 /* LoadMoreAndRefresh */,
 				88C7A2542B7E03E500F3AFAA /* Custom Tabbar */,
 				88259EB02B774945008B1CA9 /* Toast */,
 				88259EAD2B7748F1008B1CA9 /* Rechability */,
@@ -709,6 +723,18 @@
 				ABB11C2C2B7F7F9700090D9B /* LoginSuccessPopUpViewController.xib */,
 			);
 			path = "Authentication Screen";
+			sourceTree = "<group>";
+		};
+		8837B9E42B85F18E00719EF8 /* LoadMoreAndRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				8837B9E52B85F18E00719EF8 /* PullToRefresh.swift */,
+				8837B9E62B85F18E00719EF8 /* LoadMoreViewAnimator.swift */,
+				8837B9E72B85F18E00719EF8 /* LoadMore.swift */,
+				8837B9E82B85F18E00719EF8 /* PullToRefreshAnimator.swift */,
+				8837B9E92B85F18E00719EF8 /* UIScrollView+Extensions.swift */,
+			);
+			path = LoadMoreAndRefresh;
 			sourceTree = "<group>";
 		};
 		88C7A2432B7E02D000F3AFAA /* Tabbar Screen */ = {
@@ -1171,6 +1197,7 @@
 				88259E9E2B77413F008B1CA9 /* UITextField+Additions.swift in Sources */,
 				88C7A24A2B7E030200F3AFAA /* MyCoursesViewController.swift in Sources */,
 				AB83ABF72B7E417200272DDF /* WelcomeCollectionDataSource.swift in Sources */,
+				8837B9E12B85D63A00719EF8 /* APIClient+Colleges.swift in Sources */,
 				88C7A2562B7E03E500F3AFAA /* MainTabBarController.swift in Sources */,
 				88259EA52B77419B008B1CA9 /* NoInternetConnectionViewController.swift in Sources */,
 				ABBA87C82B837283008F075A /* FacultiesCollectionViewCell.swift in Sources */,
@@ -1192,6 +1219,7 @@
 				AB83ABF42B7E409F00272DDF /* WelcomeCollectionViewCell.swift in Sources */,
 				88259E802B774127008B1CA9 /* UITextField+Extension.swift in Sources */,
 				88259E392B7740D3008B1CA9 /* BaseImageViewController.swift in Sources */,
+				8837B9EE2B85F18E00719EF8 /* UIScrollView+Extensions.swift in Sources */,
 				ABC39D532B84B9B2002398C2 /* FacultiesTableDataSources.swift in Sources */,
 				ABBA87CB2B8375D5008F075A /* FacultiesCollectionDataSource.swift in Sources */,
 				88259DC12B7738C4008B1CA9 /* AppDelegate.swift in Sources */,
@@ -1215,6 +1243,7 @@
 				88259E3E2B7740D3008B1CA9 /* ViewControllerEnum.swift in Sources */,
 				88259E242B773C15008B1CA9 /* APIClient.swift in Sources */,
 				ABC39D4C2B84A8FC002398C2 /* ChapterListTableDataSources.swift in Sources */,
+				8837B9EB2B85F18E00719EF8 /* LoadMoreViewAnimator.swift in Sources */,
 				88C7A2522B7E033000F3AFAA /* ProfileViewController.swift in Sources */,
 				88259E9F2B77413F008B1CA9 /* UIVisualEffectView+Additions.swift in Sources */,
 				88259E812B774127008B1CA9 /* UIStackView+Extension.swift in Sources */,
@@ -1231,12 +1260,14 @@
 				88259E3B2B7740D3008B1CA9 /* CommonFunctions.swift in Sources */,
 				88259E2A2B773E9D008B1CA9 /* DateConstants.swift in Sources */,
 				88259E9D2B77413F008B1CA9 /* UILabel+Additions.swift in Sources */,
+				8837B9EC2B85F18E00719EF8 /* LoadMore.swift in Sources */,
 				88259E712B774127008B1CA9 /* UIImageView+Extension.swift in Sources */,
 				88259E822B774127008B1CA9 /* UIView+Extensions.swift in Sources */,
 				88259E7A2B774127008B1CA9 /* UIApplication+Extension.swift in Sources */,
 				88259E7D2B774127008B1CA9 /* NSMutableAttributedString+Extensions.swift in Sources */,
 				88259E992B77413F008B1CA9 /* BundleEx+Additions.swift in Sources */,
 				ABBA87C42B836612008F075A /* CoursesCollectionDataSource.swift in Sources */,
+				8837B9EA2B85F18E00719EF8 /* PullToRefresh.swift in Sources */,
 				88259E7C2B774127008B1CA9 /* Bundle+Extensions.swift in Sources */,
 				88259E132B773C15008B1CA9 /* Configuration.swift in Sources */,
 				88259E852B774127008B1CA9 /* UILabel+Extensions.swift in Sources */,
@@ -1258,6 +1289,7 @@
 				ABC39D3C2B84A333002398C2 /* SemesterCollectionViewDataSource.swift in Sources */,
 				ABB11C252B7F47A400090D9B /* SignUpViewController.swift in Sources */,
 				88259DC32B7738C4008B1CA9 /* SceneDelegate.swift in Sources */,
+				8837B9ED2B85F18E00719EF8 /* PullToRefreshAnimator.swift in Sources */,
 				ABC39D582B84C6C3002398C2 /* FacultieDetailsViewController.swift in Sources */,
 				88259EA02B77413F008B1CA9 /* UIImageView+Additions.swift in Sources */,
 				88259EB22B774945008B1CA9 /* Toast.swift in Sources */,

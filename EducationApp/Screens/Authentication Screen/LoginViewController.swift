@@ -23,12 +23,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var signUpLabel: UILabel?
     
     //MARK: - Variable Declaration
-
-    /// To used to check welcome completed
-    var isWelcomeCompleted: Int?
-    
-    /// To used for check login is succeed
-    var isLoginSucceed: Int?
     
     //MARK: - Class Method
     
@@ -39,8 +33,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         #if DEBUG
-            emailTextField?.text = "dhruv.coderkube@gmail.com"
-            passwordTextField?.text = "Dhruv@123"
+            emailTextField?.text = "vijay.coderkube@gmail.com"
+            passwordTextField?.text = "12345678"
         #else
         #endif
     }
@@ -106,18 +100,7 @@ extension LoginViewController {
         let userData = responseData.dictionaryObject ?? [:]
         Config().saveUserData(object: userData)
 
-        isWelcomeCompleted = Config().welcomeComplete
-        isLoginSucceed = Config().getUser().count
-        
-        if (isLoginSucceed ?? 0) > 0 {
-            KAPPDELEGATE.setUpHome()
-            
-        } else if isWelcomeCompleted == 0 {
-            KAPPDELEGATE.setUpWelcome()
-            
-        } else {
-            KAPPDELEGATE.setUpLogin()
-        }
+        KAPPDELEGATE.setUpHome()
     }
 }
 

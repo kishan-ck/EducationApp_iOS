@@ -56,7 +56,8 @@ extension ForgotPasswordViewController {
                 "email": emailTextField?.text?.trim() as AnyObject]
             APIClient.sharedInstance.forgotPasswordApi(parameters: params) { responseObj in
                 if(responseObj?.integer(key: "status") == 200){
-                    KAPPDELEGATE.setUpLogin()
+                    
+                    self.navigationController?.popViewController(animated: true)
                 }
             } failure: { error in
                 makeToast(type: .error, title: APP_TITLE, message: error ?? "", view: self.view)
