@@ -58,9 +58,7 @@ class SignUpViewController: UIViewController{
     /// - Description : To set values after view did load
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         getCollegesList()
-        
         self.firstNameTextField?.text = "Vijay"
         self.lastNameTextField?.text = "Parmar"
         self.genderTextField?.text = "Male"

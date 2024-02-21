@@ -16,7 +16,7 @@ class MyCoursesViewController: BaseViewController {
     var coursesTableDataSources = CoursesTableDataSources()
     
     /// coursesListArray stores array of courses list data.
-    var coursesListArray: [json]?
+    var coursesListArray = [json]()
     
     //MARK: - Class Method
     
@@ -68,8 +68,7 @@ extension MyCoursesViewController {
     /// getCoursesList() used to call courses List API.
     /// - Parameter isShowloader: passing show loader boolean
     func getCoursesList(isShowloader: Bool = true){
-        self.coursesListArray = [json]()
-        self.coursesListArray?.removeAll()
+        coursesListArray.removeAll()
         
         let collegeId = Config().getUser().object(key: "student_course_details").object(key: "college_details").string(key: "_id")
         APIClient.sharedInstance.getCoursesListApi(collegeId: collegeId, parameters: [:]) { responseObj in
@@ -90,9 +89,15 @@ extension MyCoursesViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.count == 0 {
-            
+            coursesTableDataSources.coursesArray = coursesListArray
         } else {
-            
+            var filteredCoursesArray: [json] = []
+            filteredCoursesArray = coursesListArray.filter({ (courseObject) -> Bool in
+                let courseName: NSString = courseObject.string(key: "coursename") as NSString
+                let range = courseName.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
+                return range.location != NSNotFound
+            })
+            coursesTableDataSources.coursesArray = filteredCoursesArray
         }
         coursesTableView?.reloadData()
     }

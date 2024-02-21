@@ -7,6 +7,22 @@ import UIKit
 class SemesterCollectionViewDataSource: NSObject, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
     
     //MARK: - Variable Declaration
+    /// semesterListArray stores array of semester list data.
+    var semesterListArray: [json]? {
+        didSet{
+            self.CollectionView?.reloadData()
+            
+            if semesterListArray?.count == 0 {
+                CollectionView?.isScrollEnabled = false
+                KAPPDELEGATE.noDataFoundView(subView: self.CollectionView!)
+            } else {
+                CollectionView?.isScrollEnabled = true
+                KAPPDELEGATE.removeNoDataFoundView(subView: self.CollectionView!)
+            }
+        }
+    }
+    
+    var courseObj: json?
     
     /// Asks the DataSource to return the number of sections in the collection view.
     /// - Parameter tableView: UICollectionView
@@ -22,7 +38,7 @@ class SemesterCollectionViewDataSource: NSObject, UICollectionViewDelegateFlowLa
     ///   - section: An index number identifying a number of items in a section in collectionView.
     /// - Returns: returns total numer of items in Int
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        return 5
+        return semesterListArray?.count ?? 0
     }
     
     /// Asks the DataSource for a cell to insert in a particular location of the collection view.
@@ -34,8 +50,11 @@ class SemesterCollectionViewDataSource: NSObject, UICollectionViewDelegateFlowLa
         
         guard let collectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "SemesterCollectionViewCell", for: indexPath) as? SemesterCollectionViewCell  else { fatalError("Bad cell type.") }
         
+        let semesterObject = semesterListArray?[indexPath.row]
         
-        
+        collectionViewCell.semesterTitleLabel?.text = ("SEMESTER".localized) + (semesterObject?.string(key: "semester") ?? "")
+        collectionViewCell.semesterImageView?.getImage(url: semesterObject?.string(key: "image_url") ?? "")
+        collectionViewCell.semesterDescriptionLabel?.isHidden = true
         return collectionViewCell
     }
     
@@ -56,7 +75,10 @@ class SemesterCollectionViewDataSource: NSObject, UICollectionViewDelegateFlowLa
     ///   - collectionView: UICollectionView
     ///   - indexPath: An index path locating a row in collectionView.
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let semesterObject = semesterListArray?[indexPath.row]
         let viewController = SubjectListViewController(nibName: "SubjectListViewController", bundle: nil)
+        viewController.semesterObject = semesterObject
+        viewController.courseObj = courseObj
         collectionView.parentViewController?.navigationController?.pushViewController(viewController, animated: true)
     }
 }

@@ -67,7 +67,7 @@
 "FORGOT_PASSWORD" = "Forgot password?";
 "DO_NOT_HAVE_ACCOUNT" = "Don’t have an account? ";
 "LOGIN_TO_YOUR_ACCOUNT" = "Login to your account to continue with your courses";
-"HELLO_STUDENT" = "Hello %@ %@!";
+"HELLO_STUDENT" = "Hello Student!";
 
 //MARK: - Forgot Password Screen Strings
 "FORGOT_PASSWORD_TITLE" = "Forgot password";
@@ -75,7 +75,7 @@
 "SEND" = "Send";
 
 //MARK: - Home Screen Strings
-"WELCOME_TEXT" = "Wel come";
+"WELCOME_TEXT" = "Welcome";
 "WELCOME_TEXT_DESC" = "What do you want to learn?";
 "SEE_ALL" = "See All";
 "BECOME_FACULTIES" = "Become faculties";
@@ -96,6 +96,7 @@
 "ALL_SEMESTER" = "All Semester";
 "ALL_SUBJECT" = "All Subject";
 "COURSE" = "Course: ";
+"SEMESTER" = "Semester - ";
 
 //MARK: - Settings Screen Strings
 "EMAIL_US" = "Email us";

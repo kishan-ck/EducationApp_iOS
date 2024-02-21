@@ -14,6 +14,12 @@ class SubjectListViewController: BaseViewController {
     //MARK: - Variable Declaration
     var subjectCollectionViewDataSource = SubjectCollectionViewDataSource()
     
+    var semesterObject: json?
+    var courseObj: json?
+    
+    /// semesterListArray stores array of semester list data.
+    var subjectListArray = [json]()
+    
     //MARK: - Class Method
     
     /// View did load
@@ -23,6 +29,11 @@ class SubjectListViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         subjectCollectionView?.setDataSourceDelegate(datasourceAndDelegate: subjectCollectionViewDataSource, collectionCell: "SemesterCollectionViewCell")
+        
+        self.getSubjectList()
+        subjectCollectionView?.addPullToRefresh {
+            self.getSubjectList(isShowloader: false)
+        }
     }
     
     /// View will Appear
@@ -51,9 +62,27 @@ extension SubjectListViewController {
     
     /// setupUI() function will be used for the setup ui when view contoller will load.
     func setUpUI() {
-        navigationBarWithRightButtonTransparent(isShowBackButton: true, showTitle: "HAAHA", isShowSearchButton: true)
+        let title = (courseObj?.string(key: "coursename") ?? "") + " SEM - " + (semesterObject?.string(key: "semester") ?? "")
+        navigationBarWithRightButtonTransparent(isShowBackButton: true, showTitle: title, isShowSearchButton: true)
         
         searchBar?.placeholder = "SEARCH".localized
+    }
+    
+    /// getSubjectList() used to call semester List API.
+    /// - Parameter isShowloader: passing show loader boolean
+    func getSubjectList(isShowloader: Bool = true){
+        subjectListArray.removeAll()
+        
+        APIClient.sharedInstance.getSubjectListApi(semesterID: semesterObject?.string(key: "_id") ?? "", parameters: [:]) { responseObj in
+            let listArray = responseObj?.array(key: "data") ?? []
+            self.subjectListArray = listArray
+
+            self.subjectCollectionView?.stopPullToRefresh()
+            self.subjectCollectionViewDataSource.subjectListArray = self.subjectListArray
+        } failure: { error in
+            self.subjectCollectionView?.stopPullToRefresh()
+            makeToast(type: .error, title: APP_TITLE, message: error ?? "")
+        }
     }
 }
 
@@ -62,9 +91,15 @@ extension SubjectListViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.count == 0 {
-            
+            subjectCollectionViewDataSource.subjectListArray = subjectListArray
         } else {
-            
+            var filteredSubjectArray: [json] = []
+            filteredSubjectArray = subjectListArray.filter({ (subjectObject) -> Bool in
+                let subjectName: NSString = (subjectObject.string(key: "subject")) as NSString
+                let range = subjectName.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
+                return range.location != NSNotFound
+            })
+            subjectCollectionViewDataSource.subjectListArray = filteredSubjectArray
         }
         subjectCollectionView?.reloadData()
     }

@@ -74,7 +74,7 @@
 "SEND" = "Send";
 
 //MARK: - Home Screen Strings
-"WELCOME_TEXT" = "Wel come";
+"WELCOME_TEXT" = "Welcome";
 "WELCOME_TEXT_DESC" = "What do you want to learn?";
 "SEE_ALL" = "See All";
 "BECOME_A_FACULTY" = "Become a faculty?";

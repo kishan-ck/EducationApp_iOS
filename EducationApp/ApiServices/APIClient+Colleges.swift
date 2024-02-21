@@ -66,4 +66,41 @@ extension APIClient {
             failure(error)
         }
     }
+    
+    
+    /// Get subject list API that will give the subject details
+    /// - Parameters:
+    ///   - parameters: passing parameters
+    ///   - result: provide user data
+    ///   - failure: failure will show the error string
+    public func getSubjectListApi(semesterID: String, parameters: Parameters, isShowloader: Bool = true, result: @escaping ((_ responseObj: JSON?) -> Void), failure: @escaping ((_ error: String?) -> Void)){
+        callService(serviceName: .get_subject_list(semesterID), parameters: parameters, method: .get, isShowloader: isShowloader, passToken: false) { responseObj in
+            let object = JSON(responseObj as Any)
+            if object["status"].intValue == 200 {
+                result(object)
+            } else {
+                failure(object.string(key: "message"))
+            }
+        } failure : { error in
+            failure(error)
+        }
+    }
+    
+    /// Get chapter list API that will give the chapter details
+    /// - Parameters:
+    ///   - parameters: passing parameters
+    ///   - result: provide user data
+    ///   - failure: failure will show the error string
+    public func getChaterListApi(subjectID: String, parameters: Parameters, isShowloader: Bool = true, result: @escaping ((_ responseObj: JSON?) -> Void), failure: @escaping ((_ error: String?) -> Void)){
+        callService(serviceName: .get_chapter_list(subjectID), parameters: parameters, method: .get, isShowloader: isShowloader, passToken: false) { responseObj in
+            let object = JSON(responseObj as Any)
+            if object["status"].intValue == 200 {
+                result(object)
+            } else {
+                failure(object.string(key: "message"))
+            }
+        } failure : { error in
+            failure(error)
+        }
+    }
 }
