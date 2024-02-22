@@ -27,7 +27,7 @@
                         <searchBar hidden="YES" contentMode="scaleToFill" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="QCV-wz-Xqz">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             <scopeButtonTitles>
                                 <string>Title</string>
                                 <string>Title</string>

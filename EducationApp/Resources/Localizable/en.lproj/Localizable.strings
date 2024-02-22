@@ -5,7 +5,7 @@
 //MARK: - Application Localizable Strings
 
 //MARK: - Common Strings
-"APP_TITLE" = "Education App";
+"APP_TITLE" = "LearnWithCK";
 "CANCEL" = "Cancel";
 "PHOTO_LIBRARY" = "Photo Library";
 "CAMERA" = "Camera";
@@ -145,3 +145,7 @@
 "NO_RECORD_AVAILABLE_DESCRIPTION" = "Sorry, there are no records available at this moment.";
 "MAIL_BOX_NOT_SETUP" = "Your mail box didn't setup Please setup your mail box.";
 "APP_URL_NOT_VALID" = "App URL is not valid";
+"NO_COLLEGE_DATA_FOUND" = "No college found";
+"NO_COURSE_DATA_FOUND" = "No course found";
+"NO_SEMESTER_DATA_FOUND" = "No semester found";
+"INVALID_OLD_PASSWORD" = "Your old password is wrong";

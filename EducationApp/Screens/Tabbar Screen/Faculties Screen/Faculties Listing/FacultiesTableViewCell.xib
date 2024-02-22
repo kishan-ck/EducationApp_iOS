@@ -48,13 +48,13 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="jBs-DR-biZ">
-                                <rect key="frame" x="135" y="20" width="130" height="90"/>
+                                <rect key="frame" x="135" y="45.5" width="130" height="39"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dA-uh-Yuf">
-                                        <rect key="frame" x="0.0" y="0.0" width="130" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="39"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="dfdddd" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1VZ-8f-5hU" customClass="UILabelDeviceClass" customModule="EducationApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="130" height="21.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="34"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                                 <color key="textColor" name="#1E1E1E"/>
                                                 <nil key="highlightedColor"/>
@@ -80,8 +80,8 @@
                                             <constraint firstAttribute="trailing" secondItem="1VZ-8f-5hU" secondAttribute="trailing" id="nCG-hc-10p"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q0j-38-Jgw">
-                                        <rect key="frame" x="0.0" y="26.5" width="130" height="25"/>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q0j-38-Jgw">
+                                        <rect key="frame" x="0.0" y="39" width="130" height="25"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="dfdddd" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NA7-Yh-g71" customClass="UILabelDeviceClass" customModule="EducationApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="130" height="20"/>
@@ -110,8 +110,8 @@
                                             </constraint>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gpO-Hh-7C3">
-                                        <rect key="frame" x="0.0" y="51.5" width="130" height="22"/>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gpO-Hh-7C3">
+                                        <rect key="frame" x="0.0" y="39" width="130" height="22"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="dfdddd" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uzY-F7-hk5" customClass="UILabelDeviceClass" customModule="EducationApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="130" height="17"/>
@@ -140,8 +140,8 @@
                                             <constraint firstItem="uzY-F7-hk5" firstAttribute="top" secondItem="gpO-Hh-7C3" secondAttribute="top" id="sd2-zE-cbv"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ze3-jZ-GfC">
-                                        <rect key="frame" x="0.0" y="73.5" width="130" height="16.5"/>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ze3-jZ-GfC">
+                                        <rect key="frame" x="0.0" y="39" width="130" height="16.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="dfdddd" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9P-IB-G0V" customClass="UILabelDeviceClass" customModule="EducationApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="130" height="11.5"/>
@@ -211,7 +211,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </constraint>
-                            <constraint firstAttribute="bottom" secondItem="yvU-zk-OVP" secondAttribute="bottom" constant="10" id="mkh-is-2za">
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="yvU-zk-OVP" secondAttribute="bottom" constant="10" id="mkh-is-2za">
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
                                         <real key="value" value="1.04"/>

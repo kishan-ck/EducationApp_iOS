@@ -67,11 +67,14 @@ extension FacultieDetailsViewController {
         navigationBarWithRightButtonTransparent(isShowBackButton: true, showTitle: "FACULTY_DETAILS".localized, isShowSearchButton: false)
         
         facultieProfileImageView?.getImage(url: facultiesObj?.string(key: "profileImage") ?? "", placeHolderImage: enumForPlaceHolderImage.commonCoursesBackgroundImage.rawValue)
-        facultieProfesionLabel?.text = (facultiesObj?.string(key: "lecture") ?? "")
         
-        degreeLabel?.text = (facultiesObj?.string(key: "degree") ?? "BCA")
+        facultieProfesionLabel?.text = (facultiesObj?.string(key: "currentPosition") ?? "")
         
-        personalInformationProfesionLabel?.text = (facultiesObj?.string(key: "lecture") ?? "")
+        if let degreeArray = facultiesObj?.array(key: "degree") {
+            degreeLabel?.text = degreeArray.map{$0.stringValue}.joined(separator: ", ")
+        }
+        
+        personalInformationProfesionLabel?.text = (facultiesObj?.string(key: "currentPosition") ?? "")
         personalInformationWorkPlaceLabel?.text = (facultiesObj?.object(key: "college_Details").string(key: "collegeName"))
         
         facultieNameLabel?.text = (facultiesObj?.string(key: "name") ?? "")

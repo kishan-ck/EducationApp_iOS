@@ -29,7 +29,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvf-bQ-Z1P">
                         <rect key="frame" x="10" y="10" width="137" height="162"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_forgot_password" translatesAutoresizingMaskIntoConstraints="NO" id="0JX-bW-TiE">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_forgot_password" translatesAutoresizingMaskIntoConstraints="NO" id="0JX-bW-TiE">
                                 <rect key="frame" x="0.0" y="0.0" width="137" height="100"/>
                                 <color key="backgroundColor" name="#0961F5"/>
                                 <constraints>

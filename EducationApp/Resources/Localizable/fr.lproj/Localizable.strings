@@ -5,7 +5,7 @@
 //MARK: - Application Localizable Strings
 
 //MARK: - Common Strings
-"APP_TITLE" = "Education App";
+"APP_TITLE" = "LearnWithCK";
 "CANCEL" = "Cancel";
 "PHOTO_LIBRARY" = "Photo Library";
 "CAMERA" = "Camera";

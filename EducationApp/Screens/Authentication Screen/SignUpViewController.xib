@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -48,7 +48,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkO-Pl-qHv">
-                    <rect key="frame" x="0.0" y="69" width="414" height="797"/>
+                    <rect key="frame" x="0.0" y="65" width="414" height="801"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bcw-Gj-i3l">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="1484"/>
@@ -1095,7 +1095,7 @@
                                                             <rect key="frame" x="0.0" y="32.5" width="374" height="46"/>
                                                             <subviews>
                                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="SELECT_COLLEGE" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uXi-tZ-L7E">
-                                                                    <rect key="frame" x="24" y="0.0" width="305" height="46"/>
+                                                                    <rect key="frame" x="24" y="0.0" width="326" height="46"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <color key="textColor" name="#232323"/>
                                                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
@@ -1147,10 +1147,10 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </constraint>
                                                                 <constraint firstItem="uXi-tZ-L7E" firstAttribute="top" secondItem="mUM-BA-dYd" secondAttribute="top" id="h5C-AD-cNZ"/>
-                                                                <constraint firstAttribute="trailing" secondItem="uXi-tZ-L7E" secondAttribute="trailing" constant="45" id="yVC-n1-gvv">
+                                                                <constraint firstAttribute="trailing" secondItem="uXi-tZ-L7E" secondAttribute="trailing" constant="24" id="yVC-n1-gvv">
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="widthPercentage">
-                                                                            <real key="value" value="10.460000000000001"/>
+                                                                            <real key="value" value="5.5800000000000001"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </constraint>

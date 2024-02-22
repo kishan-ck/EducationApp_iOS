@@ -51,10 +51,21 @@ class FacultiesTableDataSources: NSObject, UITableViewDelegate, UITableViewDataS
         
         tableViewCell.facultieImageView?.getImage(url: facultiesObject?.string(key: "profileImage") ?? "", placeHolderImage: enumForPlaceHolderImage.commonCoursesBackgroundImage.rawValue)
         tableViewCell.facultieNameLabel?.text = (facultiesObject?.string(key: "name") ?? "")
-        tableViewCell.facultieDegreeLabel?.text = (facultiesObject?.string(key: "currentPosition") ?? "")
-        tableViewCell.facultieEmailLabel?.text = (facultiesObject?.string(key: "email") ?? "")
-        tableViewCell.facultieExperienceLabel?.text = "EXPERIENCE".localized.uppercased() + ": " + (facultiesObject?.string(key: "experience") ?? "")
-    
+        
+        if let degreeArray = facultiesObject?.array(key: "degree") {
+            tableViewCell.facultieDegreeLabelView?.isHidden = false
+            tableViewCell.facultieDegreeLabel?.text = degreeArray.map{$0.stringValue}.joined(separator: ", ")
+        }
+        
+        if facultiesObject?.string(key: "email") != "" {
+            tableViewCell.facultieEmailLabelView?.isHidden = false
+            tableViewCell.facultieEmailLabel?.text = (facultiesObject?.string(key: "email") ?? "")
+        }
+        
+        if facultiesObject?.string(key: "experience") != "" {
+            tableViewCell.facultieExperienceLabelView?.isHidden = false
+            tableViewCell.facultieExperienceLabel?.text = "EXPERIENCE".localized.uppercased() + ": " + (facultiesObject?.string(key: "experience") ?? "")
+        }
         return tableViewCell
     }
     

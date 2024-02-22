@@ -53,6 +53,9 @@ extension ChangePasswordViewController {
         if showOldPasswordTextField?.text?.trim() == "" {
             makeToast(type: .error, title: APP_TITLE, message: "PLEASE_ENTER_OLD_PASSWORD".localized, view: self.view)
             
+        } else if showOldPasswordTextField?.text?.trim() != Config().getUser().string(key: "password") {
+            makeToast(type: .error, title: APP_TITLE, message: "INVALID_OLD_PASSWORD".localized, view: self.view)
+            
         } else if showNewPasswordTextField?.text?.trim() == "" {
             makeToast(type: .error, title: APP_TITLE, message: "PLEASE_ENTER_NEW_PASSWORD".localized, view: self.view)
             

@@ -16,7 +16,7 @@ class FacultiesViewController: BaseViewController {
     var facultiesTableDataSources = FacultiesTableDataSources()
     
     /// facultiesListArray stores array of faculties list data.
-    var facultiesListArray: [json]?
+    var facultiesListArray = [json]()
     
     //MARK: - Class Method
     
@@ -68,10 +68,8 @@ extension FacultiesViewController {
     /// getFacultiesList() used to call faculties List API.
     /// - Parameter isShowloader: passing show loader boolean
     func getFacultiesList(isShowloader: Bool = true){
-        self.facultiesListArray = [json]()
-        self.facultiesListArray?.removeAll()
+        self.facultiesListArray.removeAll()
         
-        //let collegeId = Config().getUser().object(key: "student_course_details").object(key: "college_details").string(key: "_id")
         APIClient.sharedInstance.getAllFacultiesListApi(parameters: [:], isShowloader: isShowloader) { responseObj in
             let listArray = responseObj?.array(key: "data") ?? []
             self.facultiesListArray = listArray
@@ -90,9 +88,15 @@ extension FacultiesViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.count == 0 {
-            
+            facultiesTableDataSources.facultiesArray = facultiesListArray
         } else {
-            
+            var filteredFacultiesArray: [json] = []
+            filteredFacultiesArray = facultiesListArray.filter({ (facultieObject) -> Bool in
+                let facultieName: NSString = facultieObject.string(key: "name") as NSString
+                let range = facultieName.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
+                return range.location != NSNotFound
+            })
+            facultiesTableDataSources.facultiesArray = filteredFacultiesArray
         }
         facultiesTableView?.reloadData()
     }

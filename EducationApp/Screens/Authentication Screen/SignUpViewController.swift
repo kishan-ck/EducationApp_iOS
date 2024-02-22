@@ -59,7 +59,7 @@ class SignUpViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         getCollegesList()
-        self.firstNameTextField?.text = "Vijay"
+                self.firstNameTextField?.text = "Vijay"
         self.lastNameTextField?.text = "Parmar"
         self.genderTextField?.text = "Male"
         self.phoneNumberTextField?.text = "9016100516"
@@ -85,6 +85,11 @@ extension SignUpViewController {
     /// setupUI() function will be used for the setup ui when view contoller will load.
     func setUpUI() {
         self.navigationController?.navigationBar.isHidden = true
+
+        genderTextField?.setRightPaddingPoints(14)
+        selectCollegeTextField?.setRightPaddingPoints(14)
+        selectCourseTextField?.setRightPaddingPoints(14)
+        selectSemesterTextField?.setRightPaddingPoints(14)
         
         genderDropDown = commonDropdown(anchorView: genderTextFieldView!, dataSource: genderData) { id, value in
             self.genderTextField?.text = value
@@ -261,14 +266,26 @@ extension SignUpViewController: UITextFieldDelegate {
             return false
             
         } else if textField == selectCollegeTextField {
+            if collegeData.count == 0 {
+                makeToast(type: .error, title: APP_TITLE, message: "NO_COLLEGE_DATA_FOUND".localized, view: self.view)
+                return false
+            }
             collegeDropDown.show()
             return false
             
         } else if textField == selectCourseTextField {
+            if courseData.count == 0 {
+                makeToast(type: .error, title: APP_TITLE, message: "NO_COURSE_DATA_FOUND".localized, view: self.view)
+                return false
+            }
             courseDropDown.show()
             return false
             
         } else if textField == selectSemesterTextField {
+            if semesterData.count == 0 {
+                makeToast(type: .error, title: APP_TITLE, message: "NO_SEMESTER_DATA_FOUND".localized, view: self.view)
+                return false
+            }
             semesterDropDown.show()
             return false
         }

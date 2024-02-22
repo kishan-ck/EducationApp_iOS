@@ -36,7 +36,7 @@ enum APIEndPoint {
             return "forgot_password"
             
         case .update_profile:
-            return "update_profile"
+            return "update-profile"
             
         case .update_password:
             return "update-password"
@@ -51,7 +51,7 @@ enum APIEndPoint {
             return "semester/get-semester-list?course_id=\(courseId)"
 
         case .faculties_get_all_faculties:
-            return "faculties/get-all-faculties"
+            return "faculties/get-faculties"
             
         case .faculties_get_faculties_college_wise(let collegeId):
             return "faculties/get-faculties-college-wise?college_id=\(collegeId)"
