@@ -17,7 +17,7 @@ class SettingsViewController: BaseViewController {
     var settingsArray: [[String: Any]] = [
         ["title": "PROFILE", "image": "ic_profile", "id": "1"],
         ["title": "CHANGE_PASSWORD", "image": "ic_change_password", "id": "2"],
-        ["title": "EMAIL_US", "image": "ic_call_dark", "id": "3"],
+        ["title": "EMAIL_US", "image": "ic_email_dark", "id": "3"],
         ["title": "INFORMATION", "image": "ic_info", "id": "4"],
         ["title": "SHARE_APP", "image": "ic_share", "id": "5"],
         ["title": "RATE_US", "image": "ic_rating", "id": "6"],
