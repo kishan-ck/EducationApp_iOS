@@ -50,8 +50,7 @@ class ChapterListTableDataSources: NSObject, UITableViewDelegate, UITableViewDat
         let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "CoursesTableViewCell", for: indexPath) as! CoursesTableViewCell
         
         let chapterObject = chapterListArray?[indexPath.row]
-        
-        tableViewCell.titleImageView?.getImage(url: chapterObject?.string(key: "image_url") ?? "")
+        tableViewCell.titleImageView?.getImage(url: chapterObject?.string(key: "image_url") ?? "", placeHolderImage: enumForPlaceHolderImage.defaultImage.rawValue)
         tableViewCell.titleLabel?.text = chapterObject?.string(key: "chapterName")
     
         return tableViewCell

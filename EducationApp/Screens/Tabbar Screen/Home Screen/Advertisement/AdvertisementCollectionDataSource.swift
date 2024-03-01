@@ -40,7 +40,7 @@ class AdvertisementCollectionDataSource: NSObject, UICollectionViewDelegateFlowL
         guard let collectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "AdvertisementCollectionViewCell", for: indexPath) as? AdvertisementCollectionViewCell  else { fatalError("Bad cell type.") }
         
         let advertisementObject = self.advertisementArray?[indexPath.row]
-        collectionViewCell.advertisementImageView?.getImage(url: advertisementObject?.string(key: "image_url") ?? "", placeHolderImage: enumForPlaceHolderImage.commonCoursesBackgroundImage.rawValue)
+        collectionViewCell.advertisementImageView?.getImage(url: advertisementObject?.string(key: "image_url") ?? "", placeHolderImage: enumForPlaceHolderImage.defaultImage.rawValue)
         
         return collectionViewCell
     }

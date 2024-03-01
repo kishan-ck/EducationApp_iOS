@@ -4,6 +4,7 @@
 
 import UIKit
 import SwiftyJSON
+import QuickLook
 
 class ChapterListViewController: BaseViewController {
     
@@ -19,6 +20,8 @@ class ChapterListViewController: BaseViewController {
     
     /// chapterListArray stores array of chapter list data.
     var chapterListArray = [json]()
+    
+    var bookURL: URL?
     
     //MARK: - Class Method
     
@@ -86,6 +89,34 @@ extension ChapterListViewController {
     }
 }
 
+//MARK: - IBAction Method
+extension ChapterListViewController {
+    
+    ///  questionPaperButton UIButton click event.
+    ///
+    /// - Parameter sender: passing sender object.
+    /// - Description : it will display question papers.
+    @IBAction func questionPaperButtonAction(_ sender: Any) {
+        bookURL = nil
+        let previewController = QLPreviewController()
+        previewController.dataSource = self
+        bookURL = URL(string: subjectObject?.string(key: "sub_question_paper") ?? "")
+        present(previewController, animated: true, completion: nil)
+    }
+    
+    ///  syllabusButton UIButton click event.
+    ///
+    /// - Parameter sender: passing sender object.
+    /// - Description : it will display whole syllabus.
+    @IBAction func syllabusButtonAction(_ sender: Any) {
+        bookURL = nil
+        let previewController = QLPreviewController()
+        previewController.dataSource = self
+        bookURL = URL(string: subjectObject?.string(key: "sub_syllabus") ?? "")
+        present(previewController, animated: true, completion: nil)
+    }
+}
+
 //MARK: - UISearchBarDelegate
 extension ChapterListViewController: UISearchBarDelegate {
     
@@ -105,3 +136,13 @@ extension ChapterListViewController: UISearchBarDelegate {
     }
 }
 
+extension ChapterListViewController: QLPreviewControllerDataSource {
+    
+    func numberOfPreviewItems(in controller: QLPreviewController) -> Int {
+        return bookURL != nil ? 1 : 0
+    }
+    
+    func previewController(_ controller: QLPreviewController, previewItemAt index: Int) -> QLPreviewItem {
+        return bookURL! as QLPreviewItem
+    }
+}

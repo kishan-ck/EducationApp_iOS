@@ -50,7 +50,7 @@ class CoursesTableDataSources: NSObject, UITableViewDelegate, UITableViewDataSou
         let courseObject = self.coursesArray?[indexPath.row]
         
         let courseName = courseObject?.string(key: "coursename").trim()
-        tableViewCell.titleImageView?.getImage(url: courseObject?.string(key: "image_url") ?? "")
+        tableViewCell.titleImageView?.getImage(url: courseObject?.string(key: "image_url") ?? "", placeHolderImage: enumForPlaceHolderImage.defaultImage.rawValue)
         tableViewCell.titleLabel?.text = courseName
         
         if (courseName?.lowercased().contains("gujarati") ?? false) {

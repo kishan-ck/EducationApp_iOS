@@ -49,7 +49,7 @@ class FacultiesTableDataSources: NSObject, UITableViewDelegate, UITableViewDataS
         
         let facultiesObject = self.facultiesArray?[indexPath.row]
         
-        tableViewCell.facultieImageView?.getImage(url: facultiesObject?.string(key: "profileImage") ?? "", placeHolderImage: enumForPlaceHolderImage.commonCoursesBackgroundImage.rawValue)
+        tableViewCell.facultieImageView?.getImage(url: facultiesObject?.string(key: "profileImage") ?? "", placeHolderImage: enumForPlaceHolderImage.defaultImage.rawValue)
         tableViewCell.facultieNameLabel?.text = (facultiesObject?.string(key: "name") ?? "")
         
         if let degreeArray = facultiesObject?.array(key: "degree") {

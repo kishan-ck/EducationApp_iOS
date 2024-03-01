@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>host</key>
-	<string>https://education-app-31lz.onrender.com/</string>
+	<string>http://44.235.233.29:8000/</string>
 	<key>path</key>
 	<string>api/</string>
 </dict>

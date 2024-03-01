@@ -53,7 +53,7 @@ class SemesterCollectionViewDataSource: NSObject, UICollectionViewDelegateFlowLa
         let semesterObject = semesterListArray?[indexPath.row]
         
         collectionViewCell.semesterTitleLabel?.text = ("SEMESTER".localized) + (semesterObject?.string(key: "semester") ?? "")
-        collectionViewCell.semesterImageView?.getImage(url: semesterObject?.string(key: "image_url") ?? "")
+        collectionViewCell.semesterImageView?.getImage(url: semesterObject?.string(key: "image_url") ?? "", placeHolderImage: enumForPlaceHolderImage.defaultImage.rawValue)
         collectionViewCell.semesterDescriptionLabel?.isHidden = true
         return collectionViewCell
     }

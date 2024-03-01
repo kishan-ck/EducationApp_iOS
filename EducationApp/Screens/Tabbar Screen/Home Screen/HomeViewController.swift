@@ -88,17 +88,16 @@ extension HomeViewController {
     func getHomeDataApi(){
         let collegeId = Config().getUser().object(key: "student_course_details").object(key: "college_details").string(key: "_id")
         APIClient.sharedInstance.getAllHomeDataApi(collegeId: collegeId, parameters: [:]) { responseObj in
-            let listObject = responseObj?.object(key: "data")
             
-            let collegeTotals = responseObj?.object(key: "collegeTotals")
-            self.totalInstructorLabel?.text = "\(collegeTotals?.integer(key: "totalInstructor") ?? 0)"
-            self.totalCoursesLabel?.text = "\(collegeTotals?.integer(key: "totalCourse") ?? 0)"
-            self.totalSubjectsLabel?.text = "\(collegeTotals?.integer(key: "totalSubject") ?? 0)"
-            self.happyStudentLabel?.text = "\(collegeTotals?.integer(key: "totalStudents") ?? 0)"
+            let totalObject = responseObj?.object(key: "total")
+            self.totalInstructorLabel?.text = "\(totalObject?.integer(key: "Faculties") ?? 0)"
+            self.totalCoursesLabel?.text = "\(totalObject?.integer(key: "Courses") ?? 0)"
+            self.totalSubjectsLabel?.text = "\(totalObject?.integer(key: "Subjects") ?? 0)"
+            self.happyStudentLabel?.text = "\(totalObject?.integer(key: "Students") ?? 0)"
 
-            self.advertisementCollectionDataSource.advertisementArray = listObject?.array(key: "advertisements") ?? [[:]]
-            self.coursesCollectionDataSource.coursesArray = listObject?.array(key: "popularCourses") ?? [[:]]
-            self.facultiesCollectionDataSource.facultiesArray = listObject?.array(key: "faculties") ?? [[:]]
+            self.advertisementCollectionDataSource.advertisementArray = responseObj?.object(key: "data").array(key: "advertisements") ?? [[:]]
+            self.coursesCollectionDataSource.coursesArray = responseObj?.object(key: "data").array(key: "popularCourses") ?? [[:]]
+            self.facultiesCollectionDataSource.facultiesArray = responseObj?.object(key: "data").array(key: "faculties") ?? [[:]]
         } failure: { error in
             makeToast(type: .error, title: APP_TITLE, message: error ?? "")
         }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -44,13 +44,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iiJ-WP-Rdr">
-                    <rect key="frame" x="0.0" y="48" width="414" height="848"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LaV-E8-bgc">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="664.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="649.5"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aAI-pp-uJR">
-                                    <rect key="frame" x="20" y="10" width="374" height="654.5"/>
+                                    <rect key="frame" x="20" y="10" width="374" height="639.5"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lDs-NP-ylP">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="175.5"/>
@@ -138,7 +138,7 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8uv-Nr-KAp">
-                                            <rect key="frame" x="0.0" y="175.5" width="374" height="396.5"/>
+                                            <rect key="frame" x="0.0" y="175.5" width="374" height="381.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="PERSONAL_INFORMATION" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPU-15-cAY" customClass="UILabelDeviceClass" customModule="EducationApp" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="20" width="374" height="22.5"/>
@@ -154,7 +154,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ycY-vT-vas">
-                                                    <rect key="frame" x="0.0" y="42.5" width="374" height="354"/>
+                                                    <rect key="frame" x="0.0" y="42.5" width="374" height="339"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6p1-GP-apw">
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="88.5"/>
@@ -227,6 +227,13 @@
                                                                 <constraint firstItem="6eW-HI-Gqn" firstAttribute="leading" secondItem="6p1-GP-apw" secondAttribute="leading" id="M8p-lE-gY8"/>
                                                                 <constraint firstAttribute="bottom" secondItem="vLY-fg-fXK" secondAttribute="bottom" id="MjJ-iY-zBP"/>
                                                                 <constraint firstAttribute="trailing" secondItem="vLY-fg-fXK" secondAttribute="trailing" id="kn5-gL-Ute"/>
+                                                                <constraint firstItem="vLY-fg-fXK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6eW-HI-Gqn" secondAttribute="bottom" constant="20" id="lEh-gK-Ydh">
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                                                            <real key="value" value="2.0800000000000001"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </constraint>
                                                                 <constraint firstAttribute="trailing" secondItem="b1V-2T-8Bv" secondAttribute="trailing" id="mJ8-w7-bY1"/>
                                                                 <constraint firstItem="vLY-fg-fXK" firstAttribute="top" secondItem="WwV-GT-pJV" secondAttribute="bottom" constant="20" id="nxM-IR-O0G">
                                                                     <userDefinedRuntimeAttributes>
@@ -297,6 +304,13 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="trailing" secondItem="A0u-fw-yG2" secondAttribute="trailing" id="1Gm-6J-skg"/>
                                                                 <constraint firstItem="A0u-fw-yG2" firstAttribute="leading" secondItem="W15-cQ-shK" secondAttribute="leading" id="8an-kI-ydp"/>
+                                                                <constraint firstItem="A0u-fw-yG2" firstAttribute="top" relation="greaterThanOrEqual" secondItem="amP-aT-Mwu" secondAttribute="bottom" constant="20" id="JeH-i8-PY2">
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                                                            <real key="value" value="2.0800000000000001"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </constraint>
                                                                 <constraint firstItem="amP-aT-Mwu" firstAttribute="top" secondItem="W15-cQ-shK" secondAttribute="top" constant="20" id="JnF-V8-mqB">
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
@@ -334,7 +348,7 @@
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eyg-cP-RZh">
-                                                            <rect key="frame" x="0.0" y="177" width="374" height="88.5"/>
+                                                            <rect key="frame" x="0.0" y="177" width="374" height="73.5"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_email_round" translatesAutoresizingMaskIntoConstraints="NO" id="AOC-Pb-Kno">
                                                                     <rect key="frame" x="0.0" y="20" width="34" height="34"/>
@@ -375,7 +389,7 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fx7-Qd-TJt">
-                                                                    <rect key="frame" x="0.0" y="87.5" width="374" height="1"/>
+                                                                    <rect key="frame" x="0.0" y="72.5" width="374" height="1"/>
                                                                     <color key="backgroundColor" name="#EAEAEA"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="1" id="PaW-mR-WLV"/>
@@ -388,10 +402,10 @@
                                                                 <constraint firstAttribute="trailing" secondItem="Oe5-iQ-GAE" secondAttribute="trailing" id="EeS-Ko-Bfy"/>
                                                                 <constraint firstItem="AOC-Pb-Kno" firstAttribute="leading" secondItem="Eyg-cP-RZh" secondAttribute="leading" id="HYR-Rf-2Na"/>
                                                                 <constraint firstAttribute="trailing" secondItem="fx7-Qd-TJt" secondAttribute="trailing" id="L99-2p-9zL"/>
-                                                                <constraint firstItem="fx7-Qd-TJt" firstAttribute="top" secondItem="621-1j-1Qv" secondAttribute="bottom" constant="20" id="LVp-4i-AKk">
+                                                                <constraint firstItem="fx7-Qd-TJt" firstAttribute="top" relation="greaterThanOrEqual" secondItem="AOC-Pb-Kno" secondAttribute="bottom" constant="5" id="LVp-4i-AKk">
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
-                                                                            <real key="value" value="2.0800000000000001"/>
+                                                                            <real key="value" value="0.52000000000000002"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </constraint>
@@ -418,12 +432,13 @@
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </constraint>
+                                                                <constraint firstItem="fx7-Qd-TJt" firstAttribute="top" secondItem="621-1j-1Qv" secondAttribute="bottom" constant="5" id="sTr-Vc-pE2"/>
                                                                 <constraint firstItem="fx7-Qd-TJt" firstAttribute="leading" secondItem="Eyg-cP-RZh" secondAttribute="leading" id="uBh-eK-Lw7"/>
                                                                 <constraint firstItem="Oe5-iQ-GAE" firstAttribute="top" secondItem="AOC-Pb-Kno" secondAttribute="top" id="wJw-m5-2Iq"/>
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sbO-H1-m0h">
-                                                            <rect key="frame" x="0.0" y="265.5" width="374" height="88.5"/>
+                                                            <rect key="frame" x="0.0" y="250.5" width="374" height="88.5"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_experience" translatesAutoresizingMaskIntoConstraints="NO" id="2et-GX-Voa">
                                                                     <rect key="frame" x="0.0" y="20" width="34" height="34"/>
@@ -481,6 +496,13 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </constraint>
                                                                 <constraint firstAttribute="bottom" secondItem="RUB-8G-zlw" secondAttribute="bottom" id="6CI-4C-hGD"/>
+                                                                <constraint firstItem="RUB-8G-zlw" firstAttribute="top" relation="greaterThanOrEqual" secondItem="2et-GX-Voa" secondAttribute="bottom" constant="20" id="8bK-7n-FY8">
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="heightPercentage">
+                                                                            <real key="value" value="2.0800000000000001"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </constraint>
                                                                 <constraint firstItem="CQD-aG-jhq" firstAttribute="leading" secondItem="2et-GX-Voa" secondAttribute="trailing" constant="10" id="9Ym-Z0-Gkn">
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="widthPercentage">
@@ -532,7 +554,7 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YcU-vv-7gG">
-                                            <rect key="frame" x="0.0" y="572" width="374" height="82.5"/>
+                                            <rect key="frame" x="0.0" y="557" width="374" height="82.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="ACHIEVEMENT_AWARD" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="piX-vc-1kd" customClass="UILabelDeviceClass" customModule="EducationApp" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="20" width="374" height="22.5"/>

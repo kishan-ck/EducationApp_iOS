@@ -3,10 +3,12 @@
 //
 
 import UIKit
+import QuickLook
 
 class CoursesCollectionDataSource: NSObject, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
     
     //MARK: - Variable Declaration
+    var bookURL: URL?
     
     /// coursesArray stores array of course list data.
     var coursesArray : [json]? {
@@ -40,8 +42,14 @@ class CoursesCollectionDataSource: NSObject, UICollectionViewDelegateFlowLayout,
         guard let collectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CoursesCollectionViewCell", for: indexPath) as? CoursesCollectionViewCell  else { fatalError("Bad cell type.") }
         
         let courseObject = self.coursesArray?[indexPath.row]
-        collectionViewCell.titleImageView?.getImage(url: courseObject?.string(key: "courseImage") ?? "", placeHolderImage: enumForPlaceHolderImage.commonCoursesBackgroundImage.rawValue)
+        
+        collectionViewCell.titleImageView?.getImage(url: courseObject?.string(key: "courseImage") ?? "", placeHolderImage: enumForPlaceHolderImage.defaultImage.rawValue)
         collectionViewCell.courseNameLabel?.text = courseObject?.string(key: "courseName").trim()
+        
+        collectionViewCell.isLikeImageBackView?.isHidden = true
+        collectionViewCell.subjectNameLabelView?.isHidden = true
+        collectionViewCell.semesterLabelView?.isHidden = true
+        
         collectionViewCell.subjectNameLabel?.text = "Advanced mathematics 3"
         collectionViewCell.semesterLabel?.text = "CSE Sem 5"
         
@@ -82,6 +90,23 @@ class CoursesCollectionDataSource: NSObject, UICollectionViewDelegateFlowLayout,
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if (coursesArray?.count ?? 0) > 0 {
             let courseObject = self.coursesArray?[indexPath.row]
+            bookURL = nil
+            
+            let previewController = QLPreviewController()
+            previewController.dataSource = self
+            bookURL = URL(string: courseObject?.string(key: "courseBook") ?? "")
+            collectionView.parentViewController?.present(previewController, animated: true, completion: nil)
         }
+    }
+}
+
+extension CoursesCollectionDataSource: QLPreviewControllerDataSource {
+    
+    func numberOfPreviewItems(in controller: QLPreviewController) -> Int {
+        return bookURL != nil ? 1 : 0
+    }
+    
+    func previewController(_ controller: QLPreviewController, previewItemAt index: Int) -> QLPreviewItem {
+        return bookURL! as QLPreviewItem
     }
 }

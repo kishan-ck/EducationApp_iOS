@@ -50,7 +50,7 @@ class SubjectCollectionViewDataSource: NSObject, UICollectionViewDelegateFlowLay
         
         let subjectObject = subjectListArray?[indexPath.row]
         collectionViewCell.semesterTitleLabel?.text = subjectObject?.string(key: "subject")
-        collectionViewCell.semesterImageView?.getImage(url: subjectObject?.string(key: "image_url") ?? "")
+        collectionViewCell.semesterImageView?.getImage(url: subjectObject?.string(key: "image_url") ?? "", placeHolderImage: enumForPlaceHolderImage.defaultImage.rawValue)
         collectionViewCell.semesterDescriptionLabel?.isHidden = true
         
         return collectionViewCell

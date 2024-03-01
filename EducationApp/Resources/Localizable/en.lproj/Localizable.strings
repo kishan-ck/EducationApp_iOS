@@ -5,7 +5,7 @@
 //MARK: - Application Localizable Strings
 
 //MARK: - Common Strings
-"APP_TITLE" = "LearnWithCK";
+"APP_TITLE" = "Learn with CK";
 "CANCEL" = "Cancel";
 "PHOTO_LIBRARY" = "Photo Library";
 "CAMERA" = "Camera";
@@ -91,6 +91,9 @@
 "TOTAL_SUBJECTS" = "Total Subjects";
 "TOTAL_COURSES" = "Total Courses";
 "HAPPY_STUDENT" = "Total Student";
+"SYLLABUS_AND_QUESTION_PAPER" = "Syllabus and Question Paper";
+"SYLLABUS" = "Syllabus";
+"QUESTION_PAPER" = "Question Paper";
 
 //MARK: - Courses Screen Strings
 "ALL_SEMESTER" = "All Semester";

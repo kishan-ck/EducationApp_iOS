@@ -8,7 +8,6 @@ import SwiftyJSON
 class FacultieDetailsViewController: BaseViewController {
     
     //MARK: - IBOutlet Declaration
-    
     //Top Data
     @IBOutlet weak var facultieProfileImageView: UIImageView?
     @IBOutlet weak var facultieNameLabel: UILabel?
@@ -66,7 +65,7 @@ extension FacultieDetailsViewController {
     func setUpUI() {
         navigationBarWithRightButtonTransparent(isShowBackButton: true, showTitle: "FACULTY_DETAILS".localized, isShowSearchButton: false)
         
-        facultieProfileImageView?.getImage(url: facultiesObj?.string(key: "profileImage") ?? "", placeHolderImage: enumForPlaceHolderImage.commonCoursesBackgroundImage.rawValue)
+        facultieProfileImageView?.getImage(url: facultiesObj?.string(key: "profileImage") ?? "", placeHolderImage: enumForPlaceHolderImage.defaultImage.rawValue)
         
         facultieProfesionLabel?.text = (facultiesObj?.string(key: "currentPosition") ?? "")
         

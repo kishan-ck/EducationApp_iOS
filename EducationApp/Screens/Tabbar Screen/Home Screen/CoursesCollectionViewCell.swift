@@ -14,6 +14,10 @@ class CoursesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var courseNameLabel: UILabel?
     @IBOutlet weak var titleImageView: UIImageView?
     
+    @IBOutlet weak var isLikeImageBackView: UIView?
+    @IBOutlet weak var subjectNameLabelView: UIView?
+    @IBOutlet weak var semesterLabelView: UIView?
+    
     //MARK: - view life cycle
     
     /// awake From Nib

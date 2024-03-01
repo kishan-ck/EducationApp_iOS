@@ -40,7 +40,7 @@ class FacultiesCollectionDataSource: NSObject, UICollectionViewDelegateFlowLayou
         guard let collectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "FacultiesCollectionViewCell", for: indexPath) as? FacultiesCollectionViewCell  else { fatalError("Bad cell type.") }
 
         let facultiesObject = self.facultiesArray?[indexPath.row]
-        collectionViewCell.facultieImageView?.getImage(url: facultiesObject?.string(key: "profile_Image") ?? "", placeHolderImage: enumForPlaceHolderImage.commonCoursesBackgroundImage.rawValue)
+        collectionViewCell.facultieImageView?.getImage(url: facultiesObject?.string(key: "profile_Image") ?? "", placeHolderImage: enumForPlaceHolderImage.defaultImage.rawValue)
         collectionViewCell.facultieNameLabel?.text = (facultiesObject?.string(key: "name") ?? "")
         collectionViewCell.facultieFieldLabel?.text = (facultiesObject?.string(key: "lecture") ?? "")
         
@@ -70,6 +70,10 @@ class FacultiesCollectionDataSource: NSObject, UICollectionViewDelegateFlowLayou
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if (facultiesArray?.count ?? 0) > 0 {
             let facultiesObject = self.facultiesArray?[indexPath.row]
+            let viewController = FacultieDetailsViewController(nibName: "FacultieDetailsViewController", bundle: nil)
+            viewController.facultiesObj = facultiesObject
+            viewController.hidesBottomBarWhenPushed = true
+            collectionView.parentViewController?.navigationController?.pushViewController(viewController, animated: true)
         }
     }
 }
