@@ -819,7 +819,7 @@
     </objects>
     <resources>
         <image name="ic_background" width="157" height="75"/>
-        <image name="ic_become_faculty_background" width="335" height="171"/>
+        <image name="ic_become_faculty_background" width="334" height="171"/>
         <namedColor name="#0961F5">
             <color red="0.035000000149011612" green="0.37999999523162842" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

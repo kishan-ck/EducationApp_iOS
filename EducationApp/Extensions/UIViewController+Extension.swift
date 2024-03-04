@@ -2,8 +2,9 @@
 // Copyright (c) 2024 Education App All rights reserved.
 //
 
-import Foundation
 import UIKit
+import Foundation
+import SafariServices
 
 //MARK: - UIViewController Setup
 extension UIViewController {
@@ -117,6 +118,15 @@ extension UIViewController {
             return true
         } else {
             return false
+        }
+    }
+    
+    func openSFSafariViewController(URLString: String) {
+        if let url = URL(string: URLString) {
+            let config = SFSafariViewController.Configuration()
+            config.entersReaderIfAvailable = true
+            let vc = SFSafariViewController(url: url, configuration: config)
+            self.present(vc, animated: true)
         }
     }
 }

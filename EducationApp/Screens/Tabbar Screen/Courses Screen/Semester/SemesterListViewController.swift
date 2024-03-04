@@ -66,7 +66,7 @@ extension SemesterListViewController {
         
         searchBar?.placeholder = "SEARCH".localized
         
-        let attributedString = NSMutableAttributedString(string: "COURSE".localized + (self.courseObj?.string(key: "coursename") ?? ""))
+        let attributedString = NSMutableAttributedString(string: "COURSE".localized + " " + (self.courseObj?.string(key: "coursename") ?? ""))
         attributedString.setColorForText((self.courseObj?.string(key: "coursename") ?? ""), with: UIColor(named: "#0961F5")!)
         courseLabel?.attributedText = attributedString
     }

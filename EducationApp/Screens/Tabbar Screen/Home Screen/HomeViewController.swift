@@ -42,6 +42,8 @@ class HomeViewController: UIViewController {
     
     var facultiesCollectionDataSource = FacultiesCollectionDataSource()
     
+    var homeObj: json?
+    
     //MARK: - Class Method
     
     /// View did load
@@ -89,6 +91,8 @@ extension HomeViewController {
         let collegeId = Config().getUser().object(key: "student_course_details").object(key: "college_details").string(key: "_id")
         APIClient.sharedInstance.getAllHomeDataApi(collegeId: collegeId, parameters: [:]) { responseObj in
             
+            self.homeObj = responseObj
+            
             let totalObject = responseObj?.object(key: "total")
             self.totalInstructorLabel?.text = "\(totalObject?.integer(key: "Faculties") ?? 0)"
             self.totalCoursesLabel?.text = "\(totalObject?.integer(key: "Courses") ?? 0)"
@@ -108,6 +112,7 @@ extension HomeViewController {
 extension HomeViewController {
     
     @IBAction func applyForFacultyButtonAction(_ sender: Any) {
+        openSFSafariViewController(URLString: homeObj?.string(key: "become_Faculties") ?? "")
     }
     
     @IBAction func coursesSeeAllButtonAction(_ sender: Any) {

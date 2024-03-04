@@ -241,7 +241,6 @@ func hideShowPassword(image: UIImageView, textField: UITextField) {
 ///   - dataSource: The data source for the drop down.
 ///   - selectionAction: The action to execute when the user selects a cell.
 func commonDropdown(anchorView: UIView, dataSource: [String], selectionAction : SelectionClosure?) -> DropDown {
-    
     let dropDown = DropDown()
     dropDown.anchorView = anchorView
     dropDown.width = anchorView.frame.size.width
