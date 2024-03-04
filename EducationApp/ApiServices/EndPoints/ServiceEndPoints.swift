@@ -33,7 +33,7 @@ enum APIEndPoint {
             return "register"
             
         case .forgot_password:
-            return "forgot_password"
+            return "forgot-password"
             
         case .update_profile:
             return "update-profile"
