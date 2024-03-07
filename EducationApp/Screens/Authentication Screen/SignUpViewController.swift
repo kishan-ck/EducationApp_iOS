@@ -59,13 +59,6 @@ class SignUpViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         getCollegesList()
-        self.firstNameTextField?.text = "Vijay"
-        self.lastNameTextField?.text = "Parmar"
-        self.genderTextField?.text = "Male"
-        self.phoneNumberTextField?.text = "9016100516"
-        self.emailTextField?.text = "vijay.coderkube@gmail.com"
-        self.passwordTextField?.text = "12345678"
-        self.confirmPasswordTextField?.text = "12345678"
     }
     
     /// View will Appear
