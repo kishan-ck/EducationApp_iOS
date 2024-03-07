@@ -59,7 +59,7 @@ class SignUpViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         getCollegesList()
-                self.firstNameTextField?.text = "Vijay"
+        self.firstNameTextField?.text = "Vijay"
         self.lastNameTextField?.text = "Parmar"
         self.genderTextField?.text = "Male"
         self.phoneNumberTextField?.text = "9016100516"
