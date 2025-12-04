@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>host</key>
-	<string>http://44.235.233.29:8000/</string>
+	<string>https://devnode.coderkubes.com/education/</string>
 	<key>path</key>
 	<string>api/</string>
 </dict>

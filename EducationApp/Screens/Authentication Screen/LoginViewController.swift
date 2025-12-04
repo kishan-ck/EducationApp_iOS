@@ -33,8 +33,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         #if DEBUG
-            emailTextField?.text = "vijay.coderkube@gmail.com"
-            passwordTextField?.text = "12345678"
+            //emailTextField?.text = "vijay.coderkube@gmail.com"
+            //passwordTextField?.text = "12345678"
         #else
         #endif
     }
