@@ -224,13 +224,15 @@ extension SignUpViewController {
                     
                     let userData = responseData?.dictionaryObject ?? [:]
                     Config().saveUserData(object: userData)
-                    
-                    let viewController = LoginSuccessPopUpViewController(nibName: "LoginSuccessPopUpViewController", bundle: nil)
-                    viewController.completion = { dict in
+
+                  DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                      let viewController = LoginSuccessPopUpViewController(nibName: "LoginSuccessPopUpViewController", bundle: nil)
+                      viewController.completion = { dict in
                         KAPPDELEGATE.setUpHome()
+                      }
+                      viewController.modalPresentationStyle = .custom
+                      self?.present(viewController, animated: false, completion: nil)
                     }
-                    viewController.modalPresentationStyle = .custom
-                    self?.present(viewController, animated: false, completion: nil)
                 }
             } failure: { error in
                 makeToast(type: .error, title: APP_TITLE, message: error ?? "", view: self.view)
