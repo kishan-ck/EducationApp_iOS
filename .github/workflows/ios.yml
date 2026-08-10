@@ -1,4 +1,4 @@
-name: iOS TestFlight Deploy (Swift - No Fastlane)
+name: iOS TestFlight Deploy (Manual Signing - Stable)
 
 on:
   push:
@@ -13,18 +13,36 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      # 🔐 Install Certificate
+      - name: Install Certificate
+        run: |
+          echo "${{ secrets.P12_BASE64 }}" | base64 --decode > certificate.p12
+          security create-keychain -p "" build.keychain
+          security import certificate.p12 -k build.keychain -P "${{ secrets.P12_PASSWORD }}" -T /usr/bin/codesign
+          security list-keychains -s build.keychain
+          security unlock-keychain -p "" build.keychain
+          security set-key-partition-list -S apple-tool:,apple: -s -k "" build.keychain
+
+      # 🔐 Install Provisioning Profile
+      - name: Install Provisioning Profile
+        run: |
+          mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
+          echo "${{ secrets.PROVISION_PROFILE_BASE64 }}" | base64 --decode > profile.mobileprovision
+          UUID=$(grep -a -E -o "[-A-F0-9]{36}" profile.mobileprovision | head -1)
+          cp profile.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/$UUID.mobileprovision
+
       # 🔐 Setup App Store API Key
       - name: Setup API Key
         run: |
           mkdir -p private_keys
-          echo "${{ secrets.APPSTORE_API_PRIVATE_KEY }}" > private_keys/AuthKey.p8
+          echo "${{ secrets.APPSTORE_API_PRIVATE_KEY }}" > private_keys/AuthKey_${{ secrets.APPSTORE_API_KEY_ID }}.p8
 
       # 🔢 Increment Build Number
       - name: Increment Build Number
         run: |
           agvtool next-version -all || true
 
-      # 🏗 Build Archive (FIXED)
+      # 🏗 Build Archive (Manual Signing)
       - name: Build Archive
         run: |
           xcodebuild \
@@ -32,13 +50,33 @@ jobs:
           -configuration Release \
           -archivePath $PWD/build/EducationApp.xcarchive \
           -destination 'generic/platform=iOS' \
-          -allowProvisioningUpdates \
+          CODE_SIGN_STYLE=Manual \
           DEVELOPMENT_TEAM=95L29MZABL \
+          PROVISIONING_PROFILE_SPECIFIER="" \
           archive
 
       # 📦 Export IPA
       - name: Export IPA
         run: |
+          cat <<EOF > exportOptions.plist
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0">
+          <dict>
+              <key>method</key>
+              <string>app-store</string>
+              <key>teamID</key>
+              <string>95L29MZABL</string>
+              <key>signingStyle</key>
+              <string>manual</string>
+              <key>stripSwiftSymbols</key>
+              <true/>
+              <key>compileBitcode</key>
+              <false/>
+          </dict>
+          </plist>
+          EOF
+
           xcodebuild -exportArchive \
           -archivePath $PWD/build/EducationApp.xcarchive \
           -exportOptionsPlist exportOptions.plist \
@@ -48,7 +86,7 @@ jobs:
       - name: Upload to TestFlight
         run: |
           xcrun altool --upload-app \
-          -f build/EducationApp.ipa \
+          -f build/*.ipa \
           -t ios \
           --apiKey ${{ secrets.APPSTORE_API_KEY_ID }} \
           --apiIssuer ${{ secrets.APPSTORE_ISSUER_ID }}
