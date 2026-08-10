@@ -32,7 +32,7 @@ jobs:
           -configuration Release \
           -archivePath $PWD/build/EducationApp.xcarchive \
           archive \
-          DEVELOPMENT_TEAM=YOUR_TEAM_ID
+          DEVELOPMENT_TEAM=95L29MZABL
 
       # 📦 Export IPA
       - name: Export IPA
