@@ -1140,9 +1140,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-EducationApp/Pods-EducationApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-EducationApp/Pods-EducationApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1201,9 +1205,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-EducationApp-EducationAppUITests/Pods-EducationApp-EducationAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-EducationApp-EducationAppUITests/Pods-EducationApp-EducationAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1532,7 +1540,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 95L29MZABL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "EducationApp/Configurations+Files/Education-Info.plist";
@@ -1563,7 +1571,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 95L29MZABL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "EducationApp/Configurations+Files/Education-Info.plist";
