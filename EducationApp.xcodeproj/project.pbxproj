@@ -125,6 +125,7 @@
 		88C7A2562B7E03E500F3AFAA /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C7A2552B7E03E500F3AFAA /* MainTabBarController.swift */; };
 		88C7A2592B7E044F00F3AFAA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C7A2572B7E044F00F3AFAA /* SettingsViewController.swift */; };
 		88C7A25A2B7E044F00F3AFAA /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88C7A2582B7E044F00F3AFAA /* SettingsViewController.xib */; };
+		A00FBF713029F83000062DBF /* exportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = A00FBF703029F83000062DBF /* exportOptions.plist */; };
 		AB184E1D2B85C77800AD1C02 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB184E1B2B85C77800AD1C02 /* SettingsTableViewCell.swift */; };
 		AB184E1E2B85C77800AD1C02 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB184E1C2B85C77800AD1C02 /* SettingsTableViewCell.xib */; };
 		AB184E202B85CA8B00AD1C02 /* SettingsTableDataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB184E1F2B85CA8B00AD1C02 /* SettingsTableDataSources.swift */; };
@@ -321,6 +322,7 @@
 		88C7A2552B7E03E500F3AFAA /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		88C7A2572B7E044F00F3AFAA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		88C7A2582B7E044F00F3AFAA /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		A00FBF703029F83000062DBF /* exportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = exportOptions.plist; sourceTree = "<group>"; };
 		AB184E1B2B85C77800AD1C02 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		AB184E1C2B85C77800AD1C02 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
 		AB184E1F2B85CA8B00AD1C02 /* SettingsTableDataSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableDataSources.swift; sourceTree = "<group>"; };
@@ -401,6 +403,7 @@
 		88259DB42B7738C4008B1CA9 = {
 			isa = PBXGroup;
 			children = (
+				A00FBF703029F83000062DBF /* exportOptions.plist */,
 				88259DBF2B7738C4008B1CA9 /* EducationApp */,
 				88259DD62B7738C6008B1CA9 /* EducationAppTests */,
 				88259DE02B7738C6008B1CA9 /* EducationAppUITests */,
@@ -1087,6 +1090,7 @@
 				88259EE22B774F68008B1CA9 /* Poppins-Thin.ttf in Resources */,
 				88259EE52B774F68008B1CA9 /* Poppins-ExtraLight.ttf in Resources */,
 				88259EDB2B774F68008B1CA9 /* Poppins-ExtraBoldItalic.ttf in Resources */,
+				A00FBF713029F83000062DBF /* exportOptions.plist in Resources */,
 				88259EEA2B7751FA008B1CA9 /* Localizable.strings in Resources */,
 				88C7A24F2B7E032500F3AFAA /* FacultiesViewController.xib in Resources */,
 				88259EE82B774F68008B1CA9 /* Poppins-Regular.ttf in Resources */,
