@@ -24,15 +24,17 @@ jobs:
         run: |
           agvtool next-version -all || true
 
-      # 🏗 Build Archive
+      # 🏗 Build Archive (FIXED)
       - name: Build Archive
         run: |
           xcodebuild \
           -scheme EducationApp \
           -configuration Release \
           -archivePath $PWD/build/EducationApp.xcarchive \
-          archive \
-          DEVELOPMENT_TEAM=95L29MZABL
+          -destination 'generic/platform=iOS' \
+          -allowProvisioningUpdates \
+          DEVELOPMENT_TEAM=95L29MZABL \
+          archive
 
       # 📦 Export IPA
       - name: Export IPA
