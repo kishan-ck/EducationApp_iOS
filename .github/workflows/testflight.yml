@@ -105,22 +105,22 @@ jobs:
           APP_STORE_CONNECT_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
           APP_STORE_CONNECT_PRIVATE_KEY: ${{ secrets.APP_STORE_CONNECT_PRIVATE_KEY }}
         run: |
-          mkdir -p $RUNNER_TEMP/private_keys
+          # altool searches only in ~/.appstoreconnect/private_keys/ for the .p8 key
+          mkdir -p ~/.appstoreconnect/private_keys
 
           echo "$APP_STORE_CONNECT_PRIVATE_KEY" \
-            > $RUNNER_TEMP/private_keys/AuthKey_${APP_STORE_CONNECT_KEY_ID}.p8
+            > ~/.appstoreconnect/private_keys/AuthKey_${APP_STORE_CONNECT_KEY_ID}.p8
 
           xcrun altool \
             --upload-app \
             --type ios \
             --file $RUNNER_TEMP/export/EducationApp.ipa \
             --apiKey "$APP_STORE_CONNECT_KEY_ID" \
-            --apiIssuer "$APP_STORE_CONNECT_ISSUER_ID" \
-            --private-key @file:$RUNNER_TEMP/private_keys/AuthKey_${APP_STORE_CONNECT_KEY_ID}.p8
+            --apiIssuer "$APP_STORE_CONNECT_ISSUER_ID"
 
       - name: Cleanup
         if: always()
         run: |
           security delete-keychain "$RUNNER_TEMP/app-signing.keychain-db" || true
           rm -rf ~/Library/MobileDevice/Provisioning\ Profiles/*.mobileprovision
-          rm -f $RUNNER_TEMP/private_keys/AuthKey_*.p8
+          rm -f ~/.appstoreconnect/private_keys/AuthKey_*.p8
