@@ -126,6 +126,11 @@
 		88C7A2592B7E044F00F3AFAA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C7A2572B7E044F00F3AFAA /* SettingsViewController.swift */; };
 		88C7A25A2B7E044F00F3AFAA /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88C7A2582B7E044F00F3AFAA /* SettingsViewController.xib */; };
 		A00FBF713029F83000062DBF /* exportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = A00FBF703029F83000062DBF /* exportOptions.plist */; };
+		A0352D01302AEA74006CD7D7 /* DistributionCertificates.p12 in Resources */ = {isa = PBXBuildFile; fileRef = A0352CFE302AEA74006CD7D7 /* DistributionCertificates.p12 */; };
+		A0352D02302AEA74006CD7D7 /* CertificateSigningRequest.certSigningRequest in Resources */ = {isa = PBXBuildFile; fileRef = A0352CFC302AEA74006CD7D7 /* CertificateSigningRequest.certSigningRequest */; };
+		A0352D03302AEA74006CD7D7 /* AuthKey_ZZWUCFRA56.p8 in Resources */ = {isa = PBXBuildFile; fileRef = A0352CFB302AEA74006CD7D7 /* AuthKey_ZZWUCFRA56.p8 */; };
+		A0352D04302AEA74006CD7D7 /* Education_AppStore_Distribution.mobileprovision in Resources */ = {isa = PBXBuildFile; fileRef = A0352CFF302AEA74006CD7D7 /* Education_AppStore_Distribution.mobileprovision */; };
+		A0352D05302AEA74006CD7D7 /* distribution.cer in Resources */ = {isa = PBXBuildFile; fileRef = A0352CFD302AEA74006CD7D7 /* distribution.cer */; };
 		AB184E1D2B85C77800AD1C02 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB184E1B2B85C77800AD1C02 /* SettingsTableViewCell.swift */; };
 		AB184E1E2B85C77800AD1C02 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB184E1C2B85C77800AD1C02 /* SettingsTableViewCell.xib */; };
 		AB184E202B85CA8B00AD1C02 /* SettingsTableDataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB184E1F2B85CA8B00AD1C02 /* SettingsTableDataSources.swift */; };
@@ -323,6 +328,11 @@
 		88C7A2572B7E044F00F3AFAA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		88C7A2582B7E044F00F3AFAA /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		A00FBF703029F83000062DBF /* exportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = exportOptions.plist; sourceTree = "<group>"; };
+		A0352CFB302AEA74006CD7D7 /* AuthKey_ZZWUCFRA56.p8 */ = {isa = PBXFileReference; lastKnownFileType = text; path = AuthKey_ZZWUCFRA56.p8; sourceTree = "<group>"; };
+		A0352CFC302AEA74006CD7D7 /* CertificateSigningRequest.certSigningRequest */ = {isa = PBXFileReference; lastKnownFileType = text; path = CertificateSigningRequest.certSigningRequest; sourceTree = "<group>"; };
+		A0352CFD302AEA74006CD7D7 /* distribution.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = distribution.cer; sourceTree = "<group>"; };
+		A0352CFE302AEA74006CD7D7 /* DistributionCertificates.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = DistributionCertificates.p12; sourceTree = "<group>"; };
+		A0352CFF302AEA74006CD7D7 /* Education_AppStore_Distribution.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; path = Education_AppStore_Distribution.mobileprovision; sourceTree = "<group>"; };
 		AB184E1B2B85C77800AD1C02 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		AB184E1C2B85C77800AD1C02 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
 		AB184E1F2B85CA8B00AD1C02 /* SettingsTableDataSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableDataSources.swift; sourceTree = "<group>"; };
@@ -426,6 +436,7 @@
 		88259DBF2B7738C4008B1CA9 /* EducationApp */ = {
 			isa = PBXGroup;
 			children = (
+				A0352D00302AEA74006CD7D7 /* Education App CI Flow */,
 				88259DF22B773B3D008B1CA9 /* Delegates */,
 				88259DFC2B773BA6008B1CA9 /* Library+Frameworks */,
 				88259DFB2B773B9F008B1CA9 /* AppUtilities */,
@@ -776,6 +787,18 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A0352D00302AEA74006CD7D7 /* Education App CI Flow */ = {
+			isa = PBXGroup;
+			children = (
+				A0352CFB302AEA74006CD7D7 /* AuthKey_ZZWUCFRA56.p8 */,
+				A0352CFC302AEA74006CD7D7 /* CertificateSigningRequest.certSigningRequest */,
+				A0352CFD302AEA74006CD7D7 /* distribution.cer */,
+				A0352CFE302AEA74006CD7D7 /* DistributionCertificates.p12 */,
+				A0352CFF302AEA74006CD7D7 /* Education_AppStore_Distribution.mobileprovision */,
+			);
+			path = "Education App CI Flow";
+			sourceTree = "<group>";
+		};
 		AB184E1A2B85C74D00AD1C02 /* Settings Screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -1087,6 +1110,11 @@
 				88259E2C2B77404F008B1CA9 /* Colors.xcassets in Resources */,
 				88259EE72B774F68008B1CA9 /* Poppins-MediumItalic.ttf in Resources */,
 				88259EDA2B774F68008B1CA9 /* Poppins-BlackItalic.ttf in Resources */,
+				A0352D01302AEA74006CD7D7 /* DistributionCertificates.p12 in Resources */,
+				A0352D02302AEA74006CD7D7 /* CertificateSigningRequest.certSigningRequest in Resources */,
+				A0352D03302AEA74006CD7D7 /* AuthKey_ZZWUCFRA56.p8 in Resources */,
+				A0352D04302AEA74006CD7D7 /* Education_AppStore_Distribution.mobileprovision in Resources */,
+				A0352D05302AEA74006CD7D7 /* distribution.cer in Resources */,
 				88259EE22B774F68008B1CA9 /* Poppins-Thin.ttf in Resources */,
 				88259EE52B774F68008B1CA9 /* Poppins-ExtraLight.ttf in Resources */,
 				88259EDB2B774F68008B1CA9 /* Poppins-ExtraBoldItalic.ttf in Resources */,
@@ -1545,7 +1573,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 95L29MZABL;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1580,7 +1608,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 95L29MZABL;
 				GENERATE_INFOPLIST_FILE = YES;
