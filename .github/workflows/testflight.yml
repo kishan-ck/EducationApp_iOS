@@ -1,9 +1,9 @@
 name: iOS TestFlight
 
 on:
-  push:
-    branches:
-      - main
+  # Only trigger when a PR is moved from Draft → Ready for Review
+  pull_request:
+    types: [ready_for_review]
 
   workflow_dispatch:
 
