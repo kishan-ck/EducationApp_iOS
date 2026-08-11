@@ -55,11 +55,12 @@ jobs:
             -A \
             -t cert \
             -f pkcs12 \
-            "$KEYCHAIN_PATH"
+            -k "$KEYCHAIN_PATH"
 
+          # Include both custom and login keychains so codesign can find the cert
           security list-keychains \
             -d user \
-            -s "$KEYCHAIN_PATH"
+            -s "$KEYCHAIN_PATH" ~/Library/Keychains/login.keychain-db
 
           security default-keychain \
             -s "$KEYCHAIN_PATH"
@@ -85,6 +86,9 @@ jobs:
             -configuration Release \
             -sdk iphoneos \
             -archivePath $RUNNER_TEMP/EducationApp.xcarchive \
+            CODE_SIGN_STYLE=Manual \
+            CODE_SIGN_IDENTITY="iPhone Distribution" \
+            PROVISIONING_PROFILE_SPECIFIER="Education AppStore Distribution" \
             clean archive
 
       - name: Export IPA
